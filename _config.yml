@@ -10,8 +10,8 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Sudev Ambadi    
-tagline: third year computer science student of NIT Calicut
-author: sudev 
+tagline : third year computer science student of NIT Calicut
+author : sudev 
   name : Ambadi
   email : sudevdev@gmail.com
   github : sudev    
