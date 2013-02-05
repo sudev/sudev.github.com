@@ -1,0 +1,19 @@
+---
+layout: post
+title: Welcome to Jekyll 
+category: posts
+---
+
+I always wanted very clean and simple interface for my blog, I use to blog 
+using blogger with an ugly theme now that some nice guy [zachholman.com][zh]
+open sourced this theme with Jekyll I'm kinda more than satisfied. 
+
+
+
+---
+
+
+
+[jekyll]: https://github.com/mojombo/jekyll
+[zh]: http://sudev.github.com
+[twitter]: https://twitter.com/sudev

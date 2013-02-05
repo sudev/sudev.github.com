@@ -1,6 +1,13 @@
 markdown: rdiscount
 pygments: true
-permalink: /blog/:title
+permalink: /posts/:title
 auto: true
 rdiscount:
   extensions: [smart]
+
+name: Sudev Ambadi 
+url: http://sudev.github.com
+description: My findings not going to amuse you anyway
+twitter: sudev
+github: sudev
+gravatar_url: https://graph.facebook.com/sudev.ambadi/picture
