@@ -102,18 +102,18 @@ h1{
 	text-decoration: none;
 }
 
-#header #me{
+#container #me{
 	text-transform: uppercase;
 	margin: 10px 0 20px 0;
 }
 
-#header #kevin{
+#container #kevin{
 	font-size: 12px;
 	letter-spacing: 5px;
 	color: #666;
 }
 
-#header #kevin:hover{
+#container #kevin:hover{
 	color: #000;
 }
 
