@@ -1,7 +1,6 @@
-title : Sudev Ambadi 
-author :
-name : Sudev Ambadi
-email : sudevdev@gmail.com
-github : sudev
-twitter : sudev
-
+markdown: rdiscount
+pygments: true
+permalink: /blog/:title
+auto: true
+rdiscount:
+  extensions: [smart]

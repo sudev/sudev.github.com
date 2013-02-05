@@ -1,5 +1,11 @@
 ---
-layout: default
+layout: layout
 ---
-{% include JB/setup %}
-{% include themes/the-minimum/post.html %}
+
+<div class="content">
+  <div id="post">
+    {% include post_header.html %}
+    {{ content }}
+  </div>
+
+</div>
