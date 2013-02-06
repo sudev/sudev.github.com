@@ -59,7 +59,7 @@ a {
 
 .content {
   max-width: 650px;
-  margin-left: 110px;
+  margin-left: 125px;
   margin-right: 20px;
   margin-bottom: 50px; }
   .content h1 {
@@ -102,10 +102,13 @@ a {
     padding-bottom: 5px;
     margin-bottom: 10px; }
   .content p {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 0;
     margin-bottom: 1.2em;
-    line-height: 1.7em; }
+    line-height: 1.7em; 
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
+    color: #333;
+    }
     .content p code {
       font-size: 12px;
       background-color: #eeeeee;
