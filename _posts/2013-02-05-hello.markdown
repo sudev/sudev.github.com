@@ -4,9 +4,10 @@ title: Welcome to Jekyll
 category: posts
 ---
 
-I always wanted very clean and simple interface for my blog, I use to blog 
-using [blogger](http://www.sudevshares.blogspot.com) with an ugly theme now that some nice guy [zachholman.com][zh]
-open sourced this theme with Jekyll I'm kinda more than satisfied. 
+I always wanted very clean and simple interface for my blog, I use to blog using [blogger](http://www.sudevshares.blogspot.com) with an ugly theme now that some nice guy [zachholman.com][http://zachholman.com] open sourced this theme with Jekyll I'm kinda more than satisfied.
+
+If you havent used Jkeyll yet I recommend you to use it along with github pages.
+
 
 
 
