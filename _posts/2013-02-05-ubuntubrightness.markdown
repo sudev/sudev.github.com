@@ -10,26 +10,26 @@ Tested in Intel i7 laptop with Nvidia Graphics Card, this idea will work only if
 
 To know your systems current brightness level.
 
-```bash
+```
 cat /sys/class/backlight/acpi_video0/brightness
 ```
 
 Change brightness by changing the value 
 
-```bash
+```
 echo 0 > /sys/class/backlight/acpi_video0/brightness
 ```
 
 To permanently set the brightness you can use the rc.loacal script file to change brightness which is executed at each reboot
 
-```bash
+```
 sudo gedit /etc/rc.local
 ```
 
 
 add the following line above "exit 0" seen at the bottom of the document 
 
-```bash
+```
 echo 0 > /sys/class/backlight/acpi_video0/brightness
 ```
 
