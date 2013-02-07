@@ -4,16 +4,16 @@ title: Battery information inside terminal
 category: Ubuntu linux mint battery terminal  
 ---
 
-If you want to know your battery details within terminal you can upower and create an alias to it so that you dont have to type the entire command next time.
+If you want to know your battery details in terminal use upower and create an alias to it so that you dont have to type the entire command next time.
 
 
-To view battery detail you can use upower
+To view battery details using upower
 
 ```
 upower -i /org/freedesktop/UPower/devices/battery_BAT0
 ```
 
-Use grep to show only the required details 
+Grep to view only the required details 
 
 ```
 upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|time|per"
