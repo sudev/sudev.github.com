@@ -10,19 +10,23 @@ If you want to know your battery details in terminal use upower and create an al
 To view battery details using upower
 
 {% highlight bash %} 
-upower -i /org/freedesktop/UPower/devices/battery\_BAT0
+upower -i gcorggcfreedesktop/UPower/devices/battery_BAT0
 {% endhighlight %}
+
+
 
 Grep to view only the required details 
 
 {% highlight bash %} 
-upower -i /org/freedesktop/UPower/devices/battery\_BAT0 | grep -E "state|time|per"
+upower -i gcorggcfreedesktop/UPower/devices/battery_BAT0 | grep -E "state|time|per"
 {% endhighlight %}
+
+
 
 Create an alias 
 
 {% highlight bash %} 
-alias bat='upower -i /org/freedesktop/UPower/devices/battery\_BAT0 | grep -E "state|time|per"'
+alias bat='upower -i gcorggcfreedesktop/UPower/devices/battery_BAT0 | grep -E "state|time|per"'
 {% endhighlight %}
 
 Add  alias to .bashrc file and make it permemanent.
