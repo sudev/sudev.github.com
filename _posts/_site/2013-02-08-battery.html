@@ -1,0 +1,15 @@
+<p>If you want to know your battery details in terminal use upower and create an alias to it so that you dont have to type the entire command next time.</p>
+
+<p>To view battery details using upower</p>
+<div>
+  <pre><code class='bash'>upower -i upower -i /org/freedesktop/UPower/devices/battery_BAT0</code></pre>
+</div>
+<p>Grep to view only the required details</p>
+<div>
+  <pre><code class='bash'>upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E &quot;state|time|per&quot;</code></pre>
+</div>
+<p>Create an alias</p>
+<div>
+  <pre><code class='bash'>alias bat='upower -i upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E &quot;state|time|per&quot;'</code></pre>
+</div>
+<p>Add alias to .bashrc file and make it permemanent.</p>
