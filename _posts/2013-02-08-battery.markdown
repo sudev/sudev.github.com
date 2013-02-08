@@ -25,5 +25,9 @@ Create an alias
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|time|per"'
 ```
 
+{% highlight bash %} 
+
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|time|per"'
+{% endhighlight %}
 Add  alias to .bashrc file and make it permemanent.
 
