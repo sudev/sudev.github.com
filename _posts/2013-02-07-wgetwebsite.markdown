@@ -11,16 +11,18 @@ wget -mkpb some-website-url
 {% endhighlight %}
 <p>
 -m  mirrors the entire website
+</p>
 
-
+<p>
 -k  converts all links to suitable web viewing.
+</p>
 
-
+<p>
 -p  downloads all required files like that of the css, js ...
+</p>
 
-
+<p>
 -b  wget will run in background 
-
 </p>
 ---
 
