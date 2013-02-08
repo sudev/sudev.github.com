@@ -4,7 +4,7 @@ title: Permanently adjust screen brightness in Ubuntu 12.04 / Linux Mint 13
 category: posts
 ---
 
-This tutorial will help you to adjust the screen brightness in Ubuntu 12.04 / Linux Mint 13 during each boot automatically.
+This is how I fixed to  adjust the screen brightness in Ubuntu 12.04 / Linux Mint 13 during each boot automatically.
 
 Tested in Intel i7 laptop with Nvidia Graphics Card, this idea will work only if you have a file named brightness in /sys/class/backlight/acpi_video0
 
