@@ -50,7 +50,7 @@ Now you can easily download fedora updates from NITC Fedora Local Mirror.
 
 Reference: 
 
-http://docs.fedoraproject.org/en-US/Fedora/16/html/System_Administrators_Guide/sec-Managing_Yum_Repositories.html
+[Fedora docs](http://docs.fedoraproject.org/en-US/Fedora/16/html/System_Administrators_Guide/sec-Managing_Yum_Repositories.html)
 
 
 ---
