@@ -6,9 +6,9 @@ category: posts
 
 This will help you to configure your system to download packages from NITC fosscell fedora mirror.
 
-Use the following command to create a file inside the folder /etc/yum.repos.d
+Login as root in your system and use the following command to create a file inside the folder /etc/yum.repos.d
 {% highlight bash %}
-sudo touch /etc/yum.repos.d/fosscellfedora
+touch /etc/yum.repos.d/fosscellfedora
 {% endhighlight %}
 
 Copy and paste the folowing code into the created file using your favourite editor.
@@ -48,8 +48,7 @@ sudo yum install update
 
 Now you can easily download fedora updates from NITC Fedora Local Mirror. 
 
-Reference: 
-
+Reference:
 [Fedora docs](http://docs.fedoraproject.org/en-US/Fedora/16/html/System_Administrators_Guide/sec-Managing_Yum_Repositories.html)
 
 
