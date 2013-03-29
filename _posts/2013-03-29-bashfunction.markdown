@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Useful Bashrc Functions  
+title: Useful bashrc functions  
 category: posts
 ---
 
 
 I'm going to share some of my bashrc functions which saves me a lot of time.
 
-\: Killer \:
+::: Killer :::
 
 This function helps you find a process using a keyword, you don't have to use ps aux along with grep and then kill the process by entering the pid instead use this function give it a keyword and will it help you in killing a process.
 
