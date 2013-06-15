@@ -2,6 +2,7 @@
 layout: post
 title: Permanently adjust screen brightness in Ubuntu 12.04 / Linux Mint 13 
 category: posts
+comments: true
 ---
 
 This is how I fixed to  adjust the screen brightness in Ubuntu 12.04 / Linux Mint 13 during each boot automatically.

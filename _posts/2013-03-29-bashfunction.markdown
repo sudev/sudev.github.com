@@ -2,6 +2,7 @@
 layout: post
 title: Useful bashrc functions  
 category: posts
+comments: true
 ---
 
 

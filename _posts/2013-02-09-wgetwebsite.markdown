@@ -2,6 +2,7 @@
 layout: post
 title: Offline mirror a website using wget 
 category: posts
+comments: true
 ---
 
 Use the following wget command to mirror a website 

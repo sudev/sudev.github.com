@@ -2,6 +2,7 @@
 layout: post
 title: Configuring to Fedora 17 Local Mirror of NITC  
 category: posts
+comments: true
 ---
 
 This will help you to configure your system to download packages from NITC fosscell fedora mirror.
