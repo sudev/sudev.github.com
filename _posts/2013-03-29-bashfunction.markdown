@@ -30,8 +30,9 @@ fi
 {% endhighlight %}
 
 Copy paste the above code into your bashrc and source it.
+{
 
-
+Update : This is not so useful function anymore you may use in built pkill command to get the same result.
 
 ---
 
