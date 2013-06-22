@@ -30,7 +30,9 @@ fi
 {% endhighlight %}
 
 usage : killer chromium
+
 You will given a list of application which has a name chromium and proceed with a yes or no.
+
 [ Update  This is not so useful function anymore you may use in built pkill command to get the same result. ]
 
 ::: Search and cd combined :::
@@ -47,8 +49,8 @@ scd() {
 {% endhighlight %}
 
 usuage : scd Music
-Will take you to Music folder, regardless of your present working directory
 
+Will take you to Music folder, regardless of your present working directory
 
 Copy paste the above code into your bashrc and source it.
 
