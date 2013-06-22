@@ -29,10 +29,28 @@ fi
 
 {% endhighlight %}
 
-Copy paste the above code into your bashrc and source it.
-{
+usage : {highlight bash % } killer chromium {% endhighlight % }
+you will given a list of application which has a name chromium and proceed with a yes / no.
 
 Update : This is not so useful function anymore you may use in built pkill command to get the same result.
+
+::: Search and cd combined :::
+
+This function will help you to search and cd into a folder in a single step.
+
+{% highlight bash %}
+
+scd() {
+    pathe=$(find ~ -name $1 -type d | head -n 1 )
+    cd $pathe
+}
+{% endhighlight %}
+
+usuage : {% highlight bash %} scd Music {% endhighlight %}
+
+will take you to Music folder, regardless of your present working directory
+
+Copy paste the above code into your bashrc and source it.
 
 ---
 
