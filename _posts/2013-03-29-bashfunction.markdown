@@ -29,8 +29,8 @@ fi
 
 {% endhighlight %}
 
-usage : {highlight bash % } killer chromium {% endhighlight % }
-you will given a list of application which has a name chromium and proceed with a yes / no.
+usage : {% highlight bash %} killer chromium {% endhighlight %}
+you will given a list of application which has a name chromium and proceed with a yes or no.
 
 Update : This is not so useful function anymore you may use in built pkill command to get the same result.
 
@@ -46,7 +46,7 @@ scd() {
 }
 {% endhighlight %}
 
-usuage : {% highlight bash %} scd Music {% endhighlight %}
+usuage  {% highlight bash %} scd Music {% endhighlight %}
 
 will take you to Music folder, regardless of your present working directory
 
