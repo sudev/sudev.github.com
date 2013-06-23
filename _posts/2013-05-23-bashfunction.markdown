@@ -48,6 +48,19 @@ scd() {
 
 {% endhighlight %}
 
+Now you may be wondering the reason for me using the primitive style of saving result into a variable and then cd'ing into it.
+I tried using exec with find, but the exec expects a executable binary (something of the sort /bin/bash ) and cd is a shell bultin,which means you will have to leave the parent shell to cd into folder the desired folder and the one liner for the same will look something of this sort.
+
+{% highlight bash %}
+find ~ -name $1 -type d -exec bash -c "cd '{}'; exec bash" \;
+{% endhighlight %}
+
+Also note that you will taken into a new shell and changes that you make in the new shell will not be reflected back in the parent shell, and its a pain to do exit each and every shell you login.
+
+You can have a look at my [stackoverflow post](http://stackoverflow.com/questions/17248568/a-shell-script-to-find-and-cd-into-a-folder-taking-a-folder-name-as-argument-in) regarding the doubts that I had with this implementation.
+
+If you have any suggestion to improve the thing please let me know through a comment.
+
 usuage : scd Music
 
 Will take you to Music folder, regardless of your present working directory
