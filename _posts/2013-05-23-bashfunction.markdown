@@ -32,7 +32,6 @@ fi
 usage : killer chromium
 
 You will given a list of application which has a name chromium and proceed with a yes or no.
-
 [ Update  This is not so useful function anymore you may use in built pkill command to get the same result. ]
 
 ::: Search and cd combined :::
@@ -56,9 +55,7 @@ find ~ -name $1 -type d -exec bash -c "cd '{}'; exec bash" \;
 {% endhighlight %}
 
 Also note that you will taken into a new shell and changes that you make in the new shell will not be reflected back in the parent shell, and its a pain to do exit each and every shell you login.
-
 You can have a look at my [stackoverflow post](http://stackoverflow.com/questions/17248568/a-shell-script-to-find-and-cd-into-a-folder-taking-a-folder-name-as-argument-in) regarding the doubts that I had with this implementation.
-
 If you have any suggestion to improve the thing please let me know through a comment.
 
 usuage : scd Music
