@@ -41,7 +41,7 @@ This function will help you to search and cd into a folder in a single step.
 {% highlight bash %}
 
 scd() {
-    pathe=$(find ~ -name $1 -type d | head -n 1)
+    pathe=$(find ~ -name $1 -type d -print -quit | head -n 1)
     cd $pathe
 }
 
