@@ -8,7 +8,7 @@ comments: true
 
 I'm going to share some of my bashrc functions which saves me a lot of time.
 
->   ::: Killer :::
+### ::: Killer ::: ###
 
 
 This function helps you find a process using a keyword and to kill it, you don't have to use ps aux along with grep and then kill the process by entering the pid instead use this function give it a keyword and it will help you in killing a process.
@@ -35,7 +35,7 @@ usage : killer chromium
 You will given a list of application which has similar name chromium and proceed with a yes or no.
 [ Update  This is not so useful function anymore you may use in built pkill command to get the same result. ]
 
->   ::: Search and cd combined :::
+### ::: Search and cd combined ::: ###
 
 This function will help you to search and cd into a folder in a single step.
 
@@ -64,7 +64,7 @@ usuage : scd Music
 
 Will take you to Music folder, regardless of your present working directory
 
->   ::: Mkdir and cd into it in a single step :::
+### ::: Mkdir and cd into it in a single step ::: ###
 
 Usually we have to create a folder and then cd into it, atleast to me I had to do this very often.
 
