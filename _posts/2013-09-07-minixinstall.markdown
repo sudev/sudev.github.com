@@ -13,7 +13,7 @@ Enabling ssh in virtualBox
 
 Download Minix 3 from the official website
 
-[]http://www.minix3.org/download/(http://www.minix3.org/download/)
+[http://www.minix3.org/download/](http://www.minix3.org/download/)
 
 Note: I used the Minix version 3.2.1(265 MB), Minix 3.1 versions have some issues with VirtualBox installation so please use a version > 3.2 .
 
