@@ -13,7 +13,7 @@ Enabling ssh in virtualBox
 
 Download Minix 3 from the official website
 
-http://www.minix3.org/download/
+[]http://www.minix3.org/download/(http://www.minix3.org/download/)
 
 Note: I used the Minix version 3.2.1(265 MB), Minix 3.1 versions have some issues with VirtualBox installation so please use a version > 3.2 .
 
@@ -88,15 +88,15 @@ You have now reached the point of no return. You will be asked if you want to co
 
 and then ENTER. To exit the setup script without changing the partition table, hit CTRL-C.
 
-##Reinstall choice
+###Reinstall choice
 
 If you chose an existing MINIX partition, in this step you will be offered a choice between a Full install, which erases everything in the partition, and a Reinstall, which does not affect your existing /home partition. This design means that you can put your personal files on /home and reinstall a newer version of MINIX when it is available without losing your personal files.
 
-##Select the size of /home
+###Select the size of /home
 
 The selected partition will be divided into three subpartitions: root, /usr, and /home. The latter is for your own personal files. Specify how much of the partition should be set aside for your files. You will be asked to confirm your choice.
 
-##Select a block size
+###Select a block size
 
 Disk block sizes of 1-KB, 2-KB, 4-KB, and 8-KB are supported, but to use a size larger than 4-KB you have to change a constant and recompile the system. Use the default (4 KB) here.
 
@@ -160,7 +160,7 @@ Now select the iso.
 
 To install openssh type,
         
-    pkgin\_cd install openssh
+    pkgin_cd install openssh
 
 Make sure that ssh daemon is running type,
 
@@ -181,3 +181,6 @@ To ssh into minix from host machine type(in host machine)
     ssh -l root -p 2222 localhost 
 
 Enter your minix password(if didnt set any just press ENTER).
+
+Links:
+[http://wiki.minix3.org/en/UsersGuide](http://wiki.minix3.org/en/UsersGuide)
