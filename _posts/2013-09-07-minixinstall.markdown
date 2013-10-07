@@ -147,7 +147,7 @@ Install openssh type,
 
     pkgin install openssh
 
-Installing from the CD (In case you are not able to install with pkgin, you failed to do the above steps)
+###Installing from the CD (In case you are not able to install openssh with pkgin, you failed in doing the above steps)
 
 Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.
 To install packages from the CD, you can use pkgin\_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.
@@ -162,11 +162,11 @@ To install openssh type,
         
     pkgin_cd install openssh
 
-Make sure that ssh daemon is running type,
+###Make sure that ssh daemon is running type,
 
     ps ax | grep ssh
 
-Now come back to Linux Terminal(host terminal)
+###Now come back to Linux Terminal(host terminal)
 
 Check if ssh is running in your host machine type,
     
@@ -174,7 +174,7 @@ Check if ssh is running in your host machine type,
 
 if not please install and enable ssh 
 
-    sudo apt-get install openssh && sudo start ssh
+    sudo apt-get install openssh-server && sudo start ssh
 
 To ssh into minix from host machine type(in host machine)
 
