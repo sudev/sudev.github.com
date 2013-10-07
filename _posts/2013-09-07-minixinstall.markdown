@@ -13,7 +13,7 @@ Enabling ssh in virtualBox
 
 Download Minix 3 from the official website
 
-[http://www.minix3.org/download/](http://www.minix3.org/download/)
+[Official download page](http://www.minix3.org/download/)
 
 Note: I used the Minix version 3.2.1(265 MB), Minix 3.1 versions have some issues with VirtualBox installation so please use a version > 3.2 .
 
@@ -123,7 +123,7 @@ Enabling ssh in minix and host is good option to do some development over the gu
 
 To enable ssh in the guest minix operating system you have to install openssh server in MINIX.
 
-###Making VirtualBox to listen to a particular port (Port forwarding) 
+###Making VirtualBox to listen for a particular port (Port forwarding) 
 
 We will have to change some settings in virtualbox using VBoxManage 
 
@@ -183,4 +183,4 @@ To ssh into minix from host machine type(in host machine)
 Enter your minix password(if didnt set any just press ENTER).
 
 Links:
-[http://wiki.minix3.org/en/UsersGuide](http://wiki.minix3.org/en/UsersGuide)
+[Users Guide](http://wiki.minix3.org/en/UsersGuide)
