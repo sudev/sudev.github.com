@@ -150,9 +150,9 @@ Install openssh type,
 Installing from the CD (In case you are not able to install with pkgin, you failed to do the above steps)
 
 Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.
-To install packages from the CD, you can use pkgin_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.
+To install packages from the CD, you can use pkgin\_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.
 
-To begin using pkgin_cd:
+To begin using pkgin\_cd:
 
 While your virtual image is running you can attach your iso disk to minix.To do so please click on the Devices menu that you see in the VitualBox window.
 
@@ -160,7 +160,7 @@ Now select the iso.
 
 To install openssh type,
         
-    pkgin_cd install openssh
+    pkgin\_cd install openssh
 
 Make sure that ssh daemon is running type,
 
