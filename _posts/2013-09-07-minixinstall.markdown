@@ -8,6 +8,7 @@ comments: true
 This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development.
 Enabling ssh in virtualBox
 
+Teststed with Ubuntu 13.04
 
 ##Downloading Minix 3
 
@@ -131,7 +132,7 @@ In you host operating systems terminal (Linux terminal) type,
 
     VBoxManage modifyvm "minix" --natpf1 "guestssh,tcp,,2222,,22"
 
-It is important that you chose a port number larger than 1024 for host since administrative rights are required by virtualbox to listen for ports below 1024 (here we choose 2222). Also please dont use 22 for host since it will only end up in looping back into your own system.
+It is important that you chose a port number larger than 1024 for host since administrative right is required by virtualbox to listen for ports below 1024 (here we choose 2222). Also please dont use port 22 for host since it will only end up in loop back.
 
 ###Installing openssh in MINIX
 
@@ -147,7 +148,7 @@ Install openssh type,
 
     pkgin install openssh
 
-###Installing from the CD (In case you are not able to install openssh with pkgin, ftp error/no internet etc )
+###Installing from the CD (Only if you were not able to install openssh with pkgin, ftp error/no internet etc)
 
 Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.
 To install packages from the CD, you can use pkgin\_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.
@@ -166,7 +167,7 @@ To install openssh type,
 
     ps -ax | grep ssh
 
-###Now come back to Linux Terminal( host terminal)
+###Now come back to Linux Terminal (host terminal)
 
 Check if ssh is running in your host machine type,
     
@@ -174,13 +175,21 @@ Check if ssh is running in your host machine type,
 
 if not please install and enable ssh 
 
-    sudo apt-get install openssh-server && sudo start ssh
+Ubuntu / Debian users
+    
+    sudo apt-get install openssh-server 
+    sudo start ssh
 
-To ssh into minix from host machine type(in host machine)
+Arch Linux users
+    
+    sudo pacman -S openssh-server
+    sudo systemctl start sshd   
+
+To ssh into minix from host machine type,
 
     ssh -l root -p 2222 localhost 
 
-Enter your minix password(if didnt set any just press ENTER).
+Enter your minix password(In case you didnt set any password just press ENTER).
 
 
 Links:
