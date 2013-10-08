@@ -180,13 +180,13 @@ a {
       line-height: 1.4em;
         }
       .content .listing a:hover {
-        text-decoration: underline; }
+        text-decoration: underline;}
   .content .meta {
     margin: 30px 0;
     padding: 10px 0;
     font-family: Helvetica, sans-serif; }
     .content .meta p {
-      line-height: 1.4;
+      line-height: 1.6;
       font-size: 14px;
       margin-top: 0px; }
     .content .meta img {

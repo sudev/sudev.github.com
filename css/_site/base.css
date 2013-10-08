@@ -58,8 +58,8 @@ a {
       margin-bottom: 7px; }
 
 .content {
-  max-width: 650px;
-  margin-left: 110px;
+  max-width: 660px;
+  margin-left: 125px;
   margin-right: 20px;
   margin-bottom: 50px; }
   .content h1 {
@@ -102,11 +102,12 @@ a {
     padding-bottom: 5px;
     margin-bottom: 10px; }
   .content p {
-    font-size: 14px;
+    font-size: 15px;
     margin-top: 0;
     margin-bottom: 1.2em;
-    line-height: 20px; 
-    font-family: Tahoma, Arial, Verdana;
+    line-height: 1.5em; 
+    font-family: Ubuntu, Arial, "libra sans", sans-serif;
+    color: #333;
     }
     .content p code {
       font-size: 12px;
@@ -169,11 +170,17 @@ a {
       color: #777777;
       border-bottom: 1px solid #eee; }
     .content .listing li span {
-      float: right; }
+        font-family: Ubuntu;
+        font-size: 11px;
+        float: right;
+        }
     .content .listing a {
-      text-decoration: none; }
+      text-decoration: none;
+      font-family: Ubuntu;
+      line-height: 1.4em;
+        }
       .content .listing a:hover {
-        text-decoration: underline; }
+        #text-decoration: underline; }
   .content .meta {
     margin: 30px 0;
     padding: 10px 0;
