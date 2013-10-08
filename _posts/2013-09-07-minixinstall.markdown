@@ -147,7 +147,7 @@ Install openssh type,
 
     pkgin install openssh
 
-###Installing from the CD (In case you are not able to install openssh with pkgin, you failed in doing the above steps)
+###Installing from the CD (In case you are not able to install openssh with pkgin, ftp error/no internet etc )
 
 Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.
 To install packages from the CD, you can use pkgin\_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.
@@ -166,7 +166,7 @@ To install openssh type,
 
     ps -ax | grep ssh
 
-###Now come back to Linux Terminal(host terminal)
+###Now come back to Linux Terminal( host terminal)
 
 Check if ssh is running in your host machine type,
     
