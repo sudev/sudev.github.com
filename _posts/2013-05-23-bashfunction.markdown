@@ -42,8 +42,8 @@ This function will help you to search and cd into a folder in a single step.
 {% highlight bash %}
 
 scd() {
-    pathe=$(find ~ -name $1 -type d -print -quit | head -n 1)
-    cd $pathe
+    pathe=$(find ~ -name "${1}" -type d -print -quit | head -n 1)
+    cd "${pathe}"
 }
 
 {% endhighlight %}
@@ -70,8 +70,8 @@ Usually we have to create a folder and then cd into it, atleast to me I had to d
 
 {% highlight bash %}
 mkcd() {
-    mkdir $1
-    cd $1
+    mkdir "${1}"
+    cd "${1}"
 }
 
 {% endhighlight %}
