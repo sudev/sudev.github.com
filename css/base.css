@@ -170,9 +170,15 @@ a {
       color: #777777;
       border-bottom: 1px solid #eee; }
     .content .listing li span {
-      float: right; }
+        font-family: Ubuntu;
+        font-size: 11px;
+        float: right;
+        }
     .content .listing a {
-      text-decoration: none; }
+      text-decoration: none;
+      font-family: Ubuntu;
+      line-height: 1.4em;
+        }
       .content .listing a:hover {
         text-decoration: underline; }
   .content .meta {
