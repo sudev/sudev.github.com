@@ -164,7 +164,7 @@ To install openssh type,
 
 ###Make sure that ssh daemon is running type,
 
-    ps ax | grep ssh
+    ps -ax | grep ssh
 
 ###Now come back to Linux Terminal(host terminal)
 
@@ -181,6 +181,7 @@ To ssh into minix from host machine type(in host machine)
     ssh -l root -p 2222 localhost 
 
 Enter your minix password(if didnt set any just press ENTER).
+
 
 Links:
 
