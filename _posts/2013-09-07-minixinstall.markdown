@@ -183,4 +183,5 @@ To ssh into minix from host machine type(in host machine)
 Enter your minix password(if didnt set any just press ENTER).
 
 Links:
+
 [Users Guide](http://wiki.minix3.org/en/UsersGuide)
