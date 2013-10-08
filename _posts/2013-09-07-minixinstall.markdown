@@ -5,9 +5,7 @@ category: Minix VirtualBox
 comments: true
 ---
 
-This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development.
-Enabling ssh in virtualBox
-
+This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh between minix and host Linux machine.
 Teststed with Ubuntu 13.04
 
 ##Downloading Minix 3
@@ -22,13 +20,13 @@ Note: I used the Minix version 3.2.1(265 MB), Minix 3.1 versions have some issue
 
 Make sure you have a VirtualBox install in your system.
 
-Open VirtualBox -> Click on the New button seen at the top left.
+Open VirtualBox -> Click on the New button(top left).
 
-Select the type and version as others, name the virtualbox image as minix.
+Select the type and version as "other", name the virtualbox image "minix".
 
-Click next, allot a RAM ( 512 MB) 
+Click next, allot a RAM ( 512 MB).
 
-Create a virtual hard disk ( preferably VDI, dynamic size, 1 GB)
+Create a virtual hard disk ( preferably VDI, dynamic size, 1 GB).
 
 
 ##Installing Minix 3 
@@ -42,9 +40,9 @@ Browse, select the .iso Minix image we downloaded earlier and press OK
 
 Now boot the newly created virtual Image minix by clicking on the start button.
 
-Select the option 1 for installation and press enter.
+Select Option 1 for installation and press ENTER.
 
-When the login prompt appears, login as root. Press Enter when prompted for a password.
+When the login prompt appears, login as root, press Enter when prompted for a password.
 
 To start installation type,
     
@@ -128,15 +126,17 @@ To enable ssh in the guest minix operating system you have to install openssh se
 
 We will have to change some settings in virtualbox using VBoxManage 
 
+It is important that you chose a port number larger than 1024 for host since administrative right is required by virtualbox to listen for ports below 1024 (here we choose 2222). Also note that using port 22 will only result in looping back into your own system.
+
 In you host operating systems terminal (Linux terminal) type,
 
     VBoxManage modifyvm "minix" --natpf1 "guestssh,tcp,,2222,,22"
 
-It is important that you chose a port number larger than 1024 for host since administrative right is required by virtualbox to listen for ports below 1024 (here we choose 2222). Also please dont use port 22 for host since it will only end up in loop back.
-
 ###Installing openssh in MINIX
 
 Restart your virtualBox application. Boot into minix and install openssh.
+
+**Method 1, using pkgin and internet ftp access required**
 
 You can install openssh using pkgin 
 
@@ -148,32 +148,34 @@ Install openssh type,
 
     pkgin install openssh
 
-###Installing from the CD (Only if you were not able to install openssh with pkgin, ftp error/no internet etc)
+**Method 2, using installation iso as a source (Internet not required)**
 
 Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.
 To install packages from the CD, you can use pkgin\_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.
 
-To begin using pkgin\_cd:
-
-While your virtual image is running you can attach your iso disk to minix.To do so please click on the Devices menu that you see in the VitualBox window.
-
-Now select the iso.
+While your virtual image is running you can attach your iso disk to minix.To do so please click on the Devices menu that you see in the VitualBox window, select the minix installation iso and load it.
 
 To install openssh type,
         
     pkgin_cd install openssh
 
-###Make sure that ssh daemon is running type,
+**Starting SSh daemon**
+
+When you have successfully installed openssh start the ssh daemon in minix type(start ssh will create keys for you),
+
+    sh /usr/pkg/etc/rc.d/sshd start
+
+Make sure that ssh daemon is running in minix type,
 
     ps -ax | grep ssh
 
 ###Now come back to Linux Terminal (host terminal)
 
-Check if ssh is running in your host machine type,
+Check if ssh is running in your host machine,
     
     ps aux | grep ssh
 
-if not please install and enable ssh 
+if not please install and enable ssh(depends on your distro)
 
 Ubuntu / Debian users
     
