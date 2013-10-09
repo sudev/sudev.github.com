@@ -6,6 +6,7 @@ comments: true
 ---
 
 This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh between minix and host Linux machine.
+
 Teststed with Ubuntu 13.04
 
 ##Downloading Minix 3
@@ -14,7 +15,7 @@ Download Minix 3 from the official website
 
 [Official download page](http://www.minix3.org/download/)
 
-Note: I used the Minix version 3.2.1(265 MB), Minix 3.1 versions have some issues with VirtualBox installation so please use a version > 3.2 .
+Note: I used the Minix version 3.2.1(~256 MB), Minix 3.1 versions have some issues with VirtualBox installation so please use a version > 3.2 .
 
 ##Creating a new VirtualBox Image
 
@@ -31,7 +32,7 @@ Create a virtual hard disk ( preferably VDI, dynamic size, 1 GB).
 
 ##Installing Minix 3 
 
-Assuming you have downloaded and decompressed a MINIX 3 ISO image from the download page, you can mount the ISO file:
+Assuming you have downloaded and decompressed a MINIX 3 ISO image, attach the ISO file to VirtualBox:
 
 In VirtualBox, select minix on the list on the left.
 In the menu on the right, press CD/DVD-ROM.
@@ -106,7 +107,7 @@ Files will be automatically copied from the CD-ROM to the hard disk. Every file 
 ###Select your Ethernet chip
 
 You will now be asked which (if any) of the available Ethernet drivers you want installed. Network settings can be changed after installation. 
-Since we are using VirtualBox "AMD LANCE" (option 8) as your Ethernet driver, VirtualBox is capable of emulating the AMD LANCE and it has nothing to do with your computers network card.
+Since we are using VirtualBox select "AMD LANCE" (option 8) as your Ethernet driver, VirtualBox is capable of emulating AMD LANCE and it has nothing to do with your computers network card.
 
 ###Restart
 
@@ -124,13 +125,16 @@ To enable ssh in the guest minix operating system you have to install openssh se
 
 ###Making VirtualBox to listen for a particular port (Port forwarding) 
 
-We will have to change some settings in virtualbox using VBoxManage 
+We will have to change some settings in virtualbox using VBoxManage(a commandline tool to tweak virtualbox settings) 
 
 It is important that you chose a port number larger than 1024 for host since administrative right is required by virtualbox to listen for ports below 1024 (here we choose 2222). Also note that using port 22 will only result in looping back into your own system.
 
 In you host operating systems terminal (Linux terminal) type,
 
     VBoxManage modifyvm "minix" --natpf1 "guestssh,tcp,,2222,,22"
+
+"guestssh" is just a name for the port forwarding rule.
+"minix" - name of the virtualbox image 
 
 ###Installing openssh in MINIX
 
@@ -153,7 +157,7 @@ Install openssh type,
 Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.
 To install packages from the CD, you can use pkgin\_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.
 
-While your virtual image is running you can attach your iso disk to minix.To do so please click on the Devices menu that you see in the VitualBox window, select the minix installation iso and load it.
+While your virtual image is running you can attach your iso disk to minix.To do so please click on the Devices menu that you see in the VitualBox window, select the minix installation iso and load it(this disk will be used as source for the software package).
 
 To install openssh type,
         
@@ -161,7 +165,7 @@ To install openssh type,
 
 **Starting SSh daemon**
 
-When you have successfully installed openssh start the ssh daemon in minix type(start ssh will create keys for you),
+When you have successfully installed openssh start the ssh daemon in minix type(starting ssh will create your keys),
 
     sh /usr/pkg/etc/rc.d/sshd start
 
