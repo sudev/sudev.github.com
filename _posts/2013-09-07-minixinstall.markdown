@@ -123,6 +123,7 @@ Enabling ssh in minix and host is good option to do some development over the gu
 
 To enable ssh in the guest minix operating system you have to install openssh server in MINIX.
 
+
 ###Making VirtualBox to listen for a particular port (Port forwarding) 
 
 We will have to change some settings in virtualbox using VBoxManage(a commandline tool to tweak virtualbox settings) 
@@ -135,6 +136,13 @@ In you host operating systems terminal (Linux terminal) type,
 
 "guestssh" is just a name for the port forwarding rule.
 "minix" - name of the virtualbox image 
+
+###Set a password for root account in Minix
+
+In minix machine you will have to set a password for root user.A password for the root user can be set using the command 
+    
+    passwd
+Now enter a desired password for the root account
 
 ###Installing openssh in MINIX
 
@@ -195,7 +203,7 @@ To ssh into minix from host machine type,
 
     ssh -l root -p 2222 localhost 
 
-Enter your minix password(In case you didnt set any password just press ENTER).
+Enter your minix password.
 
 
 Links:
