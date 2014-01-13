@@ -77,6 +77,46 @@ mkcd() {
 
 {% endhighlight %}
 
+### A dictionary 
+
+Due to my poor vocabulary I always had to look for the meaning of English words from dictionary.com. So i wrote a bash script to fetch meanings from dictionary.com within my terminal.
+
+{% highlight bash %}
+dict() {
+
+#Creating a temp folder 
+dir=~/.dict
+
+#Check for the existence if not create one
+[[ -d $dir ]] || mkdir $dir
+
+
+#download respective file from dictionary dot com 
+# -q => do it quietly ie nothing @ screen 
+# -O save it as mean
+wget -q -O $dir/mean wget http://dictionary.reference.com/browse/$1
+
+#Please DONT hardcode the value, give it to variable and then use it 
+file=$dir/mean
+
+#greping out result
+m=$(cat $file | grep description | grep -Po 'content=.*.*See more' | grep -Po '\,.*.\.')
+
+#saving the error code 
+k=$(echo $?)
+
+#echoing
+echo "Meaning of the word "$1" is"$m
+
+#checks if the word was actually available else throws an error
+if [[ $k -gt 0 ]]; 
+then 
+    echo ".........oops, cant find word "$1;
+    fi
+     
+}
+
+{% endhighlight %}
 
 ---
 [jekyll]: https://github.com/mojombo/jekyll
