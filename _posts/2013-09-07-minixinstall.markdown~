@@ -3,7 +3,6 @@ layout: post
 title: Installing Minix 3 using VirtualBox in Linux 
 category: Minix VirtualBox
 comments: true
-tags: [Sudev Ambadi, Sudev, Minix 3 install,minix 3 with ssh, minix 3, virtualbox, ssh, without internet, installing packages, minix 3 in linux, linux, virtual machine  ]
 ---
 
 This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh between minix and host Linux machine.

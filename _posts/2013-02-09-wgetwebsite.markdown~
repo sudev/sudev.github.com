@@ -3,7 +3,6 @@ layout: post
 title: Offline mirror a website using wget 
 category: posts
 comments: true
-tags: [Sudev Ambadi, Sudev, wget to mirror website, mirror website, wget, recursice downloads, wget download entire website  ]
 ---
 
 Use the following wget command to mirror a website 
