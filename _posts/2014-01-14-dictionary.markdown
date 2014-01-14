@@ -6,10 +6,9 @@ comments: true
 tags: [Sudev Ambadi, Sudev,bash dictionary, dictionary, linux, terminal, dictionary script, script to find meaning, dictionary script, bash script   ]
 ---
 
-### A bash script dictionary 
-
 Due to my poor vocabulary I always had to look for the meaning of English words from dictionary.com. So I wrote a bash script to fetch meanings from dictionary.com within my terminal.
 
+### A bash script dictionary 
 {% highlight bash %}
 dict() {
 
@@ -47,7 +46,7 @@ then
 
 {% endhighlight %}
 
-##Now a function to Pronounce a word
+### A function to pronounce a word
 
 {% highlight bash %}
 pron(){
@@ -85,7 +84,7 @@ do
     #mplayer is one of the default audio player in linux
     mplayer $dir/$1.ogg
                     
-    echo "do you want me to play it again [y] / [n] ?
+    echo "do you want me to play it again [y] / [n] ?"
     #read user input
     read ans
 done
