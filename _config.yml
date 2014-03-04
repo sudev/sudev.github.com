@@ -9,7 +9,9 @@ url:             http://sudev.github.io
 owner:
   name:           Sudev Ambadi
   avatar:         dp.jpg
-  bio:            "I'm a computer enthusiast interested in exploring Free and Open software, operating systems, cloud computing, programming and cricket. Currently doing my B Tech in Computer science and Engineering at National Institute of Technology, Calicut."
+#  bio:            "Free and Open software || <br /> operating systems ||   <br /> cloud computing  ||  <br /> programming ||  <br /> cricket ||  <br /> traveller ||  <br /> careless"
+# bio:      "<strong>I &#9829;</strong> <br /> &#8594; Free and Open software <br /> &#8674; operating systems, cloud computing, programming and cricket. Currently doing my B Tech in Computer science and Engineering at National Institute of Technology, Calicut."
+  bio:      "I'm a computer enthusiast interested in exploring Free and Open software, operating systems, cloud computing, programming and cricket. Currently doing my B Tech in Computer science and Engineering at National Institute of Technology, Calicut."
   email:    sudevdev@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter:  sudev        
