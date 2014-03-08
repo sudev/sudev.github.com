@@ -6,8 +6,7 @@ comments: true
 tags: [Sudev Ambadi, Sudev, Fedora Nitc mirror, fosscell mirror, nitc fedora mirror configuration, fedora mirror configuration, nit calicut]
 ---
 
-This will help you to configure your system to download packages from NITC fosscell fedora mirror.
-
+This will help you to configure your system to download packages from NITC fosscell fedora mirror.   
 Login as root in your system and use the following command to create a file inside the folder /etc/yum.repos.d
 {% highlight bash %}
 touch /etc/yum.repos.d/fosscellfedora
@@ -37,19 +36,18 @@ enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
 
-
 {% endhighlight %}
 
 Save the file.
-
-Update (Optional)
+<br />   
+Update 
 
 {% highlight bash %}
 sudo yum install update
 {% endhighlight %}
 
 Now you can easily download fedora updates from NITC Fedora Local Mirror. 
-
+<br />   
 Reference:
 [Fedora docs](http://docs.fedoraproject.org/en-US/Fedora/16/html/System_Administrators_Guide/sec-Managing_Yum_Repositories.html)
 

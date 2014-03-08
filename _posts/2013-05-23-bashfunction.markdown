@@ -31,9 +31,8 @@ fi
 
 {% endhighlight %}
 
-usage : killer chromium
-
-You will given a list of application which has similar name chromium and proceed with a yes or no.
+usage : killer chromium     
+You will given a list of application which has similar name chromium and proceed with a yes or no.    
 [ Update  This is not so useful function anymore you may use in built pkill command to get the same result. ]
 
 ###  Search and cd combined  
@@ -50,19 +49,17 @@ scd() {
 {% endhighlight %}
 
 Now you may be wondering the reason for using the primitive style of saving result into a variable and then cd'ing into it.
-I tried using exec with find, but the exec expects a executable binary (something of the sort /bin/bash ) and cd is a shell bultin,which means you will have to leave the parent shell to cd into folder ( the desired folder ).A one liner for the same will look something of this sort.
+I tried using exec with find, but the exec expects a executable binary (something of the sort /bin/bash ) and cd is a shell bultin,which means you will have to leave the parent shell to cd into a folder ( the desired folder ).A one liner for the same will look something of this sort.
 
 {% highlight bash %}
 find ~ -name $1 -type d -exec bash -c "cd '{}'; exec bash" \;
 {% endhighlight %}
 
-Also note that you will taken into a new shell and changes that you make in the new shell will not be reflected back in the parent shell, and its a pain to exit each and every shell you create during the process.
-
-You can have a look at my [stackoverflow post](http://stackoverflow.com/questions/17248568/a-shell-script-to-find-and-cd-into-a-folder-taking-a-folder-name-as-argument-in) regarding the doubts that I had with this implementation.
+Also note that you will taken into a new shell and changes that you make in the new shell will not be reflected back in the parent shell, and its a pain to exit each and every shell you create during the process.    
+You can have a look at my [stackoverflow post](http://stackoverflow.com/questions/17248568/a-shell-script-to-find-and-cd-into-a-folder-taking-a-folder-name-as-argument-in) regarding the doubts that I had with this implementation.    
 If you have any suggestion to improve the thing please let me know through a comment.
-
-usuage : scd Music
-
+<br />  
+usuage : scd Music    
 Will take you to Music folder, regardless of your present working directory
 
 ###  Mkdir and cd into it in a single step  
@@ -79,7 +76,7 @@ mkcd() {
 
 ### A dictionary 
 
-Due to my poor vocabulary I always had to look for the meaning of English words from dictionary.com. So i wrote a bash script to fetch meanings from dictionary.com within my terminal.
+Due to my poor vocabulary I always had to look for the meaning of English words from dictionary.com. So to make things easier, I wrote a bash script to fetch meanings from dictionary.com within my terminal.
 
 {% highlight bash %}
 dict() {

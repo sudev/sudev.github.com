@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Permanently adjust screen brightness in Ubuntu 12.04 / Linux Mint 13 
+title: Permanently adjust screen brightness in Ubuntu / Linux Mint 
 category: posts
 tags: [Sudev Ambadi, Sudev,ubuntu brightness problem, permenantly set ubuntu brightness, ubuntu brightness reset error, Linux Mint]
 comments: true
 ---
 
-This is how I fixed to  adjust the screen brightness in Ubuntu 12.04 / Linux Mint 13 during each boot automatically.
-
-Tested in Intel i7 laptop with Nvidia Graphics Card, this idea will work only if you have a file named brightness in /sys/class/backlight/acpi_video0
-
+This is a fix to  adjust the screen brightness in Ubuntu / Linux Mint during each boot automatically.     
+This idea will work only if you have a file named brightness in the folder /sys/class/backlight/acpi_video0  
+<br />
 To know your systems current brightness level.
 
 {% highlight bash %}
