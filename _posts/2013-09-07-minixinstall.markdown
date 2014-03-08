@@ -6,45 +6,36 @@ comments: true
 tags: [Sudev Ambadi, Sudev, Minix 3 install,minix 3 with ssh, minix 3, virtualbox, ssh, without internet, installing packages, minix 3 in linux, linux, virtual machine  ]
 ---
 
-This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh between minix and host Linux machine.
+This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh connection between Minix and host Linux machine.
 
-Teststed with Ubuntu 13.04
+Teststed with Ubuntu 13.04, Arch Linux. 
 
 ##Downloading Minix 3
 
-Download Minix 3 from the official website
+Download Minix 3 from the official website.
 
-[Official download page](http://www.minix3.org/download/)
-
-Note: I used the Minix version 3.2.1(~256 MB), Minix 3.1 versions have some issues with VirtualBox installation so please use a version > 3.2 .
+[Official download page](http://www.minix3.org/download/)   
+Note: I used the Minix version 3.2.1 (~256 MB), Minix 3.1 versions have some issues with VirtualBox installation so please use a version > 3.2 .
 
 ##Creating a new VirtualBox Image
 
-Make sure you have a VirtualBox install in your system.
-
-Open VirtualBox -> Click on the New button(top left).
-
-Select the type and version as "other", name the virtualbox image "minix".
-
-Click next, allot a RAM ( 512 MB).
-
-Create a virtual hard disk ( preferably VDI, dynamic size, 1 GB).
+* Make sure you have a VirtualBox installed in your system.
+* Open VirtualBox -> Click on the New button(top left).
+* Select the type and version as "other", name the virtualbox image "minix".
+* Click next, allot a RAM ( 512 MB).
+* Create a virtual hard disk ( preferably VDI, dynamic size, 1 GB).
 
 
 ##Installing Minix 3 
 
-Assuming you have downloaded and decompressed a MINIX 3 ISO image, attach the ISO file to VirtualBox:
-
-In VirtualBox, select minix on the list on the left.
-In the menu on the right, press CD/DVD-ROM.
-In the next menu, tick Mount CD/DVD Drive, and select ISO Image File.
-Browse, select the .iso Minix image we downloaded earlier and press OK
-
-Now boot the newly created virtual Image minix by clicking on the start button.
-
-Select Option 1 for installation and press ENTER.
-
-When the login prompt appears, login as root, press Enter when prompted for a password.
+* Assuming you have downloaded and decompressed a MINIX 3 ISO image, attach the ISO file to VirtualBox:
+* In VirtualBox, select minix on the list on the left.
+* In the menu on the right, press CD/DVD-ROM.
+* In the next menu, tick Mount CD/DVD Drive, and select ISO Image File.
+* Browse, select the .iso Minix image we downloaded earlier and press OK
+* Now boot the newly created virtual Image minix by clicking on the start button.
+* Select Option 1 for installation and press ENTER.
+* When the login prompt appears, login as root, press Enter when prompted for a password.
 
 To start installation type,
     
@@ -62,8 +53,7 @@ You will first be asked if you are an expert in MINIX disk partitioning. If so, 
 
 ###Select a disk
 
-An IDE controller may have up to four disks. The setup script will now look for each one. Just ignore any error messages. When the drives are listed, select one. and confirm your choice.
-
+An IDE controller may have up to four disks. The setup script will now look for each one. Just ignore any error messages. When the drives are listed, select one. and confirm your choice.   
 If you have two hard disks and you decide to install MINIX to the second one and have trouble booting from it, see Installation Troubleshooting.
 
 ###Select a disk region
@@ -75,7 +65,6 @@ Select a partition to overwrite
 Delete a partition to free up space and merge with adjacent free space
 For choices (1) and (2), type the region number. For (3) type:
 
-
     delete
 
 then give the region number when asked. This region will be overwritten and its previous contents lost forever.
@@ -83,7 +72,6 @@ then give the region number when asked. This region will be overwritten and its 
 ###Confirm your choices
 
 You have now reached the point of no return. You will be asked if you want to continue. If you do, the data in the selected region will be lost forever. If you are sure, type:
-
 
     yes
 
@@ -120,60 +108,54 @@ You can now remove/unmount the iso image that we attached to virtual machine(so 
 
 ##How to enable SSh
 
-Enabling ssh in minix and host is good option to do some development over the guest minix operating system.
-
-To enable ssh in the guest minix operating system you have to install openssh server in MINIX.
-
+Enabling ssh in minix and host is good option to do some development over the guest minix operating system.    
+To enable ssh in the guest minix operating system you have to install openssh in MINIX and in your host machine.
 
 ###Making VirtualBox to listen for a particular port (Port forwarding) 
 
-We will have to change some settings in virtualbox using VBoxManage(a commandline tool to tweak virtualbox settings) 
-
+We will have to change some settings in virtualbox using VBoxManage(a commandline tool to tweak virtualbox settings)   
 It is important that you chose a port number larger than 1024 for host since administrative right is required by virtualbox to listen for ports below 1024 (here we choose 2222). Also note that using port 22 will only result in looping back into your own system.
-
+<br />    
 In you host operating systems terminal (Linux terminal) type,
 
     VBoxManage modifyvm "minix" --natpf1 "guestssh,tcp,,2222,,22"
 
-"guestssh" is just a name for the port forwarding rule.
-"minix" - name of the virtualbox image 
+"guestssh" is just a name for the port forwarding rule. "minix" - name of the virtualbox image 
 
 ###Set a password for root account in Minix
 
 In minix machine you will have to set a password for root user.A password for the root user can be set using the command 
     
-    passwd
+    passwd   
+
 Now enter a desired password for the root account
 
 ###Installing openssh in MINIX
 
 Restart your virtualBox application. Boot into minix and install openssh.
-
+<br />  
 **Method 1, using pkgin and internet ftp access required**
-
+<br />
 You can install openssh using pkgin 
-
+<br />
 Update pkgin type,
 
-    pkgin update 
-
+    pkgin update    
+    
 Install openssh type,
 
     pkgin install openssh
 
-**Method 2, using installation iso as a source (Internet not required)**
-
-Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.
-To install packages from the CD, you can use pkgin\_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.
-
+**Method 2, using installation iso as a source (Internet not required)**  
+Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.   
+To install packages from the CD, you can use pkgin\_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.   
 While your virtual image is running you can attach your iso disk to minix.To do so please click on the Devices menu that you see in the VitualBox window, select the minix installation iso and load it(this disk will be used as source for the software package).
-
+<br />  
 To install openssh type,
         
     pkgin_cd install openssh
 
-**Starting SSh daemon**
-
+**Starting SSh daemon**   
 When you have successfully installed openssh start the ssh daemon in minix type(starting ssh will create your keys),
 
     sh /usr/pkg/etc/rc.d/sshd start
@@ -188,8 +170,7 @@ Check if ssh is running in your host machine,
     
     ps aux | grep ssh
 
-if not please install and enable ssh(depends on your distro)
-
+If not please install and enable ssh(depends on your distro)   
 Ubuntu / Debian users
     
     sudo apt-get install openssh-server 
@@ -204,9 +185,7 @@ To ssh into minix from host machine type,
 
     ssh -l root -p 2222 localhost 
 
-Enter your minix password.
-
-
-Links:
-
+Enter your minix password.  
+<br /> 
+Links:   
 [Users Guide](http://wiki.minix3.org/en/UsersGuide)
