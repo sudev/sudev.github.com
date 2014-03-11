@@ -9,4 +9,4 @@ image:
   feature: texture-feature-01.jpg
 ---
 
-I'm a computer enthusiast interested in exploring Free and Open software, operating systems, cloud computing, <del>web designing</del>, <del>photoshop</del>, <del>little of</del> programming and cricket. Currently doing my B Tech in Computer science and Engineering at National Institute of Technology, Calicut. <br />You can <a href="mailto:sudevdev@gmail.com?Subject=Through%20sudev.github.io" target="_top">mail me</a>. 
+I'm a computer enthusiast interested in exploring Free and Open software, operating systems, cloud computing, <del>web designing</del>, <del>photoshop</del>, <del>little of</del> programming and cricket. Currently doing my B Tech in Computer science and Engineering at National Institute of Technology, Calicut. <br />You can <a href="mailto:sudevdev@gmail.com?Subject=Through%20sudev.github.io" target="_top">mail me</a> or shift your attention a little towards left for social profiles.
