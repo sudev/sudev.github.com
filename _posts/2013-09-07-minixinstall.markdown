@@ -102,7 +102,7 @@ Since we are using VirtualBox select "AMD LANCE" (option 8) as your Ethernet dri
 
 When the copying is complete, MINIX is installed. Shut the system down by typing:
 
-    shutdown
+    shutdown -h now 
 
 You can now remove/unmount the iso image that we attached to virtual machine(so that it wont again boot into the installation ISO). When you boot up again, you will be running MINIX.
 
@@ -149,7 +149,7 @@ Install openssh type,
 **Method 2, using installation iso as a source (Internet not required)**  
 Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.   
 To install packages from the CD, you can use pkgin\_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.   
-While your virtual image is running you can attach your iso disk to minix.To do so please click on the Devices menu that you see in the VitualBox window, select the minix installation iso and load it(this disk will be used as source for the software package).
+While your virtual image is running you can attach your iso disk to minix.To do so please click on the Devices menu that you see in the VitualBox window, select the minix installation iso and load it(this disk will be used as source for the software package). In case if you are not able to view *Add CD/DISK* device option under devices menu you might be missing [Guest additions extenssion](https://help.ubuntu.com/community/VirtualBox/GuestAdditions) for VirtualBox. 
 <br />  
 To install openssh type,
         
