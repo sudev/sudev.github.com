@@ -9,7 +9,7 @@ tags: [Sudev Ambadi, Sudev, unix command line, command line text manipulation, d
 Note : *This article applies only to those who love to code*.
 I have seen many people strugling with MS Excel trying to figure out data in a large csv file, I don't blame them beacause most people I have met ignore standard unix command line tools just because they never tried it. And if you are using Excel for large datasets it more like the donkey trying to pull too much load as shown below.   
 <br />
-![MS Excel for large dataset](/images/excel1.jpg)    
+![MS Excel for large dataset](/images/excel.jpg)    
 <br />
 When the data is BIG(anything above .5GBs) and if we are trying to figure out say even the coloumn names of a csv file MS Excel will get stuck and we will see a MS Windows `Not Responding`. And if we are going to script using python/R/perl/* we will spend some time to script and more time for the script to complete. 
 
