@@ -92,7 +92,7 @@ grep Datsun car.csv
 # subset data with only lines containing Datsun
 grep Datsun car.csv > datsun.csv
 {% endhighlight %}
-*cut*  
+*Cut*  
 Cut is used to cut a line into fields according to a given deliminator or number of characters or any pattern. 
 {% highlight bash %}
 # To cut your csv and show only first and third coloumn
@@ -143,7 +143,7 @@ sed s/Mazda/Maa/g car.csv
 # "Maa RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4
 # "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1
 {% endhighlight %}
-Sed can be used to clean your dataset, mostly we find our data with unwanted characters and which needs to be ignored. Say we wish to delete all the lines containing audi.
+Sed can be used to clean your dataset, mostly we find our data with unwanted characters and which needs to be ignored. Say we wish to delete all the lines containing Mazda.
 {% highlight bash %}
 # Delete all the lines containing Mazda 
 sed /Mazda/d car.csv > noMazda.csv
@@ -202,12 +202,12 @@ The file will be splitted into part  files as { xaa, xab ... } in the same folde
 *GNU Plot*    
 GNU plot is awesome tool for plotting. Read [more](http://gnuplot.sourceforge.net/demo_cvs/).     
 <br />
-I just want to say that working with unix command line tools is easier than using any other graphical tools, all you have to do is use them for once. There are many custom tools to ease your workflow like jsontoCsv, GNU plot etc.
-*And you dont have to remember any of these parameters, use man page!*    
+I just want to say that working with unix command line tools is easier than using any other graphical tools, all you have to do is use them for once. There are many custom tools to ease your workflow like jsontoCsv, GNU plot etc check them out. High level scripting languages can do a lot, I'm big fan of python but then using unix commandline is so much easier and reliable IMHO. R is pretty good tool too, but when data gets bigger R sucks, use commandline to make data small and tidy for R.   
+*And you dont have to remember any of these parameters that we passed to unix commands, always use man page!*    
 <br />
 Links:
 
-* [Using command line for datascience](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html)
+* [Using command line for datascience, huge collection!](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html)
 * [A beginners guide that I wrote with abijith for fosscell juniors](https://github.com/fosscell/bashworkshop)
 * [Noufal Ibrahim's unix blog post](http://thelycaeum.in/blog/2013/09/03/text_processing_in_unix/)
 * [I copied many examples from here](http://www.gregreda.com/2013/07/15/unix-commands-for-data-science/)
