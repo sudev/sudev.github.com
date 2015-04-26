@@ -12,7 +12,7 @@ Saurab took some amazing stills when two NITCs peeps came to trivandrum and our 
 <br />
 <figure class="one"><a href="https://www.flickr.com/photos/80443278@N03/16977789492" title="_DSC0136-3 by Saurab Devananadan, on Flickr"><img src="https://farm8.staticflickr.com/7636/16977789492_0e1609360b_z.jpg" width="640" height="426" alt="_DSC0136-3"></a><figcaption>The Ponmudi !</figcaption></figure>
 <br />
-<figure class="one"><a href="https://www.flickr.com/photos/80443278@N03/16792873849" title="_DSC0105-3 by Saurab Devananadan, on Flickr"><img src="https://farm9.staticflickr.com/8703/16792873849_36d795427d_z.jpg" width="640" height="294" alt="_DSC0105-3"></a><figcaption>Bullets :)</figcaption></figure>
+<figure class="one"><a href="https://www.flickr.com/photos/80443278@N03/16792873849" title="_DSC0105-3 by Saurab Devananadan, on Flickr"><img src="https://farm9.staticflickr.com/8703/16792873849_36d795427d_z.jpg" width="640" height="294" alt="_DSC0105-3"></a> <figcaption>Bullets :)</figcaption> </figure>
 <br />
 <figure class="one"><a href="https://www.flickr.com/photos/80443278@N03/16953006726" title="Sudev by Saurab Devananadan, on Flickr"><img src="https://farm9.staticflickr.com/8694/16953006726_e97bc63994_z.jpg" width="640" height="426" alt="Sudev"></a><figcaption>Me the posing</figcaption></figure>
 <br />
