@@ -10,4 +10,5 @@ image:
 ---
 
 I'm a computer enthusiast interested in exploring Free and Open software, operating systems, cloud computing, data science, <del>web designing</del>, <del>photoshop</del>, <del>little of</del> programming and cricket.    
-Completed B Tech in Computer science and Engineering from National Institute of Technology, Calicut. Currently I work as big data analyst. <br />You can <a href="mailto:sudevdev@gmail.com?Subject=Through%20sudev.github.io" target="_top">mail me</a> or shift your attention little left for social profiles.
+<br />Completed B Tech in Computer science and Engineering from National Institute of Technology, Calicut. Currently I work as big data analyst. 
+<br />You may contact me at sudevdev gma!l com.
