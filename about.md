@@ -10,5 +10,5 @@ image:
 ---
 
 I'm a computer enthusiast interested in exploring Free and Open software, operating systems, cloud computing, data science, <del>web designing</del>, <del>photoshop</del>, <del>little of</del> programming and cricket.    
-<br />Completed B Tech in Computer science and Engineering from National Institute of Technology, Calicut. Currently I work as big data analyst. 
+<br />Completed B Tech in Computer science and Engineering from National Institute of Technology, Calicut. I’m a big data analyst at EY now.
 <br />You may contact me at sudevdev gma!l com.
