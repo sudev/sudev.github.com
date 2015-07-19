@@ -3,11 +3,10 @@ layout: post
 title: Ponmudi - 2 
 category: travel
 comments: true
-tags: [Sudev Ambadi, Sudev,Royal Enfield, classic, travel, India]
+tags: [Sudev Ambadi, Royal Enfield, Ponmudi, meenmutty waterfalls, bike ride, trivandrum]
 ---
 ### Trip 2 : April, 2015
-
-Saurab took some amazing stills when two NITCs peeps came to trivandrum and our trip to ponmudi.
+If you happen to be in trivandrum with a bike and you loves to ride, Ponmudi is one place that should go. Sharing some photos taken by [Saurab Devanandan](https://www.flickr.com/photos/80443278@N03/) during the trip.
 
 <br />
 <figure class="one">
