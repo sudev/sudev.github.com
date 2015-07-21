@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Dumping large csv's into mongoDB using apache spark
+title: Converting large csv's to nested data structures using apache spark
 category: posts
 comments: true
 tags: [Apache Spark, MongoDB, large csv, data cleaning, reducebykey]
 ---
 
-*Task:* To read lot of really big csvs (~GBs) from Hadoop HDFS, clean them and update it to MongoDB using Apache Spark.
-
-Recently I was assigned to create a Mongo collection with some select financial values by reading lot of csvs containing income statements, balance sheets and lot of junk data. 
+*Task:* To read lot of really big csv's (~GBs) from Hadoop HDFS, clean them and update it to MongoDB using Apache Spark.
+<br />
+Recently I was assigned to create a Mongo collection with some select financial values by reading lot of csv's containing income statements, balance sheets and lot of junk data. 
 
 
 
@@ -19,16 +19,14 @@ Shown above is sample csv, I had to convert them into schema as shown below and 
 <br />
 **Approach:**
 
-1. *Data Cleaning* - Read multiple types of csvs and convert all of them into tuples of structure `(CompanyName, Map<Year, Map<TagName, Value>>>)`. 
+1. *Data Cleaning* - Read multiple types of csv's and convert all of them into tuples of structure `(CompanyName, Map<Year, Map<TagName, Value>>>)`. 
 1. *Union all created RDDs* - Join all the cleaned csv rdd into one. 
 1. *Reduce* - Reduce all tuples related to a particular company into one tuple considering companyName as the key to reduce. 
 1. *Update MongoDB* - Update the mongo with reduced tuples.
 
-<br />
-
 ### Data Cleaning     
 
-The order of fields in the csv dump is different according to type of csv so I had to wrote a generic function wherein we can specify the position of fields of the particular csv. Call this function on both csv income statement and balance sheet and save them into variables  balanceSheetRdd and incomeStatemntRdd.
+The order of fields in the csv dump is different according to type of csv so I had to write a generic function wherein we can specify the position of specific fields. So we will call this function on both csv income statement and balance sheet and to create two variables  `balanceSheetRdd` and `incomeStatemntRdd` and later join them into one `masterRdd`.
 
 {% highlight java %}
 
@@ -41,19 +39,18 @@ JavaPairRDD<String, Map<String, Map<String, String>>> dataclean(
 
 {% endhighlight %}
 
-Reading csv, csvs can be read in spark using [spark-csv](https://github.com/databricks/spark-csv) plug-in, the plug-in is recommended over `line.split(",")` for its ability to handle quotes or malformed csvs. 
+Using the [spark-csv](https://github.com/databricks/spark-csv) plug-in we can read csv's into a dataframe, the plug-in is recommended over `line.split(",")` for its ability to handle quotes and malformed entries. 
 
 {% highlight java %}
 DataFrame df = sqlContext.read()
 				.format("com.databricks.spark.csv")
 				.option("header", "true").load(filepath);
-// spark-csv outputs dataframe to iterate over each line 
+// spark-csv outputs dataframe to iterate line by line
 // we will have to convert it to RDD of Rows
 JavaRDD<Row> rowRdd = df.javaRDD();
 {% endhighlight %}
 
-Filtering out unwanted tags   
-Define two sets to define the required tags that we are planning to extract from the csv. 
+Filtering out unwanted tags. Define two Java sets with required tags that we are planning to extract from the csv. 
 
 {% highlight java %}
 // Income Statement required tags 
@@ -77,8 +74,7 @@ public Boolean call(Row r) throws Exception {
 })
 {% endhighlight %}
 
-Create a new Pair RDD.
-Let's convert the rows into tuples of the form `(CompanyName, Map<Year, Map<TagName, Value>>>` using Spark mapToPair action.
+Create a new Pair RDD of the form `(CompanyName, Map<Year, Map<TagName, Value>>>` using Spark mapToPair action.
 
 {% highlight java %}
 cleanedRdd = filteredRdd.mapToPair( 
@@ -102,11 +98,11 @@ new PairFunction<Row, String, Map<String, Map<String, String>>>() {
 );
 {% endhighlight %}
 
-Now we have cleaned the entire csv data into desirable format, multiple RDDs can be generated for each type of csv by passing the field numbers and file path.
+Now we have cleaned the entire csv data into desirable format. I have arranged the above filtering and mapping function into a [data cleaning class](https://github.com/sudev/sparkMongo/blob/master/src/main/java/mongoDump/DataCleaning.java).
 
 ### Union 
  
-Make a master rdd from all parsed csvs using spark union transformation.
+Assuming we have created two rdd's balanceSheetRdd and incomeStatemntRdd using above method. Make a master rdd using spark union transformation.
 
 {% highlight java %}
 masterRdd = balanceSheetRdd.union(incomeStatemntRdd)
@@ -114,7 +110,7 @@ masterRdd = balanceSheetRdd.union(incomeStatemntRdd)
 
 ### Reduce
 
-Reduce the master rdd using companyName as the key. Idea is to aggregate all financial details related to a company grouped year wise. `reduceByKey()` produces iterable list using companyName as key but we need to do more here, we have to group them according to year (map within map in tuple). We can achieve this by writing a custom class implementing Function2 inside reduceByKey spark action.
+Reduce the master rdd considering companyName as the key. Idea is to aggregate all financial details related to a company grouped year wise. `reduceByKey()` produces iterable list using companyName as key but we need to do more here, we have to group them according to year. We can do this by writing a custom class implementing Function2.
 
 {% highlight java %}
 reducedRdd = masterRdd.raduceByKey(new reduceMaps())
@@ -147,8 +143,7 @@ final class reduceMaps
 
 ### Updating Mongo
 
-Use the mongo-hadoop connector to update MongoDB using Spark, it can be accessed using `saveAsNewAPIHadoopFile` action. Before saving the rdd we need to make them into pairRdds of the type `JavaPairRDD<Object, BSONObject>`.
-
+To update mongoDB using Spark use [mongo-hadoop connector](https://github.com/mongodb/mongo-hadoop/wiki/Spark-Usage). Before saving the rdd covert them into pairRdds of the type `JavaPairRDD<Object, BSONObject>`.
 
 {% highlight java %}
 mongoRdd = reducedRdd.mapToPair( new basicDBMongo())
@@ -167,7 +162,7 @@ final class basicDBMongo implements PairFunction<Tuple2<String, Map<String, Map<
 }
 {% endhighlight %}
 
-Writing them to MongoDB
+Updating mongoDB
 
 {% highlight java %}
 
@@ -184,14 +179,9 @@ mongordd.saveAsNewAPIHadoopFile("file:///notapplicable", Object.class,
 
 Actually we did quiet a lot of things here. This is how the DAG looks for this job. 
 
-* [Using command line for datascience, huge collection!](http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html)
-* [A beginners guide that I wrote with abijith for fosscell juniors](https://github.com/fosscell/bashworkshop)
-* [Noufal Ibrahim's unix blog post](http://thelycaeum.in/blog/2013/09/03/text_processing_in_unix/)
-* [I copied many examples from here](http://www.gregreda.com/2013/07/15/unix-commands-for-data-science/)
+Previously I had attempted to do this filtering and mapping jobs using dataframes, but the solution was not great. I like this program for the fact that I'm not collecting anything from rdds into driver anywhere and hence this should run distributed at each stage. Let me know your thoughts, please do comment.
 
 ---
-
-
 
 [jekyll]: https://github.com/mojombo/jekyll
 [zh]: http://sudev.github.com
