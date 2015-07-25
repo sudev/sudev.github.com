@@ -1,14 +1,19 @@
 ---
 layout: post
-title: Converting large csv's to nested data structures using apache spark
+title: Converting large csv's to nested data structure using apache spark
 category: posts
 comments: true
 tags: [Apache Spark, MongoDB, large csv, data cleaning, reducebykey]
 ---
 
-*Task:* To read lot of really big csv's (~GBs) from Hadoop HDFS, clean them and update it to MongoDB using Apache Spark.
+#### What is Apache Spark ? 
+[Apache Spark][as] brings fast, in-memory data processing to Hadoop. Elegant and expressive development APIs in Scala, Java, and Python allow data workers to efficiently execute streaming, machine learning or SQL workloads for fast iterative access to datasets. [Quick start guide][qs]
+
+#### Problem Statement / Task
+
+To read lot of really big csv's (~GBs) from Hadoop HDFS, clean, convert them to nested data structure and update it to MongoDB using Apache Spark.
 <br />
-Recently I was assigned to create a Mongo collection with some select financial values by reading lot of csv's containing income statements, balance sheets and lot of junk data. 
+Recently I was assigned to create a Mongo collection with some select financial values by reading csv's containing income statements, balance sheets ... junk data. 
 
 {% highlight js %}
 CompanyID,USDAmount,YearEnding,Label,BalSubCategoryName,BalSubCategoryCode,LabelOrderId,SubCategoryOrder
@@ -37,20 +42,20 @@ Shown above is sample csv, I had to convert them into schema as shown below and 
 {% endhighlight %}
 
 
-<br />
-**Approach:**
+
+##### Approach
 
 1. *Data Cleaning* - Read multiple types of csv's and convert all of them into tuples of structure `(CompanyName, Map<Year, Map<TagName, Value>>>)`. 
 1. *Union all created RDDs* - Join all the cleaned csv rdd into one. 
-1. *Reduce* - Reduce all tuples related to a particular company into one tuple considering companyName as the key to reduce. 
-1. *Update MongoDB* - Update the mongo with reduced tuples.
+1. *Reduce* - Reduce all tuples related to a company into single tuple considering companyName as the key. 
+1. *Update MongoDB* - Update MongoDB with reduced tuples.
 
-### Data Cleaning     
+#### Data Cleaning     
 
-The order of fields in the csv dump is different according to type of csv so I had to write a generic function wherein we can specify the position of specific fields. So we will call this function on both csv income statement and balance sheet and to create two variables  `balanceSheetRdd` and `incomeStatemntRdd` and later join them into one `masterRdd`.
+The order of fields in the csv dump differs according to the type of csv, so I had to write a generic function wherein we can specify the position of required fields. So let's call this function on both income-statement.csv and balance-sheet.csv and to create two cleaned rdd datasets  `balanceSheetRdd` and `incomeStatemntRdd` and later join them into one `masterRdd`.
 
 {% highlight java %}
-
+# Function definition
 JavaPairRDD<String, Map<String, Map<String, String>>> dataclean(
 			JavaSparkContext sc,                      // Spark Context 
 			String filepath,                         // path to file in Hadoop
@@ -60,7 +65,7 @@ JavaPairRDD<String, Map<String, Map<String, String>>> dataclean(
 
 {% endhighlight %}
 
-Using the [spark-csv](https://github.com/databricks/spark-csv) plug-in we can read csv's into a dataframe, the plug-in is recommended over `line.split(",")` for its ability to handle quotes and malformed entries. 
+The [spark-csv](https://github.com/databricks/spark-csv) plug-in can be used to read csv's into a dataframe rdd, the plug-in is recommended over `map(line.split(","))` for its ability to handle quotes and malformed entries. 
 
 {% highlight java %}
 DataFrame df = sqlContext.read()
@@ -71,7 +76,7 @@ DataFrame df = sqlContext.read()
 JavaRDD<Row> rowRdd = df.javaRDD();
 {% endhighlight %}
 
-Filtering out unwanted tags. Define two Java sets with required tags that we are planning to extract from the csv. 
+Create two Java sets with required tags that we are planning to extract from the csv. 
 
 {% highlight java %}
 // Income Statement required tags 
@@ -95,7 +100,7 @@ public Boolean call(Row r) throws Exception {
 })
 {% endhighlight %}
 
-Create a new Pair RDD of the form `(CompanyName, Map<Year, Map<TagName, Value>>>` using Spark mapToPair action.
+From the filtered rdd create a new PairRdd (tuple) of the form `(CompanyName, Map<Year, Map<TagName, Value>>>)` using Spark mapToPair action.
 
 {% highlight java %}
 cleanedRdd = filteredRdd.mapToPair( 
@@ -119,19 +124,19 @@ new PairFunction<Row, String, Map<String, Map<String, String>>>() {
 );
 {% endhighlight %}
 
-Now we have cleaned the entire csv data into desirable format. I have arranged the above filtering and mapping function into a [data cleaning class](https://github.com/sudev/sparkMongo/blob/master/src/main/java/mongoDump/DataCleaning.java).
+Now we have cleaned the entire csv file contents into desirable format. Here I have arranged the filter and mapToPair actions into [data cleaning class](https://github.com/sudev/sparkMongo/blob/master/src/main/java/mongoDump/DataCleaning.java).
 
-### Union 
+#### Union 
  
-Assuming we have created two rdd's balanceSheetRdd and incomeStatemntRdd using above method. Make a master rdd using spark union transformation.
+Assuming we have created two rdd's balanceSheetRdd and incomeStatemntRdd using above method. Make a master rdd using spark union transformation. From here on masterRdd will be instead of balanceSheetRdd and IncomeStatementRdd.
 
 {% highlight java %}
 masterRdd = balanceSheetRdd.union(incomeStatemntRdd)
 {% endhighlight %}
 
-### Reduce
+#### Reduce
 
-Reduce the master rdd considering companyName as the key. Idea is to aggregate all financial details related to a company grouped year wise. `reduceByKey()` produces iterable list using companyName as key but we need to do more here, we have to group them according to year. We can do this by writing a custom class implementing Function2.
+Reduce the master rdd with companyName as the key. Idea is to aggregate all financial details related to a company aggregated year wise. Calling `reduceByKey()` on masterRdd will produce iterable list using companyName as key but we need to do more here, we have to aggregate them according to year. We can do this by writing a custom class implementing Function2.
 
 {% highlight java %}
 reducedRdd = masterRdd.raduceByKey(new reduceMaps())
@@ -162,9 +167,9 @@ final class reduceMaps
 }
 {% endhighlight %}
 
-### Updating Mongo
+#### Updating MongoDB
 
-To update mongoDB using Spark use [mongo-hadoop connector](https://github.com/mongodb/mongo-hadoop/wiki/Spark-Usage). Before saving the rdd covert them into pairRdds of the type `JavaPairRDD<Object, BSONObject>`.
+To update mongoDB using Spark use [mongo-hadoop connector][mongoc]. Before saving the rdd covert them into pairRdds of the type `JavaPairRDD<Object, BSONObject>`.
 
 {% highlight java %}
 mongoRdd = reducedRdd.mapToPair( new basicDBMongo())
@@ -206,7 +211,7 @@ Actually we did quiet a lot of things here. This is how the DAG looks for this j
 
 <br />
 
-Previously I had attempted to do this filtering and mapping jobs using dataframes, but the solution was not great. I like this program for the fact that I'm not collecting anything from rdds into driver anywhere and hence this should run distributed at each stage. 
+Previously I had attempted to do this filtering and mapping jobs using dataframes, but the solution was not great. I like this program for the fact that I'm not collecting anything from rdds into driver anywhere and hence this should run distributed at each stage. I ran and tested this application on a Spark Standalone Cluster on HDP Stack with 4 nodes.
 
 <br />
 
@@ -221,3 +226,6 @@ Let me know your thoughts, please do comment. The entire [code is available in g
 [jekyll]: https://github.com/mojombo/jekyll
 [zh]: http://sudev.github.com
 [twitter]: https://twitter.com/sudev
+[as]: http://spark.apache.org/ "Apache Spark homepage"
+[mongoc]: https://github.com/mongodb/mongo-hadoop/wiki/Spark-Usage "Hadoop Spark Mongo connector wiki"
+[qs]: http://spark.apache.org/docs/latest/quick-start.html "Spark quick start"
