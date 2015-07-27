@@ -8,13 +8,17 @@ tags: [Zindagi na milegi dubara, farhan shayeri, ]
 
 One of the Bollywood movies which I always loved watching has been ZNMD, here is a collection of shayari recited by Farhan Akthar (Imran) in ZNMD. 
 
+
+<iframe width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F21877416&show_artwork=true"></iframe>
+
 A compiled version from Souncloud. 
-<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F21877416&show_artwork=true"></iframe>
 
 ### Apne Hone Par Mujhko Yaqeen Aa Gaya
 (The poem comes after the trio’s deep-sea dive)
 
+{% comment %} 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=ZmAYoJUsFEs&list=PL9bw4S5ePsEH3tOw-4lH5Ehv8fn89RyZx" frameborder="0"> </iframe> 
+{% endcomment %}
 
 > Pighle neelam sa behta ye sama,             
 > neeli neeli si khamoshiyan,          
@@ -40,7 +44,9 @@ It all makes me believe in my existence.
 ### Ye Jaane Kaisa Raaz Hai
 (comes when their journey with Laila comes to an end and depicts the feelings of Arjun's heart)
 
+{% comment %} 
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=s3jSUp91fRk&index=4&list=PL9bw4S5ePsEH3tOw-4lH5Ehv8fn89RyZx" frameborder="0"> </iframe> 
+{% endcomment %}
 
 > Ek baat honthon tak hai jo aai nahin     
 > bus aankhon se hai jhaankti        
@@ -76,7 +82,9 @@ What is this unknown mystery
 ### Dil Aakhir Tu Kyun Rota Hai
 (The poem comes when Farhan is heartbroken after meeting his estranged dad)
 
+{% comment %} 
 <iframe width="560" height="315" src="https://youtu.be/cwyCN98LF1U?list=PL9bw4S5ePsEH3tOw-4lH5Ehv8fn89RyZx" frameborder="0"> </iframe> 
+{% endcomment %}
 
 > Jab jab dard ka baadal chaya           
 > Jab ghum ka saya lehraya           
@@ -117,7 +125,9 @@ Oh heart why is it that you cry?
 ### Toh Zinda Ho Tum
 (The poem comes in the climax)  
 
+{% comment %} 
 <iframe width="560" height="315" src="https://youtu.be/Lni3YbDRmpY?list=PL9bw4S5ePsEH3tOw-4lH5Ehv8fn89RyZx" frameborder="0"> </iframe> 
+{% endcomment %}
 
 > Dilon mein tum apni          
 > Betaabiyan leke chal rahe ho          
@@ -157,7 +167,7 @@ If you are carrying your restlessness in your heart
 You are alive!           
 
 
-Courtesy : Tseries, one who did translation :) .
+Courtesy : Tseries, Soundcloud, one who did translation :) .
 
 ---
 

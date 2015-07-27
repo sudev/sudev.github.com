@@ -207,7 +207,10 @@ Actually we did quiet a lot of things here. This is how the DAG looks for this j
 
 <br />
 
-![dag for job](/images/stages.PNG)    
+<figure class="one">
+	<img src="/images/stages.PNG">
+	<figcaption>DAG for the job, helps in uderstanding and improving the whole process.</figcaption>
+</figure>
 
 <br />
 
@@ -215,7 +218,10 @@ Previously I had attempted to do this filtering and mapping jobs using dataframe
 
 <br />
 
-![Works like yo in cluster](/images/active.PNG)
+<figure class="one">
+	<img src="/images/active.PNG">
+	<figcaption>The workload distributed evenly in cluster. Apache Spark :)</figcaption>
+</figure>
 
 <br />
 
