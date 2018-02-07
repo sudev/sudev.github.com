@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Sudev Ambadi | Data science and unix command line</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Data science and unix command line">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/posts/datascienceunix">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="Sudev Ambadi">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="/posts/datascienceunix">
+  <meta name="twitter:title" content="Data science and unix command line">
+  <meta name="twitter:description" content="">
+
+  
+    <meta property="og:image" content="/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+    <meta name="twitter:image" content="/assets/og-image-ee46bbc61b334e821e81534b1fd43f3fee6f020ec174b3c2114445695fd48c01.jpg">
+  
+
+  <link href="/feed.xml" type="application/rss+xml" rel="alternate" title="Sudev Ambadi Last 10 blog posts" />
+
+  
+
+  
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-light-a98c41efc5ed9fcc06ac664c9e2f7a9b3c3b2e0a52357d221fe382f6f4abc8fc.ico">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light-87d1f2a3a19b1500e5c1626a0492025ca5f7f97d24540dc5900288e92112925a.png">
+    <link rel="stylesheet" type="text/css" href="/assets/light-dd81b21ab090e25ca3de9c7f8a04c3ed3092374c826eb42b9fb7cac72c5f41e7.css">
+  
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="Sudev Ambadi">Sudev Ambadi</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/sudev" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
+  <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/sudev" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>Data science and unix command line</h1>
+            <p></p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                March 20, 2015
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  7 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/unix command line">unix command line</a>
+                
+                  <a href="/tag/text manipulation">text manipulation</a>
+                
+                  <a href="/tag/data science">data science</a>
+                
+                  <a href="/tag/data science large files">data science large files</a>
+                
+                  <a href="/tag/large dataset">large dataset</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <p>Note : <em>This article applies only to those who code</em>.
+I have seen many strugling with MS Excel trying to figure out data in a large csv file, I don’t blame them beacause most people I have met ignore standard unix command line tools just because they cared about commandline tools.</p>
+
+<p><br />
+<img src="/images/excel.jpg" alt="MS Excel for large dataset" />  <br />
+<br />
+When the data is BIG(anything above .5GBs) and if we are trying to figure out say even the coloumn names of a csv file MS Excel will get stuck and we will see a MS Windows <code class="highlighter-rouge">Not Responding</code>. And if we are going to script using python/R/perl/* we will spend some time to script and more time for the script to complete. <br />
+<br />
+Assume that we have a csv “car.csv” as shown below:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="s2">""</span>,<span class="s2">"mpg"</span>,<span class="s2">"cyl"</span>,<span class="s2">"disp"</span>,<span class="s2">"hp"</span>,<span class="s2">"drat"</span>,<span class="s2">"wt"</span>,<span class="s2">"qsec"</span>,<span class="s2">"vs"</span>,<span class="s2">"am"</span>,<span class="s2">"gear"</span>,<span class="s2">"carb"</span>
+<span class="s2">"Mazda RX4"</span>,21,6,160,110,3.9,2.62,16.46,0,1,4,4
+<span class="s2">"Mazda RX4 Wag"</span>,21,6,160,110,3.9,2.875,17.02,0,1,4,4
+<span class="s2">"Datsun 710"</span>,22.8,4,108,93,3.85,2.32,18.61,1,1,4,1
+<span class="s2">"Hornet 4 Drive"</span>,21.4,6,258,110,3.08,3.215,19.44,1,0,3,1
+<span class="s2">"Hornet Sportabout"</span>,18.7,8,360,175,3.15,3.44,17.02,0,0,3,2
+<span class="s2">"Mazda RX4"</span>,21,6,160,110,3.9,2.62,16.46,0,1,4,4
+<span class="s2">"Mazda RX4 Wag"</span>,21,6,160,110,3.9,2.875,17.02,0,1,4,4
+<span class="s2">"Mazda RX4 Wag"</span>,21,6,160,110,3.9,2.875,17.02,0,1,4,4</code></pre></figure>
+
+<p>Let’s assume that we have a BIG csv with many coloumns and we are interested in the sum of 12th coloumn (carb) of the file.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cat </span>car.csv | <span class="nb">awk</span> <span class="nt">-F</span> <span class="s2">","</span> <span class="s1">'{ sum += $12 } END { printf "%.2f\n", sum}'</span>
+<span class="c"># 29.00</span></code></pre></figure>
+
+<p>Here we have used the standard command line tools <code class="highlighter-rouge">cat</code> and <code class="highlighter-rouge">awk</code> and we don’t even load the entire data into memory.   <br />
+The above line says:</p>
+
+<ol>
+  <li>Using <code class="highlighter-rouge">cat</code> stream the contents into <strong>stdout</strong></li>
+  <li>Pipe the stdout from <code class="highlighter-rouge">cat</code> to the next command <code class="highlighter-rouge">awk</code>.</li>
+  <li>With Awk
+    <ul>
+      <li><code class="highlighter-rouge">-F</code> parameter takes the deliminator that is used in big.csv.</li>
+      <li>once you specify the <code class="highlighter-rouge">-F</code> to deliminator all the fields will be available to you as { $1, $2 … }</li>
+      <li><code class="highlighter-rouge">sum += $12</code> will increment the variable sum with 12th coloumn of each line.</li>
+      <li>use <code class="highlighter-rouge">printf</code> to format result.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Other useful commands: 
+<br /> <br />
+<em>Head and tail</em>  <br />
+If we want to get a sample data from BIG csv. Again using head or tail command we are not loading the entire file into memory, we are just reading them line by line.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># To get the first 3 lines of your csv </span>
+<span class="nb">head </span>car.csv <span class="nt">-n</span> 3
+<span class="c"># "","mpg","cyl","disp","hp","drat","wt","qsec","vs","am","gear","carb"</span>
+<span class="c"># "Mazda RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># "Mazda RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span>
+
+<span class="c"># Similarly for the last 5 lines </span>
+<span class="nb">tail </span>car.csv <span class="nt">-n</span> 3 
+<span class="c"># "Mazda RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># "Mazda RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span>
+<span class="c"># "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1</span></code></pre></figure>
+
+<p>We can even save the sample to a separate file to view them using a editor or to run some script over the sample file. Using the redirect operator <code class="highlighter-rouge">&gt;</code> in bash you can redirect the output to a file.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># first 100 lines into a new file first100.txt</span>
+<span class="nb">head</span> <span class="nt">-n</span> 100 big.csv <span class="o">&gt;</span> first100.txt</code></pre></figure>
+
+<p><em>Word count</em> <br />
+<code class="highlighter-rouge">wc</code> command is used to get the number of line, words and bytes in your file</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># number of lines, words and bytes</span>
+<span class="nb">wc </span>car.csv
+<span class="c">#  11  25 602 car.csv</span>
+
+<span class="c"># to only output number of lines </span>
+<span class="nb">wc</span> <span class="nt">-l</span> car.csv
+<span class="c"># 11</span></code></pre></figure>
+
+<p><em>Grep</em>  <br />
+We wish to search for the line containing some text <code class="highlighter-rouge">Datsun</code> we can use grep to search and return those rows for you. Grep supports regular expression and hell lot of options.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Search for text Datsun </span>
+<span class="nb">grep </span>Datsun car.csv
+<span class="c"># "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1</span>
+<span class="c"># "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1</span>
+
+<span class="c"># subset data with only lines containing Datsun</span>
+<span class="nb">grep </span>Datsun car.csv <span class="o">&gt;</span> datsun.csv</code></pre></figure>
+
+<p><em>Cut</em><br />
+Cut is used to cut a line into fields according to a given deliminator or number of characters or any pattern.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># To cut your csv and show only first and third coloumn</span>
+<span class="nb">cut</span> <span class="nt">-d</span> <span class="s2">","</span> <span class="nt">-f</span> 1,3 car.csv
+<span class="c"># "","cyl"</span>
+<span class="c"># "Mazda RX4",6</span>
+<span class="c"># "Mazda RX4 Wag",6</span>
+<span class="c"># "Datsun 710",4</span>
+<span class="c"># "Hornet 4 Drive",6</span>
+<span class="c"># "Hornet Sportabout",8</span>
+<span class="c"># "Mazda RX4",6</span>
+<span class="c"># "Mazda RX4 Wag",6</span>
+<span class="c"># "Mazda RX4",6</span>
+<span class="c"># "Mazda RX4 Wag",6</span>
+<span class="c"># "Datsun 710",4</span>
+
+<span class="c"># You can cut by specifying start/end/number of characters </span>
+<span class="c"># To print only first 3 characters </span>
+<span class="nb">cut</span> <span class="nt">-c-3</span> car.csv
+<span class="c"># "","m</span>
+<span class="c"># "Mazd</span>
+<span class="c"># "Mazd</span>
+<span class="c"># "Dats</span>
+<span class="c"># "Horn</span>
+<span class="c"># "Horn</span>
+<span class="c"># "Mazd</span>
+<span class="c"># "Mazd</span>
+<span class="c"># "Mazd</span>
+<span class="c"># "Mazd</span>
+<span class="c"># "Dats</span></code></pre></figure>
+
+<p><em>Sed and Awk</em>  <br />
+These two commands are more of a programing language than being just commands. We use sed and Awk to find and replace, count, add, basically to manipulate data.
+Sed/Awk again combined with some regular expression will let we to do most manipulations on a text file.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Replace all occurence of "Mazda" to "Maa" in your data.</span>
+<span class="nb">sed </span>s/Mazda/Maa/g car.csv
+<span class="c"># "","mpg","cyl","disp","hp","drat","wt","qsec","vs","am","gear","carb"</span>
+<span class="c"># "Maa RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># "Maa RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span>
+<span class="c"># "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1</span>
+<span class="c"># "Hornet 4 Drive",21.4,6,258,110,3.08,3.215,19.44,1,0,3,1</span>
+<span class="c"># "Hornet Sportabout",18.7,8,360,175,3.15,3.44,17.02,0,0,3,2</span>
+<span class="c"># "Maa RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># "Maa RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span>
+<span class="c"># "Maa RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># "Maa RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span>
+<span class="c"># "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1</span></code></pre></figure>
+
+<p>Sed can be used to clean your dataset, mostly we find our data with unwanted characters and which needs to be ignored. Say we wish to delete all the lines containing Mazda.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Delete all the lines containing Mazda </span>
+<span class="nb">sed</span> /Mazda/d car.csv <span class="o">&gt;</span> noMazda.csv</code></pre></figure>
+
+<p>Read more about <a href="https://en.wikipedia.org/wiki/Sed">Sed</a> and <a href="https://en.wikipedia.org/wiki/Awk">Awk</a>.   <br />
+<br />
+<em>Sort and uniq</em> <br />
+Using sort command will sort the csv treating each line as a single string, we can use sort to even sort based on a coloumn, numerical order or in reverse order. Uniq can be used to return only uniq rows or return the duplicated ones. 
+<br />
+Say you want to sort a csv according to coloumn 12 (carb), -k (key) specifies the coloumn to sorted, -nr specifies sort to sort in reverse numeric order and -t specifies the coloumn deliminator.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># if you want to sort the csv according to carb(Coloumn 12)</span>
+<span class="nb">sort</span> <span class="nt">-k</span> 12 <span class="nt">-nr</span> <span class="nt">-t</span> <span class="s2">","</span> car.csv
+<span class="c"># "Mazda RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span>
+<span class="c"># "Mazda RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span>
+<span class="c"># "Mazda RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span>
+<span class="c"># "Mazda RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># "Mazda RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># "Mazda RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># "Hornet Sportabout",18.7,8,360,175,3.15,3.44,17.02,0,0,3,2</span>
+<span class="c"># "Hornet 4 Drive",21.4,6,258,110,3.08,3.215,19.44,1,0,3,1</span>
+<span class="c"># "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1</span>
+<span class="c"># "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1</span>
+<span class="c"># "","mpg","cyl","disp","hp","drat","wt","qsec","vs","am","gear","carb"</span></code></pre></figure>
+
+<p>Use uniq command to output only the uniq rows, -c flag will also append the number occurences as the first coloumn for each row.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sort </span>car.csv | <span class="nb">uniq</span> <span class="nt">-c</span>
+<span class="c"># 2 "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1</span>
+<span class="c"># 1 "Hornet 4 Drive",21.4,6,258,110,3.08,3.215,19.44,1,0,3,1</span>
+<span class="c"># 1 "Hornet Sportabout",18.7,8,360,175,3.15,3.44,17.02,0,0,3,2</span>
+<span class="c"># 3 "Mazda RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># 3 "Mazda RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span>
+<span class="c"># 1 "","mpg","cyl","disp","hp","drat","wt","qsec","vs","am","gear","carb"</span></code></pre></figure>
+
+<p>To see only the duplicate lines pass a -d flag.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sort </span>car.csv | <span class="nb">uniq</span> <span class="nt">-d</span>
+<span class="c"># "Datsun 710",22.8,4,108,93,3.85,2.32,18.61,1,1,4,1</span>
+<span class="c"># "Mazda RX4",21,6,160,110,3.9,2.62,16.46,0,1,4,4</span>
+<span class="c"># "Mazda RX4 Wag",21,6,160,110,3.9,2.875,17.02,0,1,4,4</span></code></pre></figure>
+
+<p>To get total number of uniq lines pipe <code class="highlighter-rouge">uniq</code> output to <code class="highlighter-rouge">wc</code>.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sort </span>car.csv | <span class="nb">uniq</span> | <span class="nb">wc</span> <span class="nt">-l</span>
+6</code></pre></figure>
+
+<p><em>GNU split</em>  <br />
+Sometimes you just want to split the file into n small parts and run your script over these n part files.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#Split the csv into part files of 100 lines</span>
+<span class="nb">split </span>big.csv <span class="nt">--lines</span> 100</code></pre></figure>
+
+<p>The file will be splitted into part  files as { xaa, xab … } in the same folder. <br />
+<br />
+<em>GNU Plot</em>  <br />
+GNU plot is awesome tool for plotting. Read <a href="http://gnuplot.sourceforge.net/demo_cvs/">more</a>.   <br />
+<br />
+I just want to say that working with unix command line tools is easier than using any other graphical tools, all you have to do is use them for once. There are many custom tools to ease your workflow like jsontoCsv, GNU plot etc check them out. High level scripting languages can do a lot, I’m big fan of python but then using unix commandline is so much easier and reliable IMHO. R is pretty good tool too, but when data gets bigger R sucks, use commandline to make data small and tidy for R. <br />
+<em>And you dont have to remember any of these parameters that we passed to unix commands, always use man page!</em>  <br />
+<br />
+Links:</p>
+
+<ul>
+  <li><a href="http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html">Using command line for datascience, huge collection!</a></li>
+  <li><a href="https://github.com/fosscell/bashworkshop">A beginners guide that I wrote with abijith for fosscell juniors</a></li>
+  <li><a href="http://thelycaeum.in/blog/2013/09/03/text_processing_in_unix/">Noufal Ibrahim’s unix blog post</a></li>
+  <li><a href="http://www.gregreda.com/2013/07/15/unix-commands-for-data-science/">I copied many examples from here</a></li>
+</ul>
+
+<hr />
+
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=Data+science+and+unix+command+line%20-%20/posts/datascienceunix%20by%20@sudev" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=/posts/datascienceunix" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+            <a href="https://plus.google.com/share?url=/posts/datascienceunix" title="Share on Google+" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 128 128"><path d="M40.7 55.9v16.1c0 0 15.6 0 22 0C59.2 82.5 53.8 88.2 40.7 88.2c-13.3 0-23.7-10.8-23.7-24.2s10.4-24.2 23.7-24.2c7.1 0 11.6 2.5 15.8 5.9 3.3-3.3 3.1-3.8 11.6-11.9 -7.2-6.6-16.8-10.6-27.4-10.6C18.2 23.3 0 41.5 0 64c0 22.5 18.2 40.7 40.7 40.7 33.6 0 41.8-29.3 39-48.8H40.7zM113.9 56.7V42.6h-10.1v14.1H89.4v10.1h14.5v14.5h10.1V66.8H128V56.7H113.9z"/></svg>
+            </a>
+          </div>
+
+          
+            <div id="disqus_thread" class="article-comments"></div>
+            <script src="https://sudevgithub.disqus.com/embed.js" async defer></script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p>
+    &copy; 2017 Sudev Ambadi. <br /> Unless noted otherwise, all content is available under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. </a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a><br />
+    Powered by <a href="http://jekyllrb.com">Jekyll</a> and <a href="http://pages.github.com">Github pages</a> using <a href="http://chalk.nielsenramon.com/">Chalk</a> theme.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39443594-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-39443594-1');
+  </script>
+
+
+<script type="text/javascript" src="/assets/vendor-2e5becc015a837c852edabccbc32f5a390d4afa7a2ca601db948ea5b9e50292a.js"></script>
+
+
+  <script type="text/javascript" src="/assets/webfonts-e3010885de8c083c4b2935d463b1649e8796191a66a1b43bb87ef04bbcce420d.js"></script>
+
+
+
+  <script type="text/javascript" src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js"></script>
+
+
+<script type="text/javascript" src="/assets/application-cd43a7f9bd8a08997bb19229cd040e7129ede0a1adf77c693b5835c9f8c2a4b1.js"></script>
+
+</body>
+</html>

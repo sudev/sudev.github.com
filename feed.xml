@@ -1,20 +1,90 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Sudev Ambadi</title>
+    <description></description>
+    <link></link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>Normalization, Standardization and Rescaling</title>
+        <description></description>
+        <pubDate>Sat, 09 Jul 2016 00:00:00 +0530</pubDate>
+        <link>/posts/standardization</link>
+        <guid isPermaLink="true">/posts/standardization</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Zinda ho tum !</title>
+        <description></description>
+        <pubDate>Mon, 27 Jul 2015 00:00:00 +0530</pubDate>
+        <link>/posts/znmd</link>
+        <guid isPermaLink="true">/posts/znmd</guid>
+      </item>
+    
+      <item>
+        <title>Converting large csv's to nested data structure using apache spark</title>
+        <description></description>
+        <pubDate>Sat, 18 Jul 2015 00:00:00 +0530</pubDate>
+        <link>/posts/mongospark</link>
+        <guid isPermaLink="true">/posts/mongospark</guid>
+      </item>
+    
+      <item>
+        <title>Ponmudi - 2</title>
+        <description></description>
+        <pubDate>Thu, 02 Apr 2015 00:00:00 +0530</pubDate>
+        <link>/posts/ponmuditwo</link>
+        <guid isPermaLink="true">/posts/ponmuditwo</guid>
+      </item>
+    
+      <item>
+        <title>Data science and unix command line</title>
+        <description></description>
+        <pubDate>Fri, 20 Mar 2015 00:00:00 +0530</pubDate>
+        <link>/posts/datascienceunix</link>
+        <guid isPermaLink="true">/posts/datascienceunix</guid>
+      </item>
+    
+      <item>
+        <title>Ponmudi</title>
+        <description></description>
+        <pubDate>Sun, 09 Nov 2014 00:00:00 +0530</pubDate>
+        <link>/posts/ponmudi</link>
+        <guid isPermaLink="true">/posts/ponmudi</guid>
+      </item>
+    
+      <item>
+        <title>Deep C, understand the language before you write code.</title>
+        <description></description>
+        <pubDate>Tue, 04 Mar 2014 00:00:00 +0530</pubDate>
+        <link>/posts/testyourc</link>
+        <guid isPermaLink="true">/posts/testyourc</guid>
+      </item>
+    
+      <item>
+        <title>A dictionary in your terminal</title>
+        <description></description>
+        <pubDate>Tue, 14 Jan 2014 00:00:00 +0530</pubDate>
+        <link>/posts/dictionary</link>
+        <guid isPermaLink="true">/posts/dictionary</guid>
+      </item>
+    
+      <item>
+        <title>Installing Minix 3 using VirtualBox in Linux</title>
+        <description></description>
+        <pubDate>Sat, 07 Sep 2013 00:00:00 +0530</pubDate>
+        <link>/posts/minixinstall</link>
+        <guid isPermaLink="true">/posts/minixinstall</guid>
+      </item>
+    
+      <item>
+        <title>Useful bashrc functions</title>
+        <description></description>
+        <pubDate>Thu, 23 May 2013 00:00:00 +0530</pubDate>
+        <link>/posts/bashfunction</link>
+        <guid isPermaLink="true">/posts/bashfunction</guid>
+      </item>
+    
   </channel>
 </rss>
