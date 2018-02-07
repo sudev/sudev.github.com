@@ -2,589 +2,589 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sudev Ambadi</title>
-    <link>https://example.com/tags/</link>
+    <link>https://sudevambadi.me/tags/</link>
     <description>Recent content in Tags on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2017 Sudev Ambadi. &lt;br /&gt; Unless noted otherwise, all content is available under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. &lt;/a&gt; &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png&#34; /&gt;&lt;/a&gt;</copyright>
     <lastBuildDate>Sat, 18 Jul 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sudevambadi.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Apache Spark</title>
-      <link>https://example.com/tags/apache-spark/</link>
+      <link>https://sudevambadi.me/tags/apache-spark/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/apache-spark/</guid>
+      <guid>https://sudevambadi.me/tags/apache-spark/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bash</title>
-      <link>https://example.com/tags/bash/</link>
+      <link>https://sudevambadi.me/tags/bash/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/bash/</guid>
+      <guid>https://sudevambadi.me/tags/bash/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bash Hacks</title>
-      <link>https://example.com/tags/bash-hacks/</link>
+      <link>https://sudevambadi.me/tags/bash-hacks/</link>
       <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/bash-hacks/</guid>
+      <guid>https://sudevambadi.me/tags/bash-hacks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Battery</title>
-      <link>https://example.com/tags/battery/</link>
+      <link>https://sudevambadi.me/tags/battery/</link>
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/battery/</guid>
+      <guid>https://sudevambadi.me/tags/battery/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bike</title>
-      <link>https://example.com/tags/bike/</link>
+      <link>https://sudevambadi.me/tags/bike/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/bike/</guid>
+      <guid>https://sudevambadi.me/tags/bike/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bike Ride</title>
-      <link>https://example.com/tags/bike-ride/</link>
+      <link>https://sudevambadi.me/tags/bike-ride/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/bike-ride/</guid>
+      <guid>https://sudevambadi.me/tags/bike-ride/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C</title>
-      <link>https://example.com/tags/c/</link>
+      <link>https://sudevambadi.me/tags/c/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/c/</guid>
+      <guid>https://sudevambadi.me/tags/c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C Test</title>
-      <link>https://example.com/tags/c-test/</link>
+      <link>https://sudevambadi.me/tags/c-test/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/c-test/</guid>
+      <guid>https://sudevambadi.me/tags/c-test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C&#43;&#43;</title>
-      <link>https://example.com/tags/c&#43;&#43;/</link>
+      <link>https://sudevambadi.me/tags/c&#43;&#43;/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/c&#43;&#43;/</guid>
+      <guid>https://sudevambadi.me/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Classic</title>
-      <link>https://example.com/tags/classic/</link>
+      <link>https://sudevambadi.me/tags/classic/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/classic/</guid>
+      <guid>https://sudevambadi.me/tags/classic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Complete</title>
-      <link>https://example.com/tags/complete/</link>
+      <link>https://sudevambadi.me/tags/complete/</link>
       <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/complete/</guid>
+      <guid>https://sudevambadi.me/tags/complete/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Configuration</title>
-      <link>https://example.com/tags/configuration/</link>
+      <link>https://sudevambadi.me/tags/configuration/</link>
       <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/configuration/</guid>
+      <guid>https://sudevambadi.me/tags/configuration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Cleaning</title>
-      <link>https://example.com/tags/data-cleaning/</link>
+      <link>https://sudevambadi.me/tags/data-cleaning/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/data-cleaning/</guid>
+      <guid>https://sudevambadi.me/tags/data-cleaning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Science</title>
-      <link>https://example.com/tags/data-science/</link>
+      <link>https://sudevambadi.me/tags/data-science/</link>
       <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/data-science/</guid>
+      <guid>https://sudevambadi.me/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Science Large Files</title>
-      <link>https://example.com/tags/data-science-large-files/</link>
+      <link>https://sudevambadi.me/tags/data-science-large-files/</link>
       <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/data-science-large-files/</guid>
+      <guid>https://sudevambadi.me/tags/data-science-large-files/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep C</title>
-      <link>https://example.com/tags/deep-c/</link>
+      <link>https://sudevambadi.me/tags/deep-c/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/deep-c/</guid>
+      <guid>https://sudevambadi.me/tags/deep-c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dictionary</title>
-      <link>https://example.com/tags/dictionary/</link>
+      <link>https://sudevambadi.me/tags/dictionary/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/dictionary/</guid>
+      <guid>https://sudevambadi.me/tags/dictionary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dictionary Script</title>
-      <link>https://example.com/tags/dictionary-script/</link>
+      <link>https://sudevambadi.me/tags/dictionary-script/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/dictionary-script/</guid>
+      <guid>https://sudevambadi.me/tags/dictionary-script/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Farhan</title>
-      <link>https://example.com/tags/farhan/</link>
+      <link>https://sudevambadi.me/tags/farhan/</link>
       <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/farhan/</guid>
+      <guid>https://sudevambadi.me/tags/farhan/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fedora Nitc Mirror</title>
-      <link>https://example.com/tags/fedora-nitc-mirror/</link>
+      <link>https://sudevambadi.me/tags/fedora-nitc-mirror/</link>
       <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/fedora-nitc-mirror/</guid>
+      <guid>https://sudevambadi.me/tags/fedora-nitc-mirror/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Fosscell Mirror</title>
-      <link>https://example.com/tags/fosscell-mirror/</link>
+      <link>https://sudevambadi.me/tags/fosscell-mirror/</link>
       <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/fosscell-mirror/</guid>
+      <guid>https://sudevambadi.me/tags/fosscell-mirror/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hill Station</title>
-      <link>https://example.com/tags/hill-station/</link>
+      <link>https://sudevambadi.me/tags/hill-station/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/hill-station/</guid>
+      <guid>https://sudevambadi.me/tags/hill-station/</guid>
       <description></description>
     </item>
     
     <item>
       <title>India</title>
-      <link>https://example.com/tags/india/</link>
+      <link>https://sudevambadi.me/tags/india/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/india/</guid>
+      <guid>https://sudevambadi.me/tags/india/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Installing Packages</title>
-      <link>https://example.com/tags/installing-packages/</link>
+      <link>https://sudevambadi.me/tags/installing-packages/</link>
       <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/installing-packages/</guid>
+      <guid>https://sudevambadi.me/tags/installing-packages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jekyll</title>
-      <link>https://example.com/tags/jekyll/</link>
+      <link>https://sudevambadi.me/tags/jekyll/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/jekyll/</guid>
+      <guid>https://sudevambadi.me/tags/jekyll/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kerala</title>
-      <link>https://example.com/tags/kerala/</link>
+      <link>https://sudevambadi.me/tags/kerala/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/kerala/</guid>
+      <guid>https://sudevambadi.me/tags/kerala/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Large Csv</title>
-      <link>https://example.com/tags/large-csv/</link>
+      <link>https://sudevambadi.me/tags/large-csv/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/large-csv/</guid>
+      <guid>https://sudevambadi.me/tags/large-csv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Large Dataset</title>
-      <link>https://example.com/tags/large-dataset/</link>
+      <link>https://sudevambadi.me/tags/large-dataset/</link>
       <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/large-dataset/</guid>
+      <guid>https://sudevambadi.me/tags/large-dataset/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://example.com/tags/linux/</link>
+      <link>https://sudevambadi.me/tags/linux/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/linux/</guid>
+      <guid>https://sudevambadi.me/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux Mint</title>
-      <link>https://example.com/tags/linux-mint/</link>
+      <link>https://sudevambadi.me/tags/linux-mint/</link>
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/linux-mint/</guid>
+      <guid>https://sudevambadi.me/tags/linux-mint/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Meenmutty Waterfalls</title>
-      <link>https://example.com/tags/meenmutty-waterfalls/</link>
+      <link>https://sudevambadi.me/tags/meenmutty-waterfalls/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/meenmutty-waterfalls/</guid>
+      <guid>https://sudevambadi.me/tags/meenmutty-waterfalls/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Minix 3</title>
-      <link>https://example.com/tags/minix-3/</link>
+      <link>https://sudevambadi.me/tags/minix-3/</link>
       <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/minix-3/</guid>
+      <guid>https://sudevambadi.me/tags/minix-3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Minix 3 Installation</title>
-      <link>https://example.com/tags/minix-3-installation/</link>
+      <link>https://sudevambadi.me/tags/minix-3-installation/</link>
       <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/minix-3-installation/</guid>
+      <guid>https://sudevambadi.me/tags/minix-3-installation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mirror Website</title>
-      <link>https://example.com/tags/mirror-website/</link>
+      <link>https://sudevambadi.me/tags/mirror-website/</link>
       <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/mirror-website/</guid>
+      <guid>https://sudevambadi.me/tags/mirror-website/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mongodb</title>
-      <link>https://example.com/tags/mongodb/</link>
+      <link>https://sudevambadi.me/tags/mongodb/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/mongodb/</guid>
+      <guid>https://sudevambadi.me/tags/mongodb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nit Calicut</title>
-      <link>https://example.com/tags/nit-calicut/</link>
+      <link>https://sudevambadi.me/tags/nit-calicut/</link>
       <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/nit-calicut/</guid>
+      <guid>https://sudevambadi.me/tags/nit-calicut/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Permenantly</title>
-      <link>https://example.com/tags/permenantly/</link>
+      <link>https://sudevambadi.me/tags/permenantly/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/permenantly/</guid>
+      <guid>https://sudevambadi.me/tags/permenantly/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ponmudi</title>
-      <link>https://example.com/tags/ponmudi/</link>
+      <link>https://sudevambadi.me/tags/ponmudi/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ponmudi/</guid>
+      <guid>https://sudevambadi.me/tags/ponmudi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming Knowledge</title>
-      <link>https://example.com/tags/programming-knowledge/</link>
+      <link>https://sudevambadi.me/tags/programming-knowledge/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/programming-knowledge/</guid>
+      <guid>https://sudevambadi.me/tags/programming-knowledge/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recursice Downloads</title>
-      <link>https://example.com/tags/recursice-downloads/</link>
+      <link>https://sudevambadi.me/tags/recursice-downloads/</link>
       <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/recursice-downloads/</guid>
+      <guid>https://sudevambadi.me/tags/recursice-downloads/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reducebykey</title>
-      <link>https://example.com/tags/reducebykey/</link>
+      <link>https://sudevambadi.me/tags/reducebykey/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/reducebykey/</guid>
+      <guid>https://sudevambadi.me/tags/reducebykey/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ride</title>
-      <link>https://example.com/tags/ride/</link>
+      <link>https://sudevambadi.me/tags/ride/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ride/</guid>
+      <guid>https://sudevambadi.me/tags/ride/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Royal Enfield</title>
-      <link>https://example.com/tags/royal-enfield/</link>
+      <link>https://sudevambadi.me/tags/royal-enfield/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/royal-enfield/</guid>
+      <guid>https://sudevambadi.me/tags/royal-enfield/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Script to Find Meaning</title>
-      <link>https://example.com/tags/script-to-find-meaning/</link>
+      <link>https://sudevambadi.me/tags/script-to-find-meaning/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/script-to-find-meaning/</guid>
+      <guid>https://sudevambadi.me/tags/script-to-find-meaning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shayeri</title>
-      <link>https://example.com/tags/shayeri/</link>
+      <link>https://sudevambadi.me/tags/shayeri/</link>
       <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/shayeri/</guid>
+      <guid>https://sudevambadi.me/tags/shayeri/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ssh</title>
-      <link>https://example.com/tags/ssh/</link>
+      <link>https://sudevambadi.me/tags/ssh/</link>
       <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ssh/</guid>
+      <guid>https://sudevambadi.me/tags/ssh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sudev Ambadi</title>
-      <link>https://example.com/tags/sudev-ambadi/</link>
+      <link>https://sudevambadi.me/tags/sudev-ambadi/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/sudev-ambadi/</guid>
+      <guid>https://sudevambadi.me/tags/sudev-ambadi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sudev a C</title>
-      <link>https://example.com/tags/sudev-a-c/</link>
+      <link>https://sudevambadi.me/tags/sudev-a-c/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/sudev-a-c/</guid>
+      <guid>https://sudevambadi.me/tags/sudev-a-c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Terminal</title>
-      <link>https://example.com/tags/terminal/</link>
+      <link>https://sudevambadi.me/tags/terminal/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/terminal/</guid>
+      <guid>https://sudevambadi.me/tags/terminal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Test Skills</title>
-      <link>https://example.com/tags/test-skills/</link>
+      <link>https://sudevambadi.me/tags/test-skills/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/test-skills/</guid>
+      <guid>https://sudevambadi.me/tags/test-skills/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Text Manipulation</title>
-      <link>https://example.com/tags/text-manipulation/</link>
+      <link>https://sudevambadi.me/tags/text-manipulation/</link>
       <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/text-manipulation/</guid>
+      <guid>https://sudevambadi.me/tags/text-manipulation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Travel</title>
-      <link>https://example.com/tags/travel/</link>
+      <link>https://sudevambadi.me/tags/travel/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/travel/</guid>
+      <guid>https://sudevambadi.me/tags/travel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Trip</title>
-      <link>https://example.com/tags/trip/</link>
+      <link>https://sudevambadi.me/tags/trip/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/trip/</guid>
+      <guid>https://sudevambadi.me/tags/trip/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Trivandrum</title>
-      <link>https://example.com/tags/trivandrum/</link>
+      <link>https://sudevambadi.me/tags/trivandrum/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/trivandrum/</guid>
+      <guid>https://sudevambadi.me/tags/trivandrum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu</title>
-      <link>https://example.com/tags/ubuntu/</link>
+      <link>https://sudevambadi.me/tags/ubuntu/</link>
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ubuntu/</guid>
+      <guid>https://sudevambadi.me/tags/ubuntu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu Brightness Problem</title>
-      <link>https://example.com/tags/ubuntu-brightness-problem/</link>
+      <link>https://sudevambadi.me/tags/ubuntu-brightness-problem/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ubuntu-brightness-problem/</guid>
+      <guid>https://sudevambadi.me/tags/ubuntu-brightness-problem/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ubuntu Brightness Reset Error</title>
-      <link>https://example.com/tags/ubuntu-brightness-reset-error/</link>
+      <link>https://sudevambadi.me/tags/ubuntu-brightness-reset-error/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/ubuntu-brightness-reset-error/</guid>
+      <guid>https://sudevambadi.me/tags/ubuntu-brightness-reset-error/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Unix Command Line</title>
-      <link>https://example.com/tags/unix-command-line/</link>
+      <link>https://sudevambadi.me/tags/unix-command-line/</link>
       <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/unix-command-line/</guid>
+      <guid>https://sudevambadi.me/tags/unix-command-line/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Useful Bash Functions</title>
-      <link>https://example.com/tags/useful-bash-functions/</link>
+      <link>https://sudevambadi.me/tags/useful-bash-functions/</link>
       <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/useful-bash-functions/</guid>
+      <guid>https://sudevambadi.me/tags/useful-bash-functions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Virtualbox</title>
-      <link>https://example.com/tags/virtualbox/</link>
+      <link>https://sudevambadi.me/tags/virtualbox/</link>
       <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/virtualbox/</guid>
+      <guid>https://sudevambadi.me/tags/virtualbox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wget</title>
-      <link>https://example.com/tags/wget/</link>
+      <link>https://sudevambadi.me/tags/wget/</link>
       <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/wget/</guid>
+      <guid>https://sudevambadi.me/tags/wget/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Wget to Mirror Website</title>
-      <link>https://example.com/tags/wget-to-mirror-website/</link>
+      <link>https://sudevambadi.me/tags/wget-to-mirror-website/</link>
       <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/wget-to-mirror-website/</guid>
+      <guid>https://sudevambadi.me/tags/wget-to-mirror-website/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Without Internet</title>
-      <link>https://example.com/tags/without-internet/</link>
+      <link>https://sudevambadi.me/tags/without-internet/</link>
       <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/without-internet/</guid>
+      <guid>https://sudevambadi.me/tags/without-internet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Zindagi Na Milegi Dubara</title>
-      <link>https://example.com/tags/zindagi-na-milegi-dubara/</link>
+      <link>https://sudevambadi.me/tags/zindagi-na-milegi-dubara/</link>
       <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/tags/zindagi-na-milegi-dubara/</guid>
+      <guid>https://sudevambadi.me/tags/zindagi-na-milegi-dubara/</guid>
       <description></description>
     </item>
     

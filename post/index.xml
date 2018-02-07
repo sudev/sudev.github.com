@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sudev Ambadi</title>
-    <link>https://example.com/post/</link>
+    <link>https://sudevambadi.me/post/</link>
     <description>Recent content in Posts on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2017 Sudev Ambadi. &lt;br /&gt; Unless noted otherwise, all content is available under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. &lt;/a&gt; &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png&#34; /&gt;&lt;/a&gt;</copyright>
     <lastBuildDate>Sat, 09 Jul 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://example.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sudevambadi.me/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Normalization, Standardization and Rescaling</title>
-      <link>https://example.com/post/2016-07-09-standardization/</link>
+      <link>https://sudevambadi.me/post/2016-07-09-standardization/</link>
       <pubDate>Sat, 09 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2016-07-09-standardization/</guid>
+      <guid>https://sudevambadi.me/post/2016-07-09-standardization/</guid>
       <description>This is copy/paste of an interesting FAQ from faqs.org, I really loved reading the article and thought of reposting the same in a better formatted manner for readability.
 Courtsey: ftp://ftp.sas.com/pub/neural/FAQ.html
 First, some definitions  Rescaling  &amp;ldquo;Rescaling&amp;rdquo; a vector means to add or subtract a constant and then multiply or divide by a constant, as you would do to change the units of measurement of the data.
@@ -26,10 +26,10 @@ For example, to convert a temperature from Celsius to Fahrenheit.</description>
     
     <item>
       <title>Zinda ho tum !</title>
-      <link>https://example.com/post/2015-07-27-znmd/</link>
+      <link>https://sudevambadi.me/post/2015-07-27-znmd/</link>
       <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2015-07-27-znmd/</guid>
+      <guid>https://sudevambadi.me/post/2015-07-27-znmd/</guid>
       <description>One of the Bollywood movies which I always loved watching has been ZNMD, here is a collection of shayari recited by Farhan Akthar (Imran) in ZNMD.
  A compiled version from Souncloud.
 Apne Hone Par Mujhko Yaqeen Aa Gaya (The poem comes after the trio’s deep-sea dive)
@@ -41,10 +41,10 @@ sarsaraati hui tehniyaan pattiyaan,</description>
     
     <item>
       <title>Converting large csv&#39;s to nested data structure using apache spark</title>
-      <link>https://example.com/post/2015-07-18-mongospark/</link>
+      <link>https://sudevambadi.me/post/2015-07-18-mongospark/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2015-07-18-mongospark/</guid>
+      <guid>https://sudevambadi.me/post/2015-07-18-mongospark/</guid>
       <description>What is Apache Spark ? Apache Spark brings fast, in-memory data processing to Hadoop. Elegant and expressive development APIs in Scala, Java, and Python allow data workers to efficiently execute streaming, machine learning or SQL workloads for fast iterative access to datasets.
 Quick start guide
 Problem Statement / Task To read lot of really big csv&amp;rsquo;s (~GBs) from Hadoop HDFS, clean, convert them to nested data structure and update it to MongoDB using Apache Spark.</description>
@@ -52,10 +52,10 @@ Problem Statement / Task To read lot of really big csv&amp;rsquo;s (~GBs) from H
     
     <item>
       <title>Ponmudi - 2</title>
-      <link>https://example.com/post/2015-04-02-ponmuditwo/</link>
+      <link>https://sudevambadi.me/post/2015-04-02-ponmuditwo/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2015-04-02-ponmuditwo/</guid>
+      <guid>https://sudevambadi.me/post/2015-04-02-ponmuditwo/</guid>
       <description>If you happen to be in trivandrum with a bike and you loves to ride, Ponmudi is one place that should go. Sharing some photos taken by Saurab Devanandan during the trip.
 The Ponmudi ! 
 Bullets :) 
@@ -68,10 +68,10 @@ ISRO has some office on top of Ponmudi(Must be fun working here)</description>
     
     <item>
       <title>Data science and unix command line</title>
-      <link>https://example.com/post/2015-03-20-datascienceunix/</link>
+      <link>https://sudevambadi.me/post/2015-03-20-datascienceunix/</link>
       <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2015-03-20-datascienceunix/</guid>
+      <guid>https://sudevambadi.me/post/2015-03-20-datascienceunix/</guid>
       <description>Note : This article applies only to those who code. I have seen many strugling with MS Excel trying to figure out data in a large csv file, I don&amp;rsquo;t blame them beacause most people I have met ignore standard unix command line tools just because they cared about commandline tools.
 
 When the data is BIG(anything above .5GBs) and if we are trying to figure out say even the coloumn names of a csv file MS Excel will get stuck and we will see a MS Windows Not Responding.</description>
@@ -79,10 +79,10 @@ When the data is BIG(anything above .5GBs) and if we are trying to figure out sa
     
     <item>
       <title>Ponmudi</title>
-      <link>https://example.com/post/2014-11-09-ponmudi/</link>
+      <link>https://sudevambadi.me/post/2014-11-09-ponmudi/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2014-11-09-ponmudi/</guid>
+      <guid>https://sudevambadi.me/post/2014-11-09-ponmudi/</guid>
       <description>Mountain top and the fog !  Ponmudi top. #hairpins #ride #ponmudi #re
 A post shared by Sudev Ambadi (@sudev_ambadi) on Nov 8, 2014 at 7:14am PST
   
@@ -95,10 +95,10 @@ Meemutty waterfals Meemutty waterfalls is on the way to Punmudi top. A nice shor
     
     <item>
       <title>Deep C, understand the language before you write code.</title>
-      <link>https://example.com/post/2014-03-04-testyourc/</link>
+      <link>https://sudevambadi.me/post/2014-03-04-testyourc/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2014-03-04-testyourc/</guid>
+      <guid>https://sudevambadi.me/post/2014-03-04-testyourc/</guid>
       <description>I came across a slide which explains why is it hard to program in C/C++ programming language when you don&amp;rsquo;t have a proper understanidng of the same.
 Here is slide which demonostrates why a proper understanding of language is neccessary before you code.
  Courtesy :: Deep C by Olve Maudal</description>
@@ -106,30 +106,30 @@ Here is slide which demonostrates why a proper understanding of language is necc
     
     <item>
       <title>A dictionary in your terminal</title>
-      <link>https://example.com/post/2014-01-14-dictionary/</link>
+      <link>https://sudevambadi.me/post/2014-01-14-dictionary/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2014-01-14-dictionary/</guid>
+      <guid>https://sudevambadi.me/post/2014-01-14-dictionary/</guid>
       <description>Owning to my poor vocabulary I had to look up for meanings every now and then, the following script gets you the meaning for any word from dictionary.com using bash.
 A bash script dictionary dict() { #Creating a temp folder dir=~/.dict #Check for the existence if not create one [[ -d $dir ]] || mkdir $dir #download respective file from dictionary dot com # -q =&amp;gt; do it quietly ie nothing @ screen # -O save it as mean wget -q -O $dir/mean wget http://dictionary.</description>
     </item>
     
     <item>
       <title>Installing Minix 3 using VirtualBox in Linux</title>
-      <link>https://example.com/post/2013-09-07-minixinstall/</link>
+      <link>https://sudevambadi.me/post/2013-09-07-minixinstall/</link>
       <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2013-09-07-minixinstall/</guid>
+      <guid>https://sudevambadi.me/post/2013-09-07-minixinstall/</guid>
       <description>This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh connection between Minix and host Linux machine.
 But why, but why?? Minix is a micro kernel, unlike Linux which is monolithic Minix is a operating system which is Reliable. Being a micro kernel good sepration around the Kernel Space and User Space, Minix Kernel is only 6000 lines of code compared to millions of lines of code in Linux Kernel.</description>
     </item>
     
     <item>
       <title>Useful bashrc functions</title>
-      <link>https://example.com/post/2013-05-23-bashfunction/</link>
+      <link>https://sudevambadi.me/post/2013-05-23-bashfunction/</link>
       <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2013-05-23-bashfunction/</guid>
+      <guid>https://sudevambadi.me/post/2013-05-23-bashfunction/</guid>
       <description>I&amp;rsquo;m going to share some of my bashrc functions which saves me a lot of time.
 Killer This function helps you find a process using a keyword and to kill it, you don&amp;rsquo;t have to use ps aux along with grep and then kill the process by entering the pid instead use this function give it a keyword and it will help you in killing a process.
 killer() { echo &amp;#34;I&amp;#39;m going to kill these process&amp;#34;; ps -ef | grep $1 | grep -v grep echo &amp;#34;Can I ?</description>
@@ -137,10 +137,10 @@ killer() { echo &amp;#34;I&amp;#39;m going to kill these process&amp;#34;; ps -e
     
     <item>
       <title>Configuring to Fedora 17 Local Mirror of NITC</title>
-      <link>https://example.com/post/2013-03-22-nitcfedora/</link>
+      <link>https://sudevambadi.me/post/2013-03-22-nitcfedora/</link>
       <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2013-03-22-nitcfedora/</guid>
+      <guid>https://sudevambadi.me/post/2013-03-22-nitcfedora/</guid>
       <description>This will help you to configure your system to download packages from NITC fosscell fedora mirror.
 Login as root in your system and use the following command to create a file inside the folder /etc/yum.repos.d
 touch /etc/yum.repos.d/fosscellfedora Copy and paste the folowing code into the created file using your favourite editor.
@@ -149,20 +149,20 @@ touch /etc/yum.repos.d/fosscellfedora Copy and paste the folowing code into the 
     
     <item>
       <title>Offline mirror a website using wget</title>
-      <link>https://example.com/post/2013-02-09-wgetwebsite/</link>
+      <link>https://sudevambadi.me/post/2013-02-09-wgetwebsite/</link>
       <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2013-02-09-wgetwebsite/</guid>
+      <guid>https://sudevambadi.me/post/2013-02-09-wgetwebsite/</guid>
       <description>Use the following wget command to mirror a website
 wget -mkpb some-website-url  -m mirrors the entire website -k converts all links to suitable web viewing. -p downloads all required files like that of the css, js &amp;hellip; -b wget will run in background  This method won&amp;rsquo;t work for many websites as their server will block wget from downloading. I will update this post soon, we can use user agents in wget to mock wget as a browser.</description>
     </item>
     
     <item>
       <title>Battery information inside terminal</title>
-      <link>https://example.com/post/2013-02-08-battery/</link>
+      <link>https://sudevambadi.me/post/2013-02-08-battery/</link>
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2013-02-08-battery/</guid>
+      <guid>https://sudevambadi.me/post/2013-02-08-battery/</guid>
       <description>If you want to know your battery details in terminal use upower and create an alias to it.
 This is helpful hack if you want to trigger events on low battery or if you are someone who uses really light desktop managers without a battery indicator.
 Upower command can be used to get stats on battery.
@@ -172,10 +172,10 @@ upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E &amp;#34;state|
     
     <item>
       <title>Permanently adjust screen brightness in Ubuntu / Linux Mint</title>
-      <link>https://example.com/post/2013-02-05-ubuntubrightness/</link>
+      <link>https://sudevambadi.me/post/2013-02-05-ubuntubrightness/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2013-02-05-ubuntubrightness/</guid>
+      <guid>https://sudevambadi.me/post/2013-02-05-ubuntubrightness/</guid>
       <description>This details a fix to reset the screen brightness in Ubuntu / Linux Mint during each boot.
 This idea will work only if you have a file named brightness in the folder /sys/class/backlight/acpi_video0 and the hack is relevant for the Ubuntu (version &amp;lt; 12.04) where they had a bug in which the brightness is too high during each restart.
 To know your systems current brightness level.
@@ -184,10 +184,10 @@ cat /sys/class/backlight/acpi_video0/brightness Change brightness by changing th
     
     <item>
       <title>Welcome to Jekyll</title>
-      <link>https://example.com/post/2013-02-05-hello/</link>
+      <link>https://sudevambadi.me/post/2013-02-05-hello/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/2013-02-05-hello/</guid>
+      <guid>https://sudevambadi.me/post/2013-02-05-hello/</guid>
       <description>I always wanted a clean and simple interface for my blog, I used to blog on blogger with an ugly theme.
 If you are yet to use Jkeyll, I would recommend you to use it along with Github Pages.</description>
     </item>
