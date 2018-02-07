@@ -5,7 +5,11 @@ category: posts
 comments: true
 ---
 
-*This is copy/paste of an interesting FAQ from faqs.org, I really loved reading the article and thought of reposting the same in a better formatted manner for readability.*     
+*This is copy/paste of an interesting FAQ from faqs.org, I really loved reading the article and thought of reposting the same in a better formatted manner for readability.*      
+
+
+   
+
 Courtsey: [ftp://ftp.sas.com/pub/neural/FAQ.html](ftp://ftp.sas.com/pub/neural/FAQ.html)
 
 

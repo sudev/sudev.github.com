@@ -3,11 +3,13 @@ layout: post
 title: Data science and unix command line
 category: posts
 comments: true
-tags: [unix command line, command line text manipulation, data science and unix commandline, data science large files, large dataset]
+tags: [unix command line, text manipulation, data science, data science large files, large dataset]
 ---
 
 Note : *This article applies only to those who code*.
-I have seen many people strugling with MS Excel trying to figure out data in a large csv file, I don't blame them beacause most people I have met ignore standard unix command line tools just because they never tried it. And if you are using Excel for large datasets it more like the donkey trying to pull too much load as shown below.   
+I have seen many strugling with MS Excel trying to figure out data in a large csv file, I don't blame them beacause most people I have met ignore standard unix command line tools just because they cared about commandline tools.        
+
+
 <br />
 ![MS Excel for large dataset](/images/excel.jpg)    
 <br />

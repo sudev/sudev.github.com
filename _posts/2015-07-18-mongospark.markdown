@@ -7,7 +7,7 @@ tags: [Apache Spark, MongoDB, large csv, data cleaning, reducebykey]
 ---
 
 #### What is Apache Spark ? 
-[Apache Spark][as] brings fast, in-memory data processing to Hadoop. Elegant and expressive development APIs in Scala, Java, and Python allow data workers to efficiently execute streaming, machine learning or SQL workloads for fast iterative access to datasets. [Quick start guide][qs]
+[Apache Spark][as] brings fast, in-memory data processing to Hadoop. Elegant and expressive development APIs in Scala, Java, and Python allow data workers to efficiently execute streaming, machine learning or SQL workloads for fast iterative access to datasets. [Quick start guide][qs]        
 
 #### Problem Statement / Task
 
@@ -55,7 +55,7 @@ Shown above is sample csv, I had to convert them into schema as shown below and 
 The order of fields in the csv dump differs according to the type of csv, so I had to write a generic function wherein we can specify the position of required fields. So let's call this function on both income-statement.csv and balance-sheet.csv and to create two cleaned rdd datasets  `balanceSheetRdd` and `incomeStatemntRdd` and later join them into one `masterRdd`.
 
 {% highlight java %}
-# Function definition
+// Function definition
 JavaPairRDD<String, Map<String, Map<String, String>>> dataclean(
 			JavaSparkContext sc,                      // Spark Context 
 			String filepath,                         // path to file in Hadoop
@@ -227,11 +227,6 @@ Previously I had attempted to do this filtering and mapping jobs using dataframe
 
 Let me know your thoughts, please do comment. The entire [code is available in github](https://github.com/sudev/sparkMongo), this post intends to explain the same. 
 
----
-
-[jekyll]: https://github.com/mojombo/jekyll
-[zh]: http://sudev.github.com
-[twitter]: https://twitter.com/sudev
 [as]: http://spark.apache.org/ "Apache Spark homepage"
 [mongoc]: https://github.com/mongodb/mongo-hadoop/wiki/Spark-Usage "Hadoop Spark Mongo connector wiki"
 [qs]: http://spark.apache.org/docs/latest/quick-start.html "Spark quick start"

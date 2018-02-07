@@ -3,10 +3,12 @@ layout: post
 title: Zinda ho tum !
 category: posts
 comments: true
-tags: [Zindagi na milegi dubara, farhan shayeri, ]
+tags: [Zindagi na milegi dubara, farhan, shayeri, complete]
 ---
 
-One of the Bollywood movies which I always loved watching has been ZNMD, here is a collection of shayari recited by Farhan Akthar (Imran) in ZNMD. 
+One of the Bollywood movies which I always loved watching has been ZNMD, here is a collection of shayari recited by Farhan Akthar (Imran) in ZNMD.      
+
+
 
 
 <iframe width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F21877416&show_artwork=true"></iframe>
@@ -30,7 +32,7 @@ A compiled version from Souncloud.
 > Apne hone par mujhko yakeen aa gaya.    
 
 
-English Translation (Sucks!)
+English Translation
 
 <br />
 The moment seems to flow like a molten sapphire and there’s deep blue silence,    
@@ -62,7 +64,7 @@ It all makes me believe in my existence.
 > duniya se bhi chhupta nahin          
 > ye jaane kaisa raaz hai            
 
-English Translation (Sucks!)
+English Translation
 
 <br />
 A thought came alive, but away it hid        
@@ -101,7 +103,7 @@ What is this unknown mystery
 > Kyun tu aise pal khota hai           
 > Dil aakhir tu kyun rota hai          
 
-English Translation (Sucks!)
+English Translation
 
 <br />
 When clouds of pain loom in the sky        
@@ -148,7 +150,7 @@ Oh heart why is it that you cry?
 > Betaabiyan leke chal rahe ho                   
 > Toh zinda ho tum                  
 
-English Translation (Sucks!)
+English Translation
 
 <br />
 If you are carrying your restlessness in your heart You are alive        
@@ -166,8 +168,3 @@ You are alive!
 
 Courtesy : Tseries, Soundcloud, one who did translation :) .
 
----
-
-[jekyll]: https://github.com/mojombo/jekyll
-[zh]: http://sudev.github.com
-[twitter]: https://twitter.com/sudev

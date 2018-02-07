@@ -1,72 +1,82 @@
-title:            Sudev Ambadi 
-tagline:          Free thinker
-description:      Sudev Ambadi's personal blog.
-# Your site's domain goes here. Leave localhost server or blank when working locally.
-#url:              http://localhost:4000
-url:             http://sudev.github.io
+# Mandatory settings
 
-# Owner/author information
-owner:
-  name:           Sudev Ambadi
-  avatar:         dp.jpg
-#  bio:            "Free and Open software || <br /> operating systems ||   <br /> cloud computing  ||  <br /> programming ||  <br /> cricket ||  <br /> traveller ||  <br /> careless"
-# bio:      "<strong>I &#9829;</strong> <br /> &#8594; Free and Open software <br /> &#8674; operating systems, cloud computing, programming and cricket. Currently doing my B Tech in Computer science and Engineering at National Institute of Technology, Calicut."
-  bio:      "I'm a computer enthusiast interested in exploring Free and Open software, operating systems, cloud computing, programming and cricket. "
-  email:    sudevdev@gmail.com
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:  sudev        
-  facebook: sudev.ambadi       
-  github: sudev        
-  linkedin:       
-  instagram: sudev_ambadi      
-  lastfm:         
-  tumblr:         
-  # For Google Authorship https://plus.google.com/authorship
-google_plus: 
+blog_theme: light # Or use dark
+name: Sudev Ambadi 
+paginate: 10
+url: # add your site url (format: https://example.com)
 
-# Analytics and webmaster tools stuff goes here
-google_analytics: UA-39443594-1
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:        
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about/
-  - title: Articles
-    url: /articles/
-  - title: Travel
-    url: /travel/
 
-#  - title: Theme Setup
-#   url: /theme-setup/
-  - title: Old blog
-    url: http://sudevshares.blogspot.in
-    external: true
+# Optional settings
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Asia/Kolkata
-future:      true
-pygments:    true
-markdown:    kramdown
+about_enabled: true # Change to true if you wish to show an icon in the navigation that redirects to the about page
+baseurl: # Set if blog doesn't sit at the root of the domain (format: /blog)
+discus_identifier: sudevgithub
+ga_analytics: UA-39443594-1 # Add your GA Tracking Id
+local_fonts: false # Change to true if you wish to use local fonts
+rss_enabled: true # Change to false if not
+scrollappear_enabled: true # Change to false to disable
+social:
+  dribbble: # Add your Dribbble handle
+  facebook: # Add your Facebook handle
+  flickr: # Add your Flickr handle
+  github: sudev
+  linkedin: # Add your LinkedIn handle
+  twitter: sudev
+  email: # Add your Email address
+  bitcoin: # Add your Bitcoin link or address
+  ethereum: # Add your Ethereum link or address
+  gitlab: # Add your GitLab handle
+  youtube: # Add your Youtube handle
+  twitch: # Add your Twitch handle
+  discord: # Add you Discord server invitation ID
+  tumblr: # Add your Tumblr handle
+  bitbucket: # Add your Bitbucket handle
+  docker: # Add your Docker Hub handle
+  instagram: # Add your Instagram handle
+  keybase: # Add your Keybase handle
+  medium: # Add your Medium handle
+  spotify: # Add your Spotify handle
+  stackoverflow: # Add your Stack Overflow ID number
+  steam: # Add your Steam handle
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
+# Important settings (change at own risk)
 
-  coderay:
-    coderay_line_numbers: 
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
-
-include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+assets:
+  plugins:
+    css: { autoprefixer: {}}
+    img: { optim: {}}
+  source_maps: false
+  sources:
+    - _assets/icons
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/yarn
+collections:
+  my_tags:
+    output: false
+    permalink: /tag/:slug/
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: articles_by_tag
+exclude:
+  - .travis.yml
+  - bin/*
+  - circle.yml
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - README.md
+  - vendor/
+  - yarn.lock
+plugins:
+  - jekyll-assets
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jemoji
+paginate_path: /posts/page/:num/
+permalink: posts/:slug

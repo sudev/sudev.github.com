@@ -1,7 +1,0 @@
----
-layout: post-index
-permalink: /articles/
-title: Articles
-tagline: A List of Posts
-tags: [Sudev Ambadi, Articles, blog on open softwares]
----
