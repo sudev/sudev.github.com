@@ -3,11 +3,13 @@ layout: post
 title: Useful bashrc functions  
 category: posts
 comments: true
-tags: [Sudev Ambadi, Sudev, useful bashrc functions, bash fucntions, bash functions to save time, cd and mkdir in one step   ]
+tags: [useful bash functions, bash, bash hacks]
 ---
 
 
-I'm going to share some of my bashrc functions which saves me a lot of time.
+I'm going to share some of my bashrc functions which saves me a lot of time.      
+
+
 
 ###  Killer  
 
@@ -32,8 +34,7 @@ fi
 {% endhighlight %}
 
 usage : killer chromium     
-You will given a list of application which has similar name chromium and proceed with a yes or no.    
-[ Update  This is not so useful function anymore you may use in built pkill command to get the same result. ]
+You will given a list of application which has similar name chromium and proceed with a yes or no. *Update  This is not so useful function anymore you may use in built pkill command to get the same result.*
 
 ###  Search and cd combined  
 
@@ -49,7 +50,7 @@ scd() {
 {% endhighlight %}
 
 Now you may be wondering the reason for using the primitive style of saving result into a variable and then cd'ing into it.
-I tried using exec with find, but the exec expects a executable binary (something of the sort /bin/bash ) and cd is a shell bultin,which means you will have to leave the parent shell to cd into a folder ( the desired folder ).A one liner for the same will look something of this sort.
+I tried using exec with find, but the exec expects a executable binary (something of the sort /bin/bash ) and cd is a shell bultin, which means you will have to leave the parent shell to cd into a folder ( the desired folder ).A one liner for the same will look something of this sort.
 
 {% highlight bash %}
 find ~ -name $1 -type d -exec bash -c "cd '{}'; exec bash" \;
@@ -115,7 +116,4 @@ then
 
 {% endhighlight %}
 
----
-[jekyll]: https://github.com/mojombo/jekyll
-[zh]: http://sudev.github.com
-[twitter]: https://twitter.com/sudev
+I love doing hacks around bash, you can find more of these [here](https://github.com/sudev/.bashrc).
