@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Installing Minix 3 using VirtualBox in Linux | Sudev Ambadi</title>
+
+<meta property='og:title' content='Installing Minix 3 using VirtualBox in Linux - Sudev Ambadi'>
+<meta property='og:description' content='This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh connection between Minix and host Linux machine.
+But why, but why?? Minix is a micro kernel, unlike Linux which is monolithic Minix is a operating system which is Reliable. Being a micro kernel good sepration around the Kernel Space and User Space, Minix Kernel is only 6000 lines of code compared to millions of lines of code in Linux Kernel.'>
+<meta property='og:url' content='https://example.com/post/2013-09-07-minixinstall/'>
+<meta property='og:site_name' content='Sudev Ambadi'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/392ea4e3015cf654cbd3974ac2c29e64?s=256'><meta property='article:publisher' content='sudev.ambadi'><meta property='article:section' content='Post'><meta property='article:tag' content='Minix 3 installation'><meta property='article:tag' content='ssh'><meta property='article:tag' content='minix 3'><meta property='article:tag' content='virtualbox'><meta property='article:tag' content='without internet'><meta property='article:tag' content='installing packages'><meta property='article:tag' content='linux'><meta property='article:published_time' content='2013-09-07T00:00:00Z'/><meta property='article:modified_time' content='2013-09-07T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@sudev'><meta name='twitter:creator' content='@sudev'>
+<link rel="stylesheet" href="https://example.com/css/style.css"/><link rel='stylesheet' href='/css/custom.css'></head>
+<body>
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://example.com"><h1 class="title is-4">Sudev Ambadi</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile"><a class="level-item" href='mailto:sudevdev@gmail.com' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" href='https://github.com/sudev' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" href='https://instagram.com/sudev_ambadi' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" href='https://twitter.com/sudev' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg></i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/minix-3-installation">#Minix 3 installation</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/ssh">#ssh</a>
+  
+  | <a class="subtitle is-6" href="/tags/minix-3">#minix 3</a>
+  
+  | <a class="subtitle is-6" href="/tags/virtualbox">#virtualbox</a>
+  
+  | <a class="subtitle is-6" href="/tags/without-internet">#without internet</a>
+  
+  | <a class="subtitle is-6" href="/tags/installing-packages">#installing packages</a>
+  
+  | <a class="subtitle is-6" href="/tags/linux">#linux</a>
+  
+
+      
+    </div>
+    <h2 class="subtitle is-6">September 7, 2013</h2>
+    <h1 class="title">Installing Minix 3 using VirtualBox in Linux</h1>
+    
+    <div class="content">
+      
+
+<p>This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh connection between Minix and host Linux machine.</p>
+
+<h2 id="but-why-but-why">But why, but why??</h2>
+
+<p>Minix is a micro kernel, unlike Linux which is monolithic Minix is a operating system which is Reliable. Being a micro kernel good sepration around the Kernel Space and User Space, Minix Kernel is only 6000 lines of code compared to millions of lines of code in Linux Kernel.</p>
+
+<p>This makes Minix perfect system to study for understanding operating systems, <a href="https://en.wikipedia.org/wiki/Andrew_S._Tanenbaum" target="_blank">Andrew Tanenbaum</a> has <a href="https://mcdtu.files.wordpress.com/2017/03/tanenbaum_woodhull_operating-systems-design-implementation-3rd-edition.pdf" target="_blank">book</a> detailing all of Minix/Operating Systems, so if you are a under graduate looking to do something around operating systems as your major project is not a bad idea.</p>
+
+<p>Teststed with Ubuntu 13.04 and Arch Linux.</p>
+
+<h2 id="downloading-minix-3">Downloading Minix 3</h2>
+
+<p>Download Minix 3 from the official website.</p>
+
+<p><a href="http://www.minix3.org/download/" target="_blank">Official download page</a><br />
+Note: I used the Minix version 3.2.1 (~256 MB), Minix 3.1 versions have some issues with VirtualBox installation so please use a version &gt; 3.2 .</p>
+
+<h2 id="creating-a-new-virtualbox-image">Creating a new VirtualBox Image</h2>
+
+<ul>
+<li>Make sure you have a VirtualBox installed in your system.</li>
+<li>Open VirtualBox -&gt; Click on the New button(top left).</li>
+<li>Select the type and version as &ldquo;other&rdquo;, name the virtualbox image &ldquo;minix&rdquo;.</li>
+<li>Click next, allot a RAM ( 512 MB).</li>
+<li>Create a virtual hard disk ( preferably VDI, dynamic size, 1 GB).</li>
+</ul>
+
+<h2 id="installing-minix-3">Installing Minix 3</h2>
+
+<ul>
+<li>Assuming you have downloaded and decompressed a MINIX 3 ISO image, attach the ISO file to VirtualBox:</li>
+<li>In VirtualBox, select minix on the list on the left.</li>
+<li>In the menu on the right, press CD/DVD-ROM.</li>
+<li>In the next menu, tick Mount CD/DVD Drive, and select ISO Image File.</li>
+<li>Browse, select the .iso Minix image we downloaded earlier and press OK</li>
+<li>Now boot the newly created virtual Image minix by clicking on the start button.</li>
+<li>Select Option 1 for installation and press ENTER.</li>
+<li>When the login prompt appears, login as root, press Enter when prompted for a password.</li>
+</ul>
+
+<p>To start installation type,</p>
+
+<p><code>setup</code></p>
+
+<p>After this and all other commands, be sure to type ENTER (RETURN). When the installation script ends a screen with a colon, hit ENTER to continue.</p>
+
+<h3 id="select-keyboard-type">Select keyboard type</h3>
+
+<p>When you are asked to select your national keyboard, do so. This and other steps have a default choice, in square brackets. If you agree with it, just hit ENTER. In most steps, the default is generally a good choice for beginners. The us-swap keyboard interchanges the CAPS LOCK and CTRL keys, as is conventional on UNIX systems.</p>
+
+<h3 id="create-or-select-a-partition-for-minix">Create or select a partition for MINIX</h3>
+
+<p>You will first be asked if you are an expert in MINIX disk partitioning. If so, you will be placed in the part program to give you full power to edit the Master Boot Record (and enough rope to hang yourself). If you are not an expert, press ENTER for the default action, which is an automated step-by-step guide to formatting a disk partition for MINIX.</p>
+
+<h3 id="select-a-disk">Select a disk</h3>
+
+<p>An IDE controller may have up to four disks. The setup script will now look for each one. Just ignore any error messages. When the drives are listed, select one. and confirm your choice.<br />
+If you have two hard disks and you decide to install MINIX to the second one and have trouble booting from it, see Installation Troubleshooting.</p>
+
+<h3 id="select-a-disk-region">Select a disk region</h3>
+
+<p>Now choose a region to install MINIX into. You have three choices:</p>
+
+<p>Select a free region
+Select a partition to overwrite
+Delete a partition to free up space and merge with adjacent free space
+For choices (1) and (2), type the region number. For (3) type:</p>
+
+<p><code>delete</code></p>
+
+<p>then give the region number when asked. This region will be overwritten and its previous contents lost forever.</p>
+
+<h3 id="confirm-your-choices">Confirm your choices</h3>
+
+<p>You have now reached the point of no return. You will be asked if you want to continue. If you do, the data in the selected region will be lost forever. If you are sure, type:</p>
+
+<p><code>yes</code></p>
+
+<p>and then ENTER. To exit the setup script without changing the partition table, hit CTRL-C.</p>
+
+<h3 id="reinstall-choice">Reinstall choice</h3>
+
+<p>If you chose an existing MINIX partition, in this step you will be offered a choice between a Full install, which erases everything in the partition, and a Reinstall, which does not affect your existing /home partition. This design means that you can put your personal files on /home and reinstall a newer version of MINIX when it is available without losing your personal files.</p>
+
+<h3 id="select-the-size-of-home">Select the size of /home</h3>
+
+<p>The selected partition will be divided into three subpartitions: root, /usr, and /home. The latter is for your own personal files. Specify how much of the partition should be set aside for your files. You will be asked to confirm your choice.</p>
+
+<h3 id="select-a-block-size">Select a block size</h3>
+
+<p>Disk block sizes of 1-KB, 2-KB, 4-KB, and 8-KB are supported, but to use a size larger than 4-KB you have to change a constant and recompile the system. Use the default (4 KB) here.</p>
+
+<h3 id="wait-for-files-to-be-copied">Wait for files to be copied</h3>
+
+<p>Files will be automatically copied from the CD-ROM to the hard disk. Every file will be announced as it is copied.</p>
+
+<h3 id="select-your-ethernet-chip">Select your Ethernet chip</h3>
+
+<p>You will now be asked which (if any) of the available Ethernet drivers you want installed. Network settings can be changed after installation.
+Since we are using VirtualBox select &ldquo;AMD LANCE&rdquo; (option 8) as your Ethernet driver, VirtualBox is capable of emulating AMD LANCE and it has nothing to do with your computers network card.</p>
+
+<h3 id="restart">Restart</h3>
+
+<p>When the copying is complete, MINIX is installed. Shut the system down by typing:</p>
+
+<p><code>shutdown -h now</code></p>
+
+<p>You can now remove/unmount the iso image that we attached to virtual machine(so that it wont again boot into the installation ISO). When you boot up again, you will be running MINIX.</p>
+
+<h2 id="enabling-ssh">Enabling SSH</h2>
+
+<p>Enabling ssh in minix and host is good option to do some development over the guest minix operating system.<br />
+To enable ssh in the guest minix operating system you have to install openssh in MINIX and in your host machine.</p>
+
+<h3 id="making-virtualbox-to-listen-to-a-particular-port-port-forwarding">Making VirtualBox to listen to a particular port (Port forwarding)</h3>
+
+<p>We will have to change some settings in virtualbox using VBoxManage(a commandline tool to tweak virtualbox settings)<br />
+It is important that you chose a port number larger than 1024 for host since administrative right is required by virtualbox to listen for ports below 1024 (here we choose 2222). Also note that using port 22 will only result in looping back into your own system.</p>
+
+<p>In you host operating systems terminal (Linux terminal) run the following command,</p>
+
+<p><code>VBoxManage modifyvm &quot;minix&quot; --natpf1 &quot;guestssh,tcp,,2222,,22&quot;</code></p>
+
+<p>&ldquo;guestssh&rdquo; is just a name for the port forwarding rule. &ldquo;minix&rdquo; - name of the virtualbox image</p>
+
+<h3 id="set-a-password-for-root-account-in-minix">Set a password for root account in Minix</h3>
+
+<p>In minix machine you will have to set a password for root user.A password for the root user can be set using the command</p>
+
+<p><code>passwd</code></p>
+
+<p>Now enter a desired password for the root account</p>
+
+<h3 id="installing-openssh-in-minix">Installing openssh in MINIX</h3>
+
+<p>Restart your virtualBox application. Boot into minix and install openssh.
+<br /><br />
+<strong>Method 1, using pkgin and internet ftp access required</strong>
+<br />
+You can install openssh using pkgin
+<br />
+Update pkgin type,</p>
+
+<p><code>pkgin update</code></p>
+
+<p>Install openssh type,</p>
+
+<p><code>pkgin install openssh</code></p>
+
+<p><strong>Method 2, using installation iso as a source (Internet not required)</strong><br />
+Many packages are available directly from the CD. This can be helpful in some circumstances, and is generally faster than downloading from the online repository.<br />
+To install packages from the CD, you can use pkgin_cd. This command uses the CD-ROM as the package repository. It is a wrapper for pkgin and therefore supports the same commands.<br />
+While your virtual image is running you can attach your iso disk to minix.To do so please click on the Devices menu that you see in the VitualBox window, select the minix installation iso and load it(this disk will be used as source for the software package). In case if you are not able to view <em>Add CD/DISK</em> device option under devices menu you might be missing <a href="https://help.ubuntu.com/community/VirtualBox/GuestAdditions" target="_blank">Guest additions extenssion</a> for VirtualBox.
+<br /><br />
+To install openssh type,</p>
+
+<p><code>kgin_cd install openssh</code></p>
+
+<p><strong>Starting SSh daemon</strong><br />
+When you have successfully installed openssh start the ssh daemon in minix type(starting ssh will create your keys),</p>
+
+<p><code>sh /usr/pkg/etc/rc.d/sshd start</code></p>
+
+<p>Make sure that ssh daemon is running in minix type,</p>
+
+<p><code>ps -ax | grep ssh</code></p>
+
+<h3 id="now-come-back-to-linux-terminal-host-terminal">Now come back to Linux Terminal (host terminal)</h3>
+
+<p>Check if ssh is running in your host machine,</p>
+
+<p><code>ps aux | grep ssh</code></p>
+
+<p>If not please install and enable ssh(depends on your distro)<br />
+Ubuntu / Debian users</p>
+
+<p><code>sudo apt-get install openssh-server1</code><br />
+<code>sudo start ssh</code></p>
+
+<p>Arch Linux users</p>
+
+<p><code>sudo pacman -S openssh-server</code><br />
+<code>sudo systemctl start sshd</code></p>
+
+<p>To ssh into minix from host machine type,</p>
+
+<p><code>ssh -l root -p 2222 localhost</code></p>
+
+<p>Enter your minix password.<br />
+<br />
+Links:<br />
+<a href="http://wiki.minix3.org/en/UsersGuide" target="_blank">Users Guide</a></p>
+
+    </div>
+    
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'sudevgithub';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2017 Sudev Ambadi. <br /> Unless noted otherwise, all content is available under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. </a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a></p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    
+  </div>
+</section>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-39443594-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>

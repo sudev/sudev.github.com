@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu Brightness Problem on Sudev Ambadi</title>
+    <link>https://example.com/tags/ubuntu-brightness-problem/</link>
+    <description>Recent content in Ubuntu Brightness Problem on Sudev Ambadi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy; 2017 Sudev Ambadi. &lt;br /&gt; Unless noted otherwise, all content is available under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. &lt;/a&gt; &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png&#34; /&gt;&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 05 Feb 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/ubuntu-brightness-problem/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Permanently adjust screen brightness in Ubuntu / Linux Mint</title>
+      <link>https://example.com/post/2013-02-05-ubuntubrightness/</link>
+      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/post/2013-02-05-ubuntubrightness/</guid>
+      <description>This details a fix to reset the screen brightness in Ubuntu / Linux Mint during each boot.
+This idea will work only if you have a file named brightness in the folder /sys/class/backlight/acpi_video0 and the hack is relevant for the Ubuntu (version &amp;lt; 12.04) where they had a bug in which the brightness is too high during each restart.
+To know your systems current brightness level.
+cat /sys/class/backlight/acpi_video0/brightness Change brightness by changing the value</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>Useful bashrc functions | Sudev Ambadi</title>
+
+<meta property='og:title' content='Useful bashrc functions - Sudev Ambadi'>
+<meta property='og:description' content='I&rsquo;m going to share some of my bashrc functions which saves me a lot of time.
+Killer This function helps you find a process using a keyword and to kill it, you don&rsquo;t have to use ps aux along with grep and then kill the process by entering the pid instead use this function give it a keyword and it will help you in killing a process.
+killer() { echo &#34;I&#39;m going to kill these process&#34;; ps -ef | grep $1 | grep -v grep echo &#34;Can I ?'>
+<meta property='og:url' content='https://example.com/post/2013-05-23-bashfunction/'>
+<meta property='og:site_name' content='Sudev Ambadi'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/392ea4e3015cf654cbd3974ac2c29e64?s=256'><meta property='article:publisher' content='sudev.ambadi'><meta property='article:section' content='Post'><meta property='article:tag' content='useful bash functions'><meta property='article:tag' content='bash'><meta property='article:tag' content='bash hacks'><meta property='article:published_time' content='2013-05-23T00:00:00Z'/><meta property='article:modified_time' content='2013-05-23T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@sudev'><meta name='twitter:creator' content='@sudev'>
+<link rel="stylesheet" href="https://example.com/css/style.css"/><link rel='stylesheet' href='/css/custom.css'></head>
+<body>
+
+<section class="section">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="nav-item" href="https://example.com"><h1 class="title is-4">Sudev Ambadi</h1></a>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-item level is-mobile"><a class="level-item" href='mailto:sudevdev@gmail.com' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" href='https://github.com/sudev' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" href='https://instagram.com/sudev_ambadi' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+    
+  </svg></i>
+            </span>
+          </a><a class="level-item" href='https://twitter.com/sudev' target='_blank' rel='noopener'>
+            <span class="icon">
+              <i class><svg viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+    
+    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+    
+  </svg></i>
+            </span>
+          </a></nav>
+      </div>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="subtitle is-6 is-pulled-right">
+      
+      
+<a class="subtitle is-6" href="/tags/useful-bash-functions">#useful bash functions</a>
+
+
+
+  
+  | <a class="subtitle is-6" href="/tags/bash">#bash</a>
+  
+  | <a class="subtitle is-6" href="/tags/bash-hacks">#bash hacks</a>
+  
+
+      
+    </div>
+    <h2 class="subtitle is-6">May 23, 2013</h2>
+    <h1 class="title">Useful bashrc functions</h1>
+    
+    <div class="content">
+      
+
+<p>I&rsquo;m going to share some of my bashrc functions which saves me a lot of time.</p>
+
+<h3 id="killer">Killer</h3>
+
+<p>This function helps you find a process using a keyword and to kill it, you don&rsquo;t have to use ps aux along with grep and then kill the process by entering the pid instead use this function give it a keyword and it will help you in killing a process.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csv" data-lang="csv">killer() { 
+echo &#34;I&#39;m going to kill these process&#34;;
+ps -ef | grep $1 | grep -v grep
+echo &#34;Can I ? [y]es [n]o &#34;;
+read ans;
+if [[ $ans =~ &#34;y&#34; ]] ;
+then 
+    ps -ef | grep  $1  | grep -v grep | awk &#39;{print $2}&#39; | xargs kill -s TERM 
+fi 
+}</code></pre></div>
+
+<p>usage : killer chromium<br />
+You will given a list of application which has similar name chromium and proceed with a yes or no. <em>Update  This is not so useful function anymore you may use in built pkill command to get the same result.</em></p>
+
+<h3 id="search-and-cd-combined">Search and cd combined</h3>
+
+<p>This function will help you to search and cd into a folder in a single step.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csv" data-lang="csv">scd() {
+    pathe=$(find ~ -name &#34;${1}&#34; -type d -print -quit | head -n 1)
+    cd &#34;${pathe}&#34;
+}</code></pre></div>
+
+<p>Now you may be wondering the reason for using the primitive style of saving result into a variable and then cd&rsquo;ing into it.
+I tried using exec with find, but the exec expects a executable binary (something of the sort /bin/bash ) and cd is a shell bultin, which means you will have to leave the parent shell to cd into a folder ( the desired folder ).A one liner for the same will look something of this sort.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csv" data-lang="csv">find ~ -name $1 -type d -exec bash -c &#34;cd &#39;{}&#39;; exec bash&#34; \;</code></pre></div>
+
+<p>Also note that you will taken into a new shell and changes that you make in the new shell will not be reflected back in the parent shell, and its a pain to exit each and every shell you create during the process.<br />
+You can have a look at my <a href="http://stackoverflow.com/questions/17248568/a-shell-script-to-find-and-cd-into-a-folder-taking-a-folder-name-as-argument-in" target="_blank">stackoverflow post</a> regarding the doubts that I had with this implementation.<br />
+If you have any suggestion to improve the thing please let me know through a comment.
+<br /><br />
+usuage : scd Music<br />
+Will take you to Music folder, regardless of your present working directory</p>
+
+<h3 id="mkdir-and-cd-into-it-in-a-single-step">Mkdir and cd into it in a single step</h3>
+
+<p>Usually we have to create a folder and then cd into it, atleast to me I had to do this very often.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csv" data-lang="csv">mkcd() {
+    mkdir &#34;${1}&#34;
+    cd &#34;${1}&#34;
+}</code></pre></div>
+
+<h3 id="a-dictionary">A dictionary</h3>
+
+<p>Due to my poor vocabulary I always had to look for the meaning of English words from dictionary.com. So to make things easier, I wrote a csv script to fetch meanings from dictionary.com within my terminal.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csv" data-lang="csv">dict() {
+
+#Creating a temp folder 
+dir=~/.dict
+
+#Check for the existence if not create one
+[[ -d $dir ]] || mkdir $dir
+
+
+#download respective file from dictionary dot com 
+# -q =&gt; do it quietly ie nothing @ screen 
+# -O save it as mean
+wget -q -O $dir/mean wget http://dictionary.reference.com/browse/$1
+
+#Please DONT hardcode the value, give it to variable and then use it 
+file=$dir/mean
+
+#greping out result
+m=$(cat $file | grep description | grep -Po &#39;content=.*.*See more&#39; | grep -Po &#39;\,.*.\.&#39;)
+
+#saving the error code 
+k=$(echo $?)
+
+#echoing
+echo &#34;Meaning of the word &#34;$1&#34; is&#34;$m
+
+#checks if the word was actually available else throws an error
+if [[ $k -gt 0 ]]; 
+then 
+    echo &#34;.........oops, cant find word &#34;$1;
+    fi
+     
+}</code></pre></div>
+
+<p>I love doing hacks around bash, you can find more of these <a href="https://github.com/sudev/.bashrc" target="_blank">here</a>.</p>
+
+    </div>
+    
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <aside><div id="disqus_thread"></div></aside>
+    <script type="text/javascript">
+      var disqus_shortname = 'sudevgithub';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; 2017 Sudev Ambadi. <br /> Unless noted otherwise, all content is available under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. </a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a></p>
+    
+      <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a>.</p>
+    
+  </div>
+</section>
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-39443594-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+</html>
