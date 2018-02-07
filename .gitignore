@@ -3,6 +3,19 @@ _theme_packages/*
 
 Thumbs.db
 .DS_Store
+# Global
+*.DS_Store
+Desktop.ini
+Thumbs.db
+
+# Project
+!.keep
+*.sass-cache
+/_assets/yarn/
+/_site/
+/.jekyll-cache/
+Gemfile.lock
+yarn.lock
 
 !.gitkeep
 *~

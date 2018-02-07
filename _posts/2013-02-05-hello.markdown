@@ -2,20 +2,14 @@
 layout: post
 title: Welcome to Jekyll 
 category: posts
-tags: [Sudev Ambadi, Sudev, Ambadi, Sudev A C, nit calicut, Jekyll]
+tags: [Sudev Ambadi, Sudev A C, Jekyll]
 comments: true
 ---
 
-I always wanted very clean and simple interface for my blog, I used to blog using [blogger](http://www.sudevshares.blogspot.com) with an ugly theme. 
-If you are yet to use Jkeyll, I would recommend you to use it along with github pages.
+I always wanted a clean and simple interface for my blog, I used to blog on [blogger](http://www.sudevshares.blogspot.com) with an ugly theme.    
+
+If you are yet to use [Jkeyll](https://jekyllrb.com/), I would recommend you to use it along with [Github Pages](https://pages.github.com).
 
 
 
 
----
-
-
-
-[jekyll]: https://github.com/mojombo/jekyll
-[zh]: http://sudev.github.com
-[twitter]: https://twitter.com/sudev

@@ -3,10 +3,10 @@ layout: post
 title: A dictionary in your terminal  
 category: posts
 comments: true
-tags: [Sudev Ambadi, Sudev,bash dictionary, dictionary, linux, terminal, dictionary script, script to find meaning, dictionary script, bash script   ]
+tags: [dictionary, linux, terminal, dictionary script, script to find meaning, bash]
 ---
 
-Due to my poor vocabulary I always had to look for the meaning of English words from dictionary.com. So I wrote a bash script to fetch meanings from dictionary.com within my terminal.
+Due to my poor vocabulary I always had to look for the meaning of English words from dictionary.com. So I wrote a bash script to fetch meanings from dictionary.com within my terminal.       
 
 ### A bash script dictionary 
 {% highlight bash %}
@@ -28,7 +28,7 @@ wget -q -O $dir/mean wget http://dictionary.reference.com/browse/$1
 file=$dir/mean
 
 #greping out result
-m=$(cat $file | grep description | grep -Po 'content=.*.*See more' | grep -Po '\,.*.\.')
+m=$(cat $file | grep description | grep -o 'content=.*.*See more' | grep -o '\,.*.\.')
 
 #saving the error code 
 k=$(echo $?)
@@ -68,7 +68,7 @@ wget -q -O $dir/pron http://en.wiktionary.org/wiki/$1
 file=$dir/pron
 
 #greping out result
-m=$(cat $file | grep -Po '//upload.*.ogg' | grep -v type)
+m=$(cat $file | grep -o '//upload.*.ogg' | grep -v type)
 
 #saving the error code
 k=$(echo $?)
@@ -105,7 +105,3 @@ echo -e "\n Exitting ...\n"
 
 
 {% endhighlight %}
----
-[jekyll]: https://github.com/mojombo/jekyll
-[zh]: http://sudev.github.com
-[twitter]: https://twitter.com/sudev
