@@ -1,3 +1,2 @@
 User-agent: *
-
 Sitemap: http://sudevambadi.me/sitemap.xml

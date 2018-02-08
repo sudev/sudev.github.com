@@ -1,481 +1,612 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="http://sudevambadi.me/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
     <loc>http://sudevambadi.me/post/2016-07-09-standardization/</loc>
     <lastmod>2016-07-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2015-07-27-znmd/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2015-07-18-mongospark/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2015-04-02-ponmuditwo/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2015-03-20-datascienceunix/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2014-11-09-ponmudi/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2014-03-04-testyourc/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2014-01-14-dictionary/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2013-09-07-minixinstall/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2013-05-23-bashfunction/</loc>
     <lastmod>2013-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2013-03-22-nitcfedora/</loc>
     <lastmod>2013-03-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2013-02-09-wgetwebsite/</loc>
     <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2013-02-08-battery/</loc>
     <lastmod>2013-02-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2013-02-05-ubuntubrightness/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/2013-02-05-hello/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/apache-spark/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/bash/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/bash-hacks/</loc>
     <lastmod>2013-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/battery/</loc>
     <lastmod>2013-02-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/bike/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/bike-ride/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/c/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/c-test/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/c&#43;&#43;/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sudevambadi.me/categories/</loc>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/classic/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/complete/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/configuration/</loc>
     <lastmod>2013-03-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/data-cleaning/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/data-science/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/data-science-large-files/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/deep-c/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/dictionary/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/dictionary-script/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/farhan/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/fedora-nitc-mirror/</loc>
     <lastmod>2013-03-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/fosscell-mirror/</loc>
     <lastmod>2013-03-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/hill-station/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/india/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/installing-packages/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/jekyll/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/kerala/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/large-csv/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/large-dataset/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/linux/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/linux-mint/</loc>
     <lastmod>2013-02-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/meenmutty-waterfalls/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/minix-3/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/minix-3-installation/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sudevambadi.me/categories/minix-virtualbox/</loc>
+    <lastmod>2013-09-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/mirror-website/</loc>
     <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/mongodb/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/nit-calicut/</loc>
     <lastmod>2013-03-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/permenantly/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/ponmudi/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/post/</loc>
     <lastmod>2016-07-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sudevambadi.me/categories/posts/</loc>
+    <lastmod>2016-07-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/programming-knowledge/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/recursice-downloads/</loc>
     <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/reducebykey/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/ride/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/royal-enfield/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/script-to-find-meaning/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/shayeri/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/ssh/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/</loc>
     <lastmod>2016-07-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/sudev-ambadi/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/sudev-a-c/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/terminal/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/test-skills/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/text-manipulation/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sudevambadi.me/categories/travel/</loc>
+    <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/travel/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/trip/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/trivandrum/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/ubuntu/</loc>
     <lastmod>2013-02-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/ubuntu-brightness-problem/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/ubuntu-brightness-reset-error/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sudevambadi.me/categories/ubuntu-linux-mint-battery-terminal/</loc>
+    <lastmod>2013-02-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/unix-command-line/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/useful-bash-functions/</loc>
     <lastmod>2013-05-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/virtualbox/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/wget/</loc>
     <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/wget-to-mirror-website/</loc>
     <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/without-internet/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://sudevambadi.me/tags/zindagi-na-milegi-dubara/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
