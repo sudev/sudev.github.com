@@ -1,0 +1,10 @@
+[submodule "themes/kiss"]
+	path = themes/kiss
+	url = https://github.com/ribice/kiss
+[submodule "public"]
+	path = public
+	url = https://github.com/sudev/sudev.github.com
+	branch = master
+[submodule "themes/hugo-theme-even"]
+	path = themes/hugo-theme-even
+	url = https://github.com/olOwOlo/hugo-theme-even
