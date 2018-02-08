@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terminal on Sudev Ambadi</title>
-    <link>https://sudev.github.io/tags/terminal/</link>
+    <link>http://sudevambadi.me/tags/terminal/</link>
     <description>Recent content in Terminal on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2017 Sudev Ambadi. &lt;br /&gt; Unless noted otherwise, all content is available under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. &lt;/a&gt; &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png&#34; /&gt;&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 14 Jan 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sudev.github.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudevambadi.me/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A dictionary in your terminal</title>
-      <link>https://sudev.github.io/post/2014-01-14-dictionary/</link>
+      <link>http://sudevambadi.me/post/2014-01-14-dictionary/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://sudev.github.io/post/2014-01-14-dictionary/</guid>
+      <guid>http://sudevambadi.me/post/2014-01-14-dictionary/</guid>
       <description>Owning to my poor vocabulary I had to look up for meanings every now and then, the following script gets you the meaning for any word from dictionary.com using bash.
 A bash script dictionary dict() { #Creating a temp folder dir=~/.dict #Check for the existence if not create one [[ -d $dir ]] || mkdir $dir #download respective file from dictionary dot com # -q =&amp;gt; do it quietly ie nothing @ screen # -O save it as mean wget -q -O $dir/mean wget http://dictionary.</description>
     </item>
     
     <item>
       <title>Battery information inside terminal</title>
-      <link>https://sudev.github.io/post/2013-02-08-battery/</link>
+      <link>http://sudevambadi.me/post/2013-02-08-battery/</link>
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://sudev.github.io/post/2013-02-08-battery/</guid>
+      <guid>http://sudevambadi.me/post/2013-02-08-battery/</guid>
       <description>If you want to know your battery details in terminal use upower and create an alias to it.
 This is helpful hack if you want to trigger events on low battery or if you are someone who uses really light desktop managers without a battery indicator.
 Upower command can be used to get stats on battery.

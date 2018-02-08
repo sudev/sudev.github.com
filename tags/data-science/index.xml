@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Science on Sudev Ambadi</title>
-    <link>https://sudev.github.io/tags/data-science/</link>
+    <link>http://sudevambadi.me/tags/data-science/</link>
     <description>Recent content in Data Science on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2017 Sudev Ambadi. &lt;br /&gt; Unless noted otherwise, all content is available under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. &lt;/a&gt; &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png&#34; /&gt;&lt;/a&gt;</copyright>
     <lastBuildDate>Fri, 20 Mar 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sudev.github.io/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudevambadi.me/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Data science and unix command line</title>
-      <link>https://sudev.github.io/post/2015-03-20-datascienceunix/</link>
+      <link>http://sudevambadi.me/post/2015-03-20-datascienceunix/</link>
       <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://sudev.github.io/post/2015-03-20-datascienceunix/</guid>
+      <guid>http://sudevambadi.me/post/2015-03-20-datascienceunix/</guid>
       <description>Note : This article applies only to those who code. I have seen many strugling with MS Excel trying to figure out data in a large csv file, I don&amp;rsquo;t blame them beacause most people I have met ignore standard unix command line tools just because they cared about commandline tools.
 
 When the data is BIG(anything above .5GBs) and if we are trying to figure out say even the coloumn names of a csv file MS Excel will get stuck and we will see a MS Windows Not Responding.</description>

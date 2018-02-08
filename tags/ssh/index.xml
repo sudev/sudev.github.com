@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ssh on Sudev Ambadi</title>
-    <link>https://sudev.github.io/tags/ssh/</link>
+    <link>http://sudevambadi.me/tags/ssh/</link>
     <description>Recent content in Ssh on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy; 2017 Sudev Ambadi. &lt;br /&gt; Unless noted otherwise, all content is available under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License. &lt;/a&gt; &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png&#34; /&gt;&lt;/a&gt;</copyright>
     <lastBuildDate>Sat, 07 Sep 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://sudev.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudevambadi.me/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Installing Minix 3 using VirtualBox in Linux</title>
-      <link>https://sudev.github.io/post/2013-09-07-minixinstall/</link>
+      <link>http://sudevambadi.me/post/2013-09-07-minixinstall/</link>
       <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://sudev.github.io/post/2013-09-07-minixinstall/</guid>
+      <guid>http://sudevambadi.me/post/2013-09-07-minixinstall/</guid>
       <description>This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh connection between Minix and host Linux machine.
 But why, but why?? Minix is a micro kernel, unlike Linux which is monolithic Minix is a operating system which is Reliable. Being a micro kernel good sepration around the Kernel Space and User Space, Minix Kernel is only 6000 lines of code compared to millions of lines of code in Linux Kernel.</description>
     </item>
