@@ -457,13 +457,6 @@
   </url>
   
   <url>
-    <loc>http://sudevambadi.me/</loc>
-    <lastmod>2016-07-09T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://sudevambadi.me/tags/sudev-ambadi/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -473,6 +466,13 @@
   <url>
     <loc>http://sudevambadi.me/tags/sudev-a-c/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://sudevambadi.me/</loc>
+    <lastmod>2016-07-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -506,15 +506,15 @@
   </url>
   
   <url>
-    <loc>http://sudevambadi.me/categories/travel/</loc>
-    <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <loc>http://sudevambadi.me/tags/travel/</loc>
+    <lastmod>2014-11-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudevambadi.me/tags/travel/</loc>
-    <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <loc>http://sudevambadi.me/categories/travel/</loc>
+    <lastmod>2015-04-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
