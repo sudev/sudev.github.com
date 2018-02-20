@@ -1,0 +1,43 @@
+---
+categories:
+- Ubuntu linux mint battery terminal
+comments: true
+date: 2013-02-08T00:00:00Z
+tags:
+- terminal
+- battery
+- ubuntu
+- linux mint
+title: Battery information inside terminal
+---
+
+If you want to know your battery details in terminal use upower and create an alias to it.      
+
+This is helpful hack if you want to trigger events on low battery or if you are someone who uses really light desktop managers without a battery indicator.        
+
+
+Upower command can be used to get stats on battery.    
+
+{{< highlight csv >}} 
+upower -i /org/freedesktop/UPower/devices/battery_BAT0
+{{< / highlight >}}
+
+
+
+Grep for the required details.    
+
+{{< highlight csv >}} 
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|time|per"
+{{< / highlight >}}
+
+
+
+Create an alias, after this step you can run the command using the alias *bat*.
+
+{{< highlight csv >}} 
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|time|per"'
+{{< / highlight >}}
+
+Add  alias to ~/.bashrc or ~/.zshrc file and make it permemanent.
+
+

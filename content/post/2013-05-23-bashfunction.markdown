@@ -1,0 +1,122 @@
+---
+categories:
+- posts
+comments: true
+date: 2013-05-23T00:00:00Z
+tags:
+- useful bash functions
+- bash
+- bash hacks
+title: Useful bashrc functions
+---
+
+I'm going to share some of my bashrc functions which saves me a lot of time.      
+
+
+
+###  Killer  
+
+
+This function helps you find a process using a keyword and to kill it, you don't have to use ps aux along with grep and then kill the process by entering the pid instead use this function give it a keyword and it will help you in killing a process.
+
+{{< highlight csv >}}
+
+
+killer() { 
+echo "I'm going to kill these process";
+ps -ef | grep $1 | grep -v grep
+echo "Can I ? [y]es [n]o ";
+read ans;
+if [[ $ans =~ "y" ]] ;
+then 
+    ps -ef | grep  $1  | grep -v grep | awk '{print $2}' | xargs kill -s TERM 
+fi 
+}
+
+
+{{< / highlight >}}
+
+usage : killer chromium     
+You will given a list of application which has similar name chromium and proceed with a yes or no. *Update  This is not so useful function anymore you may use in built pkill command to get the same result.*
+
+###  Search and cd combined  
+
+This function will help you to search and cd into a folder in a single step.
+
+{{< highlight csv >}}
+
+scd() {
+    pathe=$(find ~ -name "${1}" -type d -print -quit | head -n 1)
+    cd "${pathe}"
+}
+
+{{< / highlight >}}
+
+Now you may be wondering the reason for using the primitive style of saving result into a variable and then cd'ing into it.
+I tried using exec with find, but the exec expects a executable binary (something of the sort /bin/bash ) and cd is a shell bultin, which means you will have to leave the parent shell to cd into a folder ( the desired folder ).A one liner for the same will look something of this sort.
+
+{{< highlight csv >}}
+find ~ -name $1 -type d -exec bash -c "cd '{}'; exec bash" \;
+{{< / highlight >}}
+
+Also note that you will taken into a new shell and changes that you make in the new shell will not be reflected back in the parent shell, and its a pain to exit each and every shell you create during the process.    
+You can have a look at my [stackoverflow post](http://stackoverflow.com/questions/17248568/a-shell-script-to-find-and-cd-into-a-folder-taking-a-folder-name-as-argument-in) regarding the doubts that I had with this implementation.    
+If you have any suggestion to improve the thing please let me know through a comment.
+<br />  
+usuage : scd Music    
+Will take you to Music folder, regardless of your present working directory
+
+###  Mkdir and cd into it in a single step  
+
+Usually we have to create a folder and then cd into it, atleast to me I had to do this very often.
+
+{{< highlight csv >}}
+mkcd() {
+    mkdir "${1}"
+    cd "${1}"
+}
+
+{{< / highlight >}}
+
+### A dictionary 
+
+Due to my poor vocabulary I always had to look for the meaning of English words from dictionary.com. So to make things easier, I wrote a csv script to fetch meanings from dictionary.com within my terminal.
+
+{{< highlight csv >}}
+dict() {
+
+#Creating a temp folder 
+dir=~/.dict
+
+#Check for the existence if not create one
+[[ -d $dir ]] || mkdir $dir
+
+
+#download respective file from dictionary dot com 
+# -q => do it quietly ie nothing @ screen 
+# -O save it as mean
+wget -q -O $dir/mean wget http://dictionary.reference.com/browse/$1
+
+#Please DONT hardcode the value, give it to variable and then use it 
+file=$dir/mean
+
+#greping out result
+m=$(cat $file | grep description | grep -Po 'content=.*.*See more' | grep -Po '\,.*.\.')
+
+#saving the error code 
+k=$(echo $?)
+
+#echoing
+echo "Meaning of the word "$1" is"$m
+
+#checks if the word was actually available else throws an error
+if [[ $k -gt 0 ]]; 
+then 
+    echo ".........oops, cant find word "$1;
+    fi
+     
+}
+
+{{< / highlight >}}
+
+I love doing hacks around bash, you can find more of these [here](https://github.com/sudev/.bashrc).
