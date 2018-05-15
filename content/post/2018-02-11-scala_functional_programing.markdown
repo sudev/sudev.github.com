@@ -15,7 +15,7 @@ draft: true
 
 The most common way to define a function is as a member of a object. 
 
-``` scala
+``` Scala
     import scala.io.Source
   
     object LongLines {
@@ -258,7 +258,7 @@ In this class, contents is declared as a method that has no implementation. In
 
 The abstract modifier signifies that the class may have abstract members that do not have an implementation. As a result, you cannot instantiate an abstract class.
 
-### PARAMETERLESS METHODS
+### Parameterless Methods
 
  ``` scala
  abstract class Element {
