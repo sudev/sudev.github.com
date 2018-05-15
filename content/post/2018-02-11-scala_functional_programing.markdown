@@ -2,15 +2,14 @@
 categories:
 - notes
 comments: true
-date: 2018-02-11T00:00:00Z
+date: 2018-03-11T00:00:00Z
 tags:
 - functional programming
 - Scala
+- Spark
 title: Notes on Functional Programming and Scala
 draft: true
 ---
-
-
 
 ## Functions and Closures
 
@@ -46,22 +45,22 @@ Defining functions inside other functions.
 
 * Helps not to pollute the namespace with a lot of functions. 
 
-  ``` Scala
-  def processFile(filename: String, width: Int) = {
-    
-      def processLine(filename: String,
-          width: Int, line: String) = {
-    
-        if (line.length > width)
-          println(filename + ": " + line.trim)
-      }    
-    
-      val source = Source.fromFile(filename)
-      for (line <- source.getLines()) {
-        processLine(filename, width, line)
-      }
+``` Scala
+def processFile(filename: String, width: Int) = {
+  
+    def processLine(filename: String,
+        width: Int, line: String) = {
+  
+      if (line.length > width)
+        println(filename + ": " + line.trim)
+    }    
+  
+    val source = Source.fromFile(filename)
+    for (line <- source.getLines()) {
+      processLine(filename, width, line)
     }
-  ```
+  }
+```
 
 ### First Class Functions
 
@@ -84,7 +83,7 @@ val a = sum _
 //   a: (Int, Int, Int) => Int = <function3>
 ```
 
-Given this code, the Scala compiler instantiates a function value that takes the three integer parameters missing from the partially applied function expression, sum _, and assigns a reference to that new function value to the variable a. When you apply three arguments to this new function value, it will turn around and invoke sum, passing in those same three arguments:
+Given this code, the Scala compiler instantiates a function value that takes the three integer parameters missing from the partially applied function expression, sum _, and assigns a reference to that new function value to the variable a. When you apply three arguments to this new function value, it will turn around and invoke sum, passing in those same three arguments.
 
 ``` scala
 a(1, 2, 3)
@@ -126,19 +125,181 @@ addMore(19)
 // Int 1010
 ```
 
-
-
 The function value(the object) that's created at the runtime is called a *closure*.  
 
 The name arises from the act of "closing" the function literal by capturing the bindings of its free variables.
 
- A function literal with no free variables, such as (x: Int) => x + 1, is called a *closed term*, where a *term* is a bit of source code. Thus a function value created at runtime from this function literal is not a closure in the strictest sense, because (x: Int) => x + 1is already closed as written. But any function literal with free variables, such as(x: Int) => x + more, is an *open term*. Therefore, any function value created at runtime from(x: Int) => x + more will, by definition, require that a binding for its free variable, more, be captured. The resulting function value, which will contain a reference to the captured more variable, is called a closure because the function value is the end product of the act of closing the open term, (x: Int) => x + more.
+A function literal with no free variables, such as (x: Int) => x + 1, is called a *closed term*, where a *term* is a bit of source code. Thus a function value created at runtime from this function literal is not a closure in the strictest sense, because (x: Int) => x + 1is already closed as written. But any function literal with free variables, such as(x: Int) => x + more, is an *open term*. Therefore, any function value created at runtime from(x: Int) => x + more will, by definition, require that a binding for its free variable, more, be captured. The resulting function value, which will contain a reference to the captured more variable, is called a closure because the function value is the end product of the act of closing the open term, (x: Int) => x + more.
 
- ### Tail Recursion 
+### Tail Recursion 
 
 Functions which call themselves as the last actions are called *tail rescursive*.
 
 A tail recursive function will not binf a new stack frame for each call; all calls will execute in a single frame.   
+
+
+#### Limits of tail recursion 
+
+The use of tail recursion in Scala is fairly limited because the JVM instruction set makes implementing more advanced forms of tail recursion very difficult. Scala only optimizes directly recursive calls back to the same function making the call. If the recursion is indirect, as in the following example of two mutually recursive functions, no optimization is possible:
+
+``` scala
+ def isEven(x: Int): Boolean =
+    if (x == 0) true else isOdd(x - 1)
+  def isOdd(x: Int): Boolean =
+    if (x == 0) false else isEven(x - 1)
+```
+
+You also won't get a tail-call optimization if the final call goes to a function value. Consider for instance the following recursive code:
+
+``` scala
+  val funValue = nestedFun _
+  def nestedFun(x: Int) : Unit = { 
+    if (x != 0) { println(x); funValue(x - 1) }
+  }
+```
+
+The funValue variable refers to a function value that essentially wraps a call to nestedFun. When you apply the function value to an argument, it turns around and applies nestedFunto that same argument, and returns the result. Therefore, you might hope the Scala compiler would perform a tail-call optimization, but in this case it would not. Tail-call optimization is limited to situations where a method or nested function calls itself directly as its last operation, without going through a function value or some other intermediary.
+
+### Currying
+
+A way to write functions with multiple parameter lists. For instance def f(x: Int)(y: Int) is a curried function with two parameter lists. A curried function is applied by passing several arguments lists, as in: f(3)(4). However, it is also possible to write a *partial application* of a curried function, such as f(3).
+
+``` scala
+def curriedSum(x: Int)(y: Int) = x + y
+
+curriedSum(1)(2)
+// Int = 3
+```
+
+### Writing new control structures
+
+In languages with first-class functions, you can effectively make new control structures even though the syntax of the language is fixed. All you need to do is create methods that take functions as arguments.
+
+For example, here is the "twice" control structure, which repeats an operation two times and returns the result:
+
+``` scala
+  scala> def twice(op: Double => Double, x: Double) = op(op(x))
+  twice: (op: Double => Double, x: Double)Double
+  
+  scala> twice(_ + 1, 5)
+  res9: Double = 7.0
+```
+
+The type of op in this example is Double => Double, which means it is a function that takes one Double as an argument and returns another Double.
+
+Consider now a more widely used coding pattern: open a resource, operate on it, and then close the resource. You can capture this in a control abstraction using a method like the following:
+
+``` scala
+  def withPrintWriter(file: File, op: PrintWriter => Unit) = {
+    val writer = new PrintWriter(file)
+    try {
+      op(writer)
+    } finally {
+      writer.close()
+    }
+  }
+```
+
+Given such a method, you can use it like this:
+
+``` scala
+  withPrintWriter(
+    new File("date.txt"),
+    writer => writer.println(new java.util.Date)
+  )
+```
+
+ The advantage of using this method is that it's withPrintWriter, not user code, that assures the file is closed at the end. So it's impossible to forget to close the file. This technique is called the *loan pattern*, because a control-abstraction function, such as withPrintWriter, opens a resource and "loans" it to a function. For instance, withPrintWriter in the previous example loans a PrintWriter to the function, op. When the function completes, it signals that it no longer needs the "borrowed" resource. The resource is then closed in a finally block, to ensure it is indeed closed, regardless of whether the function completes by returning normally or throwing an exception.
+
+Another pattern is to use the currying.
+
+``` scala
+ def withPrintWriter(file: File)(op: PrintWriter => Unit) = {
+      val writer = new PrintWriter(file)
+      try {
+        op(writer)
+      } finally {
+        writer.close()
+      }
+    }
+```
+
+ Given the above definition, you can call the method with a more pleasing syntax:
+
+``` scala
+  val file = new File("date.txt")
+  
+  withPrintWriter(file) { writer =>
+    writer.println(new java.util.Date)
+  }
+```
+
+// TODO Understand by-name parameters.
+
+
+
+## Composition and Inheritance
+
+We'll compare two fundamental relationships between classes: *composition* and *inheritance*. 
+
+Composition means one class holds a reference to another, using the referenced class to help it fulfill its mission. 
+
+Inheritance is the superclass/subclass relationship.
+
+ ### Abstract Classes 
+
+``` scala
+abstract class Element { 
+	def contains: Array[String]
+}
+```
+
+In this class, contents is declared as a method that has no implementation. In other words, the method is an abstract member of class Element. 
+
+The abstract modifier signifies that the class may have abstract members that do not have an implementation. As a result, you cannot instantiate an abstract class.
+
+### PARAMETERLESS METHODS
+
+ ``` scala
+ abstract class Element {
+    def contents: Array[String]
+    def height: Int = contents.length
+    def width: Int = if (height == 0) 0 else contents(0).length
+  }
+ ```
+
+Such [*parameterless methods*](https://www.safaribooksonline.com/library/view/programming-in-scala/9780981531687/glossary.html#g-1903107585) are quite common in Scala. By contrast, methods defined with empty parentheses, such as def height(): Int, are called *empty-paren methods*. The recommended convention is to use a parameterless method whenever there are no parameters *and* the method accesses mutable state only by reading fields of the containing object (in particular, it does not change mutable state).
+
+
+
+This convention supports the uniform access principle,[[1\]](https://www.safaribooksonline.com/library/view/programming-in-scala/9780981531687/composition-and-inheritance.html#footnotemain10-1) which says that client code should not be affected by a decision to implement an attribute as a field or method.
+
+For instance, we could implement width and height as fields, instead of methods, simply by changing the def in each definition to a val:
+
+``` scala
+abstract class Element {
+    def contents: Array[String]
+    val height = contents.length
+    val width = 
+      if (height == 0) 0 else contents(0).length
+  }
+```
+
+The two pairs of definitions are completely equivalent from a client's point of view. 
+
+The only difference is that 
+
+* field accesses might be slightly faster than method invocations because the field values are pre-computed when the class is initialized, instead of being computed on each method call. 
+
+* On the other hand, the fields require extra memory space in each Element object. 
+
+  So it depends on the usage profile of a class whether an attribute is better represented as a field or method, and that usage profile might change over time. The point is that clients of the Element class should not be affected when its internal implementation changes.
+
+In particular, a client of class Element should not need to be rewritten if a field of that class gets changed into an access function, so long as the access function is pure (*i.e.*, it does not have any side effects and does not depend on mutable state). The client should not need to care either way.
+
+ 
+
+
 
 
 
