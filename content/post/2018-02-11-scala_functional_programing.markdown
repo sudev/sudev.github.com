@@ -465,6 +465,76 @@ def isort(arr: List[Int]): List[Int] =
   }
 ```
 
+## Implicit Converstions and Parameters
+
+*Implicit definitions* are those that the compiler is allowed to insert into a program in order to fix any of its type errors. For example, if `x + y` does not type check, then the compiler might change it to `convert(x) + y`, where convert is some available implicit conversion.
+
+Implicit conversions are governed by the following general rules:
+
+* **Marking rule: Only definitions marked implicit are available.** 
+
+``` scala 
+  implicit def intToString(x: Int) = x.toString
+```
+
+
+
+* **Scope rule: An inserted implicit conversion must be in scope as a single identifier, or be associated with the source or target type of the conversion.** 
+
+To make an implicit conversion available, therefore, you must in some way bring it into scope. Moreover, with one exception, the implicit conversion must be in scope *as a single identifier*. 
+
+The compiler will not insert a conversion of the form `someVariable.convert`. For example, it will not expand `x + y` to `someVariable.convert(x) + y`. If you want to make someVariable.convert available as an implicit, you would need to import it, which would make it available as a single identifier. Once imported, the compiler would be free to apply it as `convert(x) + y`. In fact, it is common for libraries to include a Preamble object including a number of useful implicit conversions.
+
+There's one exception to the "single identifier" rule. The compiler will also look for implicit definitions in the *companion object* of the source or expected target types of the conversion.
+
+
+
+Here's an example in which the implicit definition is placed in Dollar's *companion object*:
+
+```Scala
+  object Dollar {
+    implicit def dollarToEuro(x: Dollar): Euro = ...
+  }
+  class Dollar { ... } 
+```
+
+* **One-at-a-time rule: Only one implicit is inserted.**
+
+The compiler will never rewrite `x + y` to `convert1(convert2(x)) + y`. Doing so would cause compile times to increase dramatically on erroneous code, and it would increase the difference between what the programmer writes and what the program actually does. For sanity's sake, the compiler does not insert further implicit conversions when it is already in the middle of trying another implicit. However, it's possible to circumvent this restriction by having implicits take implicit parameters, which will be described later in this chapter.
+
+* **Explicits-first rule: Whenever code type checks as it is written, no implicits are attempted.**
+
+###  Where implicits are tried
+
+* **conversions to an expected type**
+
+Implicit conversion to an expected type is the first place the compiler will use implicits. The rule is simple. Whenever the compiler sees an X, but needs a Y, it will look for an implicit function that converts X to Y. For example, normally a double cannot be used as an integer because it loses precision:
+
+```Scala
+  scala> val i: Int = 3.5
+  <console>:7: error: type mismatch;
+   found   : Double(3.5)
+   required: Int
+         val i: Int = 3.5
+                      ^
+```
+
+However, you can define an implicit conversion to smooth this over:
+
+```Scala
+  scala> implicit def doubleToInt(x: Double) = x.toInt
+  doubleToInt: (x: Double)Int
+  
+  scala> val i: Int = 3.5
+  i: Int = 3
+```
+
+What happens here is that the compiler sees a Double, specifically 3.5, in a context where it requires an Int. So far, the compiler is looking at an ordinary type error. Before giving up, though, it searches for an implicit conversion from Double to Int. In this case, it finds one: doubleToInt, because doubleToInt is in scope as a single identifier.
+
+This is literally ***implicit conversion***. 
+
+* conversions of the receiver of a selection
+* implicit parameters
 
 ### Implicit Parameters
 
