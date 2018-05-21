@@ -94,6 +94,128 @@ def join[W](other: RDD[(K, W)]): RDD[(K, (V, W))]
 
 
 
+## Partitioning
+
+#### Range Partitioning 
+
+Tupples with keys in the same range appear on the same machine. 
+
+#### Hash Partitioning 
+
+Based on a hash function. 
+
+How do we set partitioning for our data in spark? 
+
+1. Call partitionBy on RDD, providing an explicit Partitioner. 
+2. Using tranformations that return RDDs with specific partitioners.
+
+``` scala
+val pairs = purchasesRdd.map(p => (p.customerid, p.price))
+
+val tunedPartitioner = new RangePartitioner(8, pairs)
+// It is very important to persist the data once it's partitioned, else you will end up with multiple partitioning.
+val partitioned = paris.partitionBy(tunedPartitoner).persist()
+```
+
+
+
+### Partitioning Data using Transformations 
+
+* Partitioner from parent RDD
+
+Pair RDDs that are result of a transformation on a partitioned Pair RDD typically is configured to use the has partitioner that was used to construct it.
+
+* Automatically-set Parititoners.  
+
+Some operations on RDDs automatically result in an RDD with a known partitioner - for when it makes sense. 
+
+For example, by default, when usign sortByKey, a RangePartitioner is used. Further, the default partitioner when using groupByKey , is a HashPartitioner, as we saw earlier. 
+
+
+
+Operations on Pair RDDs that hold to (and propogate) a partitioner.
+
+* cogroup 
+* foldByKey
+* groupWith 
+* combineByKey
+* join 
+* partitionBy
+* leftOuterJoin 
+* sort 
+* rightOuterJoin 
+* groupBy
+* reduceByKey
+* mapValues(if parent has a partitioner)
+* flatMapValues(if parent has a partitioner)
+* filter(if parent has a partitioner)
+
+Using map/flatMap will take away all of the partitioning from the RDD. Map/flatMap can entirely change the keys of PairRDD screwing up all of the partitioning. 
+
+``` scala
+x.map((k,v) => ("blah", v))
+```
+
+
+
+Hence mapValues. It enables us to still do map transformations without changing the keys thereby preserving the partitioner. 
+
+## Shuffle 
+
+How can you identitfy for possible shuffles? 
+
+1. The return type of certain transformations.
+
+```scala
+org.apache.spark.rdd.RDD[(String, Int)] = shuffleRDD[366]
+```
+
+2. Use toDebug String 
+
+One stage will contain shuffledRDD. 
+
+
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/narrow-wide-dependencies.png)
+
+
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/narrow-dependencies.png)
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/wide-dependencies.png)
+
+
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/wide-dependencies.png)
+
+
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/dependencies.png)
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/cached becomes narrow.png)
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/transformation-narrow-wide.png)
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/debug.png)
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/debug2.png)
+
+
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/debug3.png)
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/Lineages and dependencies effect.png)
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/lineage-wide.png)
+
+
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/lineage-narrow.png)
+
+
+
+
+
 ## Datasets 
 
 ``` scala
