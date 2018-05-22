@@ -176,41 +176,137 @@ One stage will contain shuffledRDD.
 
 
 
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/narrow-wide-dependencies.png)
+![](/images/sparkScala/narrow-wide-dependencies.png)
 
 
 
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/narrow-dependencies.png)
+![](/images/sparkScala/narrow-dependencies.png)
 
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/wide-dependencies.png)
-
-
-
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/wide-dependencies.png)
+![](/images/sparkScala/wide-dependencies.png)
 
 
 
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/dependencies.png)
-
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/cached becomes narrow.png)
-
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/transformation-narrow-wide.png)
-
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/debug.png)
-
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/debug2.png)
+![](/images/sparkScala/wide-dependencies.png)
 
 
 
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/debug3.png)
+![](/images/sparkScala/dependencies.png)
 
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/Lineages and dependencies effect.png)
+![](/images/sparkScala/cached becomes narrow.png)
 
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/lineage-wide.png)
+![](/images/sparkScala/transformation-narrow-wide.png)
+
+![](/images/sparkScala/debug.png)
+
+![](/images/sparkScala/debug2.png)
 
 
 
-![](/Users/sudev.ac/code/sudev_blog/static/images/sparkScala/lineage-narrow.png)
+![](/images/sparkScala/debug3.png)
+
+![](/images/sparkScala/Lineages and dependencies effect.png)
+
+![](/images/sparkScala/lineage-wide.png)
+
+
+
+![](/images/sparkScala/lineage-narrow.png)
+
+
+
+## DataFrames
+
+![](/images/sparkScala/data-frame-pitch-1.png)
+
+![](/images/sparkScala/data-frame-pitch-2.png)
+
+![](/images/sparkScala/data-frame-pitch-3.png)
+
+![](/images/sparkScala/data-frame-pitch-4.png)
+
+![](/images/sparkScala/data-frame-pitch-5.png)
+
+![](/images/sparkScala/data-frame-pitch-6.png)
+
+![](/images/sparkScala/data-frame-pitch-7.png)
+
+That's where spark DataFrames come in, you dont really have to bother about how it needs to be done. 
+
+
+
+![](/images/sparkScala/data-frame-pitch-8.png)
+
+
+
+![](/images/sparkScala/data-frame-pitch-9.png)
+
+
+
+![](/images/sparkScala/data-frame-pitch-11.png)
+
+
+
+Rdd[Account], here Account object is nothing but a blob for spark, it can't analyse the blob structure and do optimisations. 
+
+![](/images/sparkScala/data-frame-pitch-12.png)
+
+But a typical database has more insights into the data it store, it has proper knowledge of the columns, the data type of each column and so on, here there is a lot of scope for optimizations as we have more insight into the structure of data. 
+
+![](/images/sparkScala/data-frame-pitch-13.png)
+
+The same can be said about the lambda functions that we use inside a RDD (map/filter), these functions are nothing but objects for spark, spark can never optimise for the functions. As in the previous example to join two datasets and filter few of them, spark can't optimise as it's an RDD and has completely opaque functional literal(lambda's).
+
+![](/images/sparkScala/data-frame-pitch-14.png)
+
+
+
+In database we do *declarative transformations* on the data and optimisation is primary there. They have fixed set of operations and fixed set of types to operate on.
+
+![](/images/sparkScala/data-frame-pitch-15.png)
+
+How do we use structured data in spark? 
+Spark SQL.
+![](/images/sparkScala/data-frame-pitch-16.png)
+
+
+
+## Spark SQL 
+
+Goals 
+![](/images/sparkScala/df-1.png)
+
+#### Stack
+APIs 
+
+
+
+* Dataframes. 
+* Spark SQL code. 
+* Spark DataSet. 
+
+
+
+#### Two specialised backend components. 
+
+* Catalyst - query optimiser
+* Tungsten - Off heap serialiser, too efficient kind of columnar store capabilities. 
+
+![](/images/sparkScala/df-2.png)
+
+![](/images/sparkScala/df-3.png)
+
+![](/images/sparkScala/df-4.png)
+
+All of the transformations on the Spark SQL is totally *untyped* ones. Here you can't have the type checking during the compile time.
+
+DataFrames. 
+
+* Conceptually equivalent to a table in database.
+* RDD records with known schema.
+* **Untyped**
+* **Untyped Transformations**
+
+![](/images/sparkScala/df-5.png)
 
 
 
