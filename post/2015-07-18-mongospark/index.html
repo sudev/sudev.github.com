@@ -1,224 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
+  <head>
   <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  
   <title>Converting large csv&#39;s to nested data structure using apache spark</title>
-
-  
-  
-
-
-
-
-
-  
-  <meta name="author" content="Sudev Ambadi" />
+  <meta property="og:title" content="Converting large csv&#39;s to nested data structure using apache spark" />
+  <meta name="twitter:title" content="Converting large csv&#39;s to nested data structure using apache spark" />
   <meta name="description" content="What is Apache Spark ? Apache Spark brings fast, in-memory data processing to Hadoop. Elegant and expressive development APIs in Scala, Java, and Python allow data workers to efficiently execute streaming, machine learning or SQL workloads for fast iterative access to datasets.
 Quick start guide
-Problem Statement / Task To read lot of really big csv&amp;rsquo;s (~GBs) from Hadoop HDFS, clean, convert them to nested data structure and update it to MongoDB using Apache Spark." />
-
-  
-  
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@sudev" />
-    <meta name="twitter:title" content="Converting large csv&#39;s to nested data structure using apache spark" />
-    <meta name="twitter:description" content="What is Apache Spark ? Apache Spark brings fast, in-memory data processing to Hadoop. Elegant and expressive development APIs in Scala, Java, and Python allow data workers to efficiently execute streaming, machine learning or SQL workloads for fast iterative access to datasets.
-Quick start guide
-Problem Statement / Task To read lot of really big csv&amp;rsquo;s (~GBs) from Hadoop HDFS, clean, convert them to nested data structure and update it to MongoDB using Apache Spark." />
-    <meta name="twitter:image" content="http://sudevambadi.me/img/avatar.jpg" />
-  
-
-  
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Converting large csv&#39;s to nested data structure using apache spark" />
+Problem Statement / Task To read lot of really big csv&rsquo;s (~GBs) from Hadoop HDFS, clean, convert them to nested data structure and update it to MongoDB using Apache Spark.">
   <meta property="og:description" content="What is Apache Spark ? Apache Spark brings fast, in-memory data processing to Hadoop. Elegant and expressive development APIs in Scala, Java, and Python allow data workers to efficiently execute streaming, machine learning or SQL workloads for fast iterative access to datasets.
 Quick start guide
-Problem Statement / Task To read lot of really big csv&amp;rsquo;s (~GBs) from Hadoop HDFS, clean, convert them to nested data structure and update it to MongoDB using Apache Spark." />
+Problem Statement / Task To read lot of really big csv&rsquo;s (~GBs) from Hadoop HDFS, clean, convert them to nested data structure and update it to MongoDB using Apache Spark.">
+  <meta name="twitter:description" content="What is Apache Spark ? Apache Spark brings fast, in-memory data processing to Hadoop. Elegant and expressive development APIs in Scala, Java, and Python allow data workers to efficiently execute …">
+  <meta name="author" content="Sudev Ambadi"/>
+  <link href='http://sudevambadi.me/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="http://sudevambadi.me/images/avatar.jpeg" />
+  <meta name="twitter:image" content="http://sudevambadi.me/images/avatar.jpeg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@sudev" />
+  <meta name="twitter:creator" content="@sudev" />
   <meta property="og:url" content="http://sudevambadi.me/post/2015-07-18-mongospark/" />
-  <meta property="og:image" content="http://sudevambadi.me/img/avatar.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Sudev Ambadi" />
+
+  <meta name="generator" content="Hugo 0.37.1" />
+  <link rel="canonical" href="http://sudevambadi.me/post/2015-07-18-mongospark/" />
+  <link rel="alternate" href="http://sudevambadi.me/index.xml" type="application/rss+xml" title="Sudev Ambadi">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://sudevambadi.me/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://sudevambadi.me/css/highlight.min.css" /><link rel="stylesheet" href="http://sudevambadi.me/css/codeblock.css" />
 
 
 
-
-<meta name="generator" content="Hugo 0.37.1" />
-
-
-<link rel="canonical" href="http://sudevambadi.me/post/2015-07-18-mongospark/" />
-<link rel="alternative" href="http://sudevambadi.me/index.xml" title="Sudev Ambadi" type="application/atom+xml" />
-
-
-<meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="format-detection" content="telephone=no,email=no,adress=no" />
-<meta http-equiv="Cache-Control" content="no-transform" />
-
-
-<meta name="robots" content="index,follow" />
-<meta name="referrer" content="origin-when-cross-origin" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
 
 
 
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+<div class="pswp__bg"></div>
 
-
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-<meta name="apple-mobile-web-app-title" content="Sudev Ambadi" />
-<meta name="msapplication-tooltip" content="Sudev Ambadi" />
-<meta name='msapplication-navbutton-color' content="#5fbf5e" />
-<meta name="msapplication-TileColor" content="#5fbf5e" />
-<meta name="msapplication-TileImage" content="/img/tile-image-windows.png" />
-<link rel="icon" href="http://sudevambadi.me/img/favicon.ico" />
-<link rel="icon" type="image/png" sizes="16x16" href="http://sudevambadi.me/img/favicon-16x16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="http://sudevambadi.me/img/favicon-32x32.png" />
-<link rel="icon" sizes="192x192" href="http://sudevambadi.me/img/touch-icon-android.png" />
-<link rel="apple-touch-icon" href="http://sudevambadi.me/img/touch-icon-apple.png" />
-<link rel="mask-icon" href="http://sudevambadi.me/img/safari-pinned-tab.svg" color="#5fbf5e" />
-
-
-
-<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.2.8/alt/video-js-cdn.min.css" />
-
-<link rel="stylesheet" href="http://sudevambadi.me/css/bundle.css" />
-
-
-  
-  <!--[if lt IE 9]>
-    <script src="//cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <script src="//cdn.bootcss.com/video.js/6.2.8/ie8/videojs-ie8.min.js"></script>
-  <![endif]-->
-
-<!--[if lte IE 11]>
-    <script src="//cdn.bootcss.com/classlist/1.1.20170427/classList.min.js"></script>
-  <![endif]-->
-
-
-<script src="//cdn.bootcss.com/object-fit-images/3.2.3/ofi.min.js"></script>
-
-
-<script src="//cdn.bootcss.com/smooth-scroll/12.1.4/js/smooth-scroll.polyfills.min.js"></script>
-
-
-</head>
-  <body>
+<div class="pswp__scroll-wrap">
     
-    <div class="suspension">
-      <a title="Go to top" class="to-top is-hide"><span class="icon icon-up"></span></a>
-      
-        
-      
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
     </div>
     
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-39443594-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://sudevambadi.me/">Sudev Ambadi</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Sudev Ambadi" href="http://sudevambadi.me/">
+            <img class="avatar-img" src="http://sudevambadi.me/images/avatar.jpeg" alt="Sudev Ambadi" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
     
-  <header class="site-header">
-  <img class="avatar" src="http://sudevambadi.me/img/avatar.jpg" alt="Avatar">
   
-  <h2 class="title">Sudev Ambadi</h2>
   
-  <p class="subtitle">Talentless soul</p>
-  <button class="menu-toggle" type="button">
-    <span class="icon icon-menu"></span>
-  </button>
-  <nav class="site-menu collapsed">
-    <h2 class="offscreen">Main Menu</h2>
-    <ul class="menu-list">
-      
-      
-      
-      
-        <li class="menu-item
-            
-            
-            
-              is-active
-            ">
-            <a href="http://sudevambadi.me/">Posts</a>
-          </li>
-      
-        <li class="menu-item
-            
-            
-            ">
-            <a href="http://sudevambadi.me/tags/">Tags</a>
-          </li>
-      
-    </ul>
-  </nav>
-  <nav class="social-menu collapsed">
-    <h2 class="offscreen">Social Networks</h2>
-    <ul class="social-list">
+  
 
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
       
-      <li class="social-item">
-        <a href="mailto:sudevdev@gmail.com" title="Email"><span class="icon icon-email"></span></a>
-      </li>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Converting large csv&#39;s to nested data structure using apache spark</h1>
+                
+                
+                  <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on July 18, 2015
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 5 minutes (1035 words)
+  
+  
+</span>
 
-      
-      <li class="social-item">
-        <a href="//github.com/sudev" title="GitHub"><span class="icon icon-github"></span></a>
-      </li>
 
-      <li class="social-item">
-        <a href="//twitter.com/sudev" title="Twitter"><span class="icon icon-twitter"></span></a>
-      </li>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-      
 
-      
-
-      <li class="social-item">
-        <a href="//www.instagram.com/sudev_ambadi" title="Instagram"><span class="icon icon-instagram"></span></a>
-      </li>
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <li class="social-item">
-        <a href="http://sudevambadi.me/index.xml"><span class="icon icon-rss" title="RSS"></span></a>
-      </li>
-
-    </ul>
-  </nav>
-</header>
-
-  <section class="main post-detail">
-    <header class="post-header">
-      <h1 class="post-title">Converting large csv&#39;s to nested data structure using apache spark</h1>
-      <p class="post-meta">Sudev Ambadi </br> Jul 18, 2015 · 5 min read</p>
-    </header>
-    <article class="post-content">
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
 
 <h3 id="what-is-apache-spark">What is Apache Spark ?</h3>
 
@@ -231,26 +214,26 @@ Problem Statement / Task To read lot of really big csv&amp;rsquo;s (~GBs) from H
 <br />
 Recently I was assigned to create a Mongo collection with some select financial values by reading csv&rsquo;s containing income statements, balance sheets &hellip; junk data.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csv" data-lang="csv">CompanyID,USDAmount,YearEnding,Label,BalSubCategoryName,BalSubCategoryCode,LabelOrderId,SubCategoryOrder
+<div class="highlight"><pre class="chroma"><code class="language-csv" data-lang="csv">CompanyID,USDAmount,YearEnding,Label,BalSubCategoryName,BalSubCategoryCode,LabelOrderId,SubCategoryOrder
 1235,14737.251,31-01-2010,Non-Current Assets,Intangible assets,Non_Curr_Asset_Sub_03,12,152
 1235,0,31-01-2009,Non-Current Assets,Intangible assets,Non_Curr_Asset_Sub_13,13,155
 1235,10733.189,31-01-2011,Non-Current Assets,Intangible assets,Non_Curr_Asset_Sub_10,11,125</code></pre></div>
 
 <p>Shown above is sample csv, I had to convert them into schema as shown below and update them to MongoDB. Consider a scenario where each csv is about ~ 1 GB and you have hundreds of them.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;1235&#34;</span>: {
-        <span style="color:#f92672">&#34;2009&#34;</span>: {
-            <span style="color:#f92672">&#34;Non-CurrentAssets&#34;</span>: <span style="color:#ae81ff">0</span>
-        },
-        <span style="color:#f92672">&#34;2010&#34;</span>: {
-            <span style="color:#f92672">&#34;Non-CurrentAssets&#34;</span>: <span style="color:#ae81ff">14737</span>
-        },
-        <span style="color:#f92672">&#34;2011&#34;</span>: {
-            <span style="color:#f92672">&#34;Non-CurrentAssets&#34;</span>: <span style="color:#ae81ff">10733.189</span>
-        }
-    }
-}</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;1235&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;2009&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;Non-CurrentAssets&#34;</span><span class="p">:</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;2010&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;Non-CurrentAssets&#34;</span><span class="p">:</span> <span class="mi">14737</span>
+        <span class="p">},</span>
+        <span class="nt">&#34;2011&#34;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&#34;Non-CurrentAssets&#34;</span><span class="p">:</span> <span class="mf">10733.189</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
 
 <h3 id="approach">Approach</h3>
 
@@ -265,64 +248,64 @@ Recently I was assigned to create a Mongo collection with some select financial 
 
 <p>The order of fields in the csv dump differs according to the type of csv, so I had to write a generic function wherein we can specify the position of required fields. So let&rsquo;s call this function on both income-statement.csv and balance-sheet.csv and to create two cleaned rdd datasets  <code>balanceSheetRdd</code> and <code>incomeStatemntRdd</code> and later join them into one <code>masterRdd</code>.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Function definition
-</span><span style="color:#75715e"></span>JavaPairRDD<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#a6e22e">dataclean</span><span style="color:#f92672">(</span>
-			JavaSparkContext sc<span style="color:#f92672">,</span>                      <span style="color:#75715e">// Spark Context 
-</span><span style="color:#75715e"></span>			String filepath<span style="color:#f92672">,</span>                         <span style="color:#75715e">// path to file in Hadoop
-</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">final</span> Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> filterTag<span style="color:#f92672">,</span>             <span style="color:#75715e">// Required financial tags 
-</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> pos_tag<span style="color:#f92672">,</span>  <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> pos_cname<span style="color:#f92672">,</span> <span style="color:#75715e">// Position  
-</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> pos_date<span style="color:#f92672">,</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> pos_value<span style="color:#f92672">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Function definition
+</span><span class="c1"></span><span class="n">JavaPairRDD</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;&gt;</span> <span class="nf">dataclean</span><span class="o">(</span>
+			<span class="n">JavaSparkContext</span> <span class="n">sc</span><span class="o">,</span>                      <span class="c1">// Spark Context 
+</span><span class="c1"></span>			<span class="n">String</span> <span class="n">filepath</span><span class="o">,</span>                         <span class="c1">// path to file in Hadoop
+</span><span class="c1"></span>			<span class="kd">final</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">filterTag</span><span class="o">,</span>             <span class="c1">// Required financial tags 
+</span><span class="c1"></span>			<span class="kd">final</span> <span class="kt">int</span> <span class="n">pos_tag</span><span class="o">,</span>  <span class="kd">final</span> <span class="kt">int</span> <span class="n">pos_cname</span><span class="o">,</span> <span class="c1">// Position  
+</span><span class="c1"></span>			<span class="kd">final</span> <span class="kt">int</span> <span class="n">pos_date</span><span class="o">,</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">pos_value</span><span class="o">)</span></code></pre></div>
 
 <p>The <a href="https://github.com/databricks/spark-csv">spark-csv</a> plug-in can be used to read csv&rsquo;s into a dataframe rdd, the plug-in is recommended over <code>map(line.split(&quot;,&quot;))</code> for its ability to handle quotes and malformed entries.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">DataFrame df <span style="color:#f92672">=</span> sqlContext<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">()</span>
-				<span style="color:#f92672">.</span><span style="color:#a6e22e">format</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.databricks.spark.csv&#34;</span><span style="color:#f92672">)</span>
-				<span style="color:#f92672">.</span><span style="color:#a6e22e">option</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;header&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">load</span><span style="color:#f92672">(</span>filepath<span style="color:#f92672">);</span>
-<span style="color:#75715e">// spark-csv outputs dataframe to iterate line by line
-</span><span style="color:#75715e">// we will have to convert it to RDD of Rows
-</span><span style="color:#75715e"></span>JavaRDD<span style="color:#f92672">&lt;</span>Row<span style="color:#f92672">&gt;</span> rowRdd <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span><span style="color:#a6e22e">javaRDD</span><span style="color:#f92672">();</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">DataFrame</span> <span class="n">df</span> <span class="o">=</span> <span class="n">sqlContext</span><span class="o">.</span><span class="na">read</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">&#34;com.databricks.spark.csv&#34;</span><span class="o">)</span>
+				<span class="o">.</span><span class="na">option</span><span class="o">(</span><span class="s">&#34;header&#34;</span><span class="o">,</span> <span class="s">&#34;true&#34;</span><span class="o">).</span><span class="na">load</span><span class="o">(</span><span class="n">filepath</span><span class="o">);</span>
+<span class="c1">// spark-csv outputs dataframe to iterate line by line
+</span><span class="c1">// we will have to convert it to RDD of Rows
+</span><span class="c1"></span><span class="n">JavaRDD</span><span class="o">&lt;</span><span class="n">Row</span><span class="o">&gt;</span> <span class="n">rowRdd</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">javaRDD</span><span class="o">();</span></code></pre></div>
 
 <p>Create two Java sets with required tags that we are planning to extract from the csv.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Income Statement required tags 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">final</span> Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> filterTagsIS <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">HashSet</span><span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;();</span>
-filterTagsIS<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Revenue&#34;</span><span style="color:#f92672">);</span>
-filterTagsIS<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Cost of sales&#34;</span><span style="color:#f92672">);</span>
-<span style="color:#75715e">// Balance Statement required tags
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">final</span> Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> filterTagsBS <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">HashSet</span><span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;();</span>
-filterTagsBS<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Total Non Current Assets&#34;</span><span style="color:#f92672">);</span>
-filterTagsBS<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Total Assets&#34;</span><span style="color:#f92672">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Income Statement required tags 
+</span><span class="c1"></span><span class="kd">final</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">filterTagsIS</span> <span class="o">=</span> <span class="k">new</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+<span class="n">filterTagsIS</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Revenue&#34;</span><span class="o">);</span>
+<span class="n">filterTagsIS</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Cost of sales&#34;</span><span class="o">);</span>
+<span class="c1">// Balance Statement required tags
+</span><span class="c1"></span><span class="kd">final</span> <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">filterTagsBS</span> <span class="o">=</span> <span class="k">new</span> <span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">HashSet</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+<span class="n">filterTagsBS</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Total Non Current Assets&#34;</span><span class="o">);</span>
+<span class="n">filterTagsBS</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">&#34;Total Assets&#34;</span><span class="o">);</span></code></pre></div>
 
 <p>Filter out the unwanted tags using Sparks filter action.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">filteredRdd <span style="color:#f92672">=</span> rowRdd<span style="color:#f92672">.</span><span style="color:#a6e22e">filter</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Function<span style="color:#f92672">&lt;</span>Row<span style="color:#f92672">,</span> Boolean<span style="color:#f92672">&gt;()</span> <span style="color:#f92672">{</span>  
-<span style="color:#a6e22e">@Override</span>
-<span style="color:#66d9ef">public</span> Boolean <span style="color:#a6e22e">call</span><span style="color:#f92672">(</span>Row r<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
-	<span style="color:#66d9ef">return</span> filterTag<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span>r<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span>pos_tag<span style="color:#f92672">));</span>
-<span style="color:#f92672">}</span>
-<span style="color:#f92672">})</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">filteredRdd</span> <span class="o">=</span> <span class="n">rowRdd</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="k">new</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">Row</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;()</span> <span class="o">{</span>  
+<span class="nd">@Override</span>
+<span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">call</span><span class="o">(</span><span class="n">Row</span> <span class="n">r</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="n">filterTag</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">r</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">pos_tag</span><span class="o">));</span>
+<span class="o">}</span>
+<span class="o">})</span></code></pre></div>
 
 <p>From the filtered rdd create a new PairRdd (tuple) of the form <code>(CompanyName, Map&lt;Year, Map&lt;TagName, Value&gt;&gt;&gt;)</code> using Spark mapToPair action.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">cleanedRdd <span style="color:#f92672">=</span> filteredRdd<span style="color:#f92672">.</span><span style="color:#a6e22e">mapToPair</span><span style="color:#f92672">(</span> 
-<span style="color:#66d9ef">new</span> PairFunction<span style="color:#f92672">&lt;</span>Row<span style="color:#f92672">,</span> String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;&gt;()</span> <span style="color:#f92672">{</span>
-	<span style="color:#a6e22e">@Override</span>
-	<span style="color:#66d9ef">public</span> Tuple2<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#a6e22e">call</span><span style="color:#f92672">(</span>
-			Row r<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> m1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;();</span>
-		Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;</span> m2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;();</span>
-		String label <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span>pos_tag<span style="color:#f92672">);</span>
-		<span style="color:#75715e">// create a map of the form { Tag : value }
-</span><span style="color:#75715e"></span>		m1<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>label<span style="color:#f92672">,</span> r<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span>pos_value<span style="color:#f92672">));</span>
-		String year <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span>pos_date<span style="color:#f92672">).</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>
-				r<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span>pos_date<span style="color:#f92672">).</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 4<span style="color:#f92672">);</span>
-		<span style="color:#75715e">// create a map of the form 
-</span><span style="color:#75715e"></span>		<span style="color:#75715e">// { year :  { tag : value }   }
-</span><span style="color:#75715e"></span>		m2<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>year<span style="color:#f92672">,</span> m1<span style="color:#f92672">);</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Tuple2<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;&gt;(</span>r<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span>pos_cname<span style="color:#f92672">),</span> m2<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-<span style="color:#f92672">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">cleanedRdd</span> <span class="o">=</span> <span class="n">filteredRdd</span><span class="o">.</span><span class="na">mapToPair</span><span class="o">(</span> 
+<span class="k">new</span> <span class="n">PairFunction</span><span class="o">&lt;</span><span class="n">Row</span><span class="o">,</span> <span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;&gt;()</span> <span class="o">{</span>
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="n">Tuple2</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;&gt;</span> <span class="nf">call</span><span class="o">(</span>
+			<span class="n">Row</span> <span class="n">r</span><span class="o">)</span> <span class="o">{</span>
+		<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">m1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
+		<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">m2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;();</span>
+		<span class="n">String</span> <span class="n">label</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">pos_tag</span><span class="o">);</span>
+		<span class="c1">// create a map of the form { Tag : value }
+</span><span class="c1"></span>		<span class="n">m1</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">label</span><span class="o">,</span> <span class="n">r</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">pos_value</span><span class="o">));</span>
+		<span class="n">String</span> <span class="n">year</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">pos_date</span><span class="o">).</span><span class="na">substring</span><span class="o">(</span>
+				<span class="n">r</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">pos_date</span><span class="o">).</span><span class="na">length</span><span class="o">()</span> <span class="o">-</span> <span class="n">4</span><span class="o">);</span>
+		<span class="c1">// create a map of the form 
+</span><span class="c1"></span>		<span class="c1">// { year :  { tag : value }   }
+</span><span class="c1"></span>		<span class="n">m2</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">year</span><span class="o">,</span> <span class="n">m1</span><span class="o">);</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="n">Tuple2</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;&gt;(</span><span class="n">r</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">pos_cname</span><span class="o">),</span> <span class="n">m2</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+<span class="o">);</span></code></pre></div>
 
 <p>Now we have cleaned the entire csv file contents into desirable format. Here I have arranged the filter and mapToPair actions into <a href="https://github.com/sudev/sparkMongo/blob/master/src/main/java/mongoDump/DataCleaning.java">data cleaning class</a>.</p>
 
@@ -330,72 +313,72 @@ filterTagsBS<span style="color:#f92672">.</span><span style="color:#a6e22e">add<
 
 <p>Assuming we have created two rdd&rsquo;s balanceSheetRdd and incomeStatemntRdd using above method. Make a master rdd using spark union transformation. From here on masterRdd will be instead of balanceSheetRdd and IncomeStatementRdd.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">masterRdd <span style="color:#f92672">=</span> balanceSheetRdd<span style="color:#f92672">.</span><span style="color:#a6e22e">union</span><span style="color:#f92672">(</span>incomeStatemntRdd<span style="color:#f92672">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">masterRdd</span> <span class="o">=</span> <span class="n">balanceSheetRdd</span><span class="o">.</span><span class="na">union</span><span class="o">(</span><span class="n">incomeStatemntRdd</span><span class="o">)</span></code></pre></div>
 
 <h4 id="reduce">Reduce</h4>
 
 <p>Reduce the master rdd with companyName as the key. Idea is to aggregate all financial details related to a company aggregated year wise. Calling <code>reduceByKey()</code> on masterRdd will produce iterable list using companyName as key but we need to do more here, we have to aggregate them according to year. We can do this by writing a custom class implementing Function2.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">reducedRdd <span style="color:#f92672">=</span> masterRdd<span style="color:#f92672">.</span><span style="color:#a6e22e">raduceByKey</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> reduceMaps<span style="color:#f92672">())</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">reducedRdd</span> <span class="o">=</span> <span class="n">masterRdd</span><span class="o">.</span><span class="na">raduceByKey</span><span class="o">(</span><span class="k">new</span> <span class="n">reduceMaps</span><span class="o">())</span></code></pre></div>
 
 <p>Class reduceMaps, takes two tuples with same comapnyName and then reduces it by correctly grouping the tags by year.
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">reduceMaps</span>
-		<span style="color:#66d9ef">implements</span>
-		Function2<span style="color:#f92672">&lt;</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">{</span>
-	<span style="color:#66d9ef">public</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;</span> <span style="color:#a6e22e">call</span><span style="color:#f92672">(</span>
-			Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;</span> map0<span style="color:#f92672">,</span>
-			Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;</span> map1<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
-		Set<span style="color:#f92672">&lt;</span>Entry<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;&gt;</span> emap0 <span style="color:#f92672">=</span> map0<span style="color:#f92672">.</span><span style="color:#a6e22e">entrySet</span><span style="color:#f92672">();</span>
-		<span style="color:#75715e">// Iterate on map0 and update map1
-</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Entry<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;</span> entry <span style="color:#f92672">:</span> emap0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-			Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> val <span style="color:#f92672">=</span> map1<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">());</span>
-			<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>val <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-				map1<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">(),</span> entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">());</span>
-			<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-				<span style="color:#75715e">// If present, take union of inner map and replace
-</span><span style="color:#75715e"></span>				val<span style="color:#f92672">.</span><span style="color:#a6e22e">putAll</span><span style="color:#f92672">(</span>entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">());</span>
-				map1<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>entry<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">(),</span> val<span style="color:#f92672">);</span>
-			<span style="color:#f92672">}</span>
-		<span style="color:#f92672">}</span>
-		<span style="color:#66d9ef">return</span> map1<span style="color:#f92672">;</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div></p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">reduceMaps</span>
+		<span class="kd">implements</span>
+		<span class="n">Function2</span><span class="o">&lt;</span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;&gt;</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;</span> <span class="nf">call</span><span class="o">(</span>
+			<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">map0</span><span class="o">,</span>
+			<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">map1</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+		<span class="n">Set</span><span class="o">&lt;</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;&gt;</span> <span class="n">emap0</span> <span class="o">=</span> <span class="n">map0</span><span class="o">.</span><span class="na">entrySet</span><span class="o">();</span>
+		<span class="c1">// Iterate on map0 and update map1
+</span><span class="c1"></span>		<span class="k">for</span> <span class="o">(</span><span class="n">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;</span> <span class="n">entry</span> <span class="o">:</span> <span class="n">emap0</span><span class="o">)</span> <span class="o">{</span>
+			<span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">val</span> <span class="o">=</span> <span class="n">map1</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">());</span>
+			<span class="k">if</span> <span class="o">(</span><span class="n">val</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+				<span class="n">map1</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">(),</span> <span class="n">entry</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
+			<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+				<span class="c1">// If present, take union of inner map and replace
+</span><span class="c1"></span>				<span class="n">val</span><span class="o">.</span><span class="na">putAll</span><span class="o">(</span><span class="n">entry</span><span class="o">.</span><span class="na">getValue</span><span class="o">());</span>
+				<span class="n">map1</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">entry</span><span class="o">.</span><span class="na">getKey</span><span class="o">(),</span> <span class="n">val</span><span class="o">);</span>
+			<span class="o">}</span>
+		<span class="o">}</span>
+		<span class="k">return</span> <span class="n">map1</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></div></p>
 
 <h4 id="updating-mongodb">Updating MongoDB</h4>
 
 <p>To update mongoDB using Spark use <a href="https://github.com/mongodb/mongo-hadoop/wiki/Spark-Usage" title="Hadoop Spark Mongo connector wiki">mongo-hadoop connector</a>. Before saving the rdd covert them into pairRdds of the type <code>JavaPairRDD&lt;Object, BSONObject&gt;</code>.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">mongoRdd <span style="color:#f92672">=</span> reducedRdd<span style="color:#f92672">.</span><span style="color:#a6e22e">mapToPair</span><span style="color:#f92672">(</span> <span style="color:#66d9ef">new</span> basicDBMongo<span style="color:#f92672">())</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="n">mongoRdd</span> <span class="o">=</span> <span class="n">reducedRdd</span><span class="o">.</span><span class="na">mapToPair</span><span class="o">(</span> <span class="k">new</span> <span class="n">basicDBMongo</span><span class="o">())</span></code></pre></div>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">final</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">basicDBMongo</span> <span style="color:#66d9ef">implements</span> PairFunction<span style="color:#f92672">&lt;</span>Tuple2<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;&gt;,</span> Object<span style="color:#f92672">,</span> BSONObject<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
-	<span style="color:#66d9ef">public</span> Tuple2<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">,</span> BSONObject<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">call</span><span style="color:#f92672">(</span>
-			Tuple2<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;&gt;&gt;</span> companyTuple<span style="color:#f92672">)</span>
-			<span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
-		BasicBSONObject report <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BasicBSONObject<span style="color:#f92672">();</span>
-		<span style="color:#75715e">// Create a BSON of form { companyName : financeDetails } 
-</span><span style="color:#75715e"></span>		report<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>companyTuple<span style="color:#f92672">.</span><span style="color:#a6e22e">_1</span><span style="color:#f92672">(),</span> companyTuple<span style="color:#f92672">.</span><span style="color:#a6e22e">_2</span><span style="color:#f92672">());</span>
-		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Tuple2<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">,</span> BSONObject<span style="color:#f92672">&gt;(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> report<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">final</span> <span class="kd">class</span> <span class="nc">basicDBMongo</span> <span class="kd">implements</span> <span class="n">PairFunction</span><span class="o">&lt;</span><span class="n">Tuple2</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;&gt;,</span> <span class="n">Object</span><span class="o">,</span> <span class="n">BSONObject</span><span class="o">&gt;</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="n">Tuple2</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">,</span> <span class="n">BSONObject</span><span class="o">&gt;</span> <span class="nf">call</span><span class="o">(</span>
+			<span class="n">Tuple2</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;&gt;&gt;</span> <span class="n">companyTuple</span><span class="o">)</span>
+			<span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+		<span class="n">BasicBSONObject</span> <span class="n">report</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BasicBSONObject</span><span class="o">();</span>
+		<span class="c1">// Create a BSON of form { companyName : financeDetails } 
+</span><span class="c1"></span>		<span class="n">report</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">companyTuple</span><span class="o">.</span><span class="na">_1</span><span class="o">(),</span> <span class="n">companyTuple</span><span class="o">.</span><span class="na">_2</span><span class="o">());</span>
+		<span class="k">return</span> <span class="k">new</span> <span class="n">Tuple2</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">,</span> <span class="n">BSONObject</span><span class="o">&gt;(</span><span class="kc">null</span><span class="o">,</span> <span class="n">report</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></div>
 
 <p>Updating mongoDB</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// Configurations for Mongo Hadoop Connector
-</span><span style="color:#75715e"></span>String mongouri <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mongo:url/db/collectioName&#34;</span>
-org<span style="color:#f92672">.</span><span style="color:#a6e22e">apache</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hadoop</span><span style="color:#f92672">.</span><span style="color:#a6e22e">conf</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Configuration</span> midbconf <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> org<span style="color:#f92672">.</span><span style="color:#a6e22e">apache</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hadoop</span><span style="color:#f92672">.</span><span style="color:#a6e22e">conf</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Configuration</span><span style="color:#f92672">();</span>
-midbconf<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mongo.output.format&#34;</span><span style="color:#f92672">,</span>
-		<span style="color:#e6db74">&#34;com.mongodb.hadoop.MongoOutputFormat&#34;</span><span style="color:#f92672">);</span>
-midbconf<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;mongo.output.uri&#34;</span><span style="color:#f92672">,</span> mongouri<span style="color:#f92672">);</span>
-<span style="color:#75715e">// Writing the rdd to Mongo
-</span><span style="color:#75715e"></span>mongordd<span style="color:#f92672">.</span><span style="color:#a6e22e">saveAsNewAPIHadoopFile</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file:///notapplicable&#34;</span><span style="color:#f92672">,</span> Object<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span>
-				Object<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> MongoOutputFormat<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> midbconf<span style="color:#f92672">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="c1">// Configurations for Mongo Hadoop Connector
+</span><span class="c1"></span><span class="n">String</span> <span class="n">mongouri</span> <span class="o">=</span> <span class="s">&#34;mongo:url/db/collectioName&#34;</span>
+<span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">hadoop</span><span class="o">.</span><span class="na">conf</span><span class="o">.</span><span class="na">Configuration</span> <span class="n">midbconf</span> <span class="o">=</span> <span class="k">new</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">hadoop</span><span class="o">.</span><span class="na">conf</span><span class="o">.</span><span class="na">Configuration</span><span class="o">();</span>
+<span class="n">midbconf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&#34;mongo.output.format&#34;</span><span class="o">,</span>
+		<span class="s">&#34;com.mongodb.hadoop.MongoOutputFormat&#34;</span><span class="o">);</span>
+<span class="n">midbconf</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">&#34;mongo.output.uri&#34;</span><span class="o">,</span> <span class="n">mongouri</span><span class="o">);</span>
+<span class="c1">// Writing the rdd to Mongo
+</span><span class="c1"></span><span class="n">mongordd</span><span class="o">.</span><span class="na">saveAsNewAPIHadoopFile</span><span class="o">(</span><span class="s">&#34;file:///notapplicable&#34;</span><span class="o">,</span> <span class="n">Object</span><span class="o">.</span><span class="na">class</span><span class="o">,</span>
+				<span class="n">Object</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">MongoOutputFormat</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">midbconf</span><span class="o">);</span></code></pre></div>
 
 <p>Actually we did quiet a lot of things here. This is how the DAG looks for this job.</p>
 
 <p><br /></p>
 
 <figure class="one">
-    <img src="http://sudevambadi.me/images/stages.PNG">
+    <img src="/images/stages.PNG">
     <figcaption>DAG for the job, helps in uderstanding and improving the whole process.</figcaption>
 </figure>
 
@@ -406,79 +389,162 @@ midbconf<span style="color:#f92672">.</span><span style="color:#a6e22e">set</spa
 <p><br /></p>
 
 <figure class="one">
-    <img src="http://sudevambadi.me/images/active.PNG">
+    <img src="/images/active.PNG">
     <figcaption>The workload distributed evenly in cluster. Apache Spark :)</figcaption>
 </figure>
 
 <p><br /></p>
 
 <p>Let me know your thoughts, please do comment. The entire <a href="https://github.com/sudev/sparkMongo">code is available in github</a>, this post intends to explain the same.</p>
-</article>
-    <footer class="post-footer">
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="http://sudevambadi.me//tags/apache-spark/">Apache Spark</a>&nbsp;
+            
+              <a href="http://sudevambadi.me//tags/mongodb/">MongoDB</a>&nbsp;
+            
+              <a href="http://sudevambadi.me//tags/large-csv/">large csv</a>&nbsp;
+            
+              <a href="http://sudevambadi.me//tags/data-cleaning/">data cleaning</a>&nbsp;
+            
+              <a href="http://sudevambadi.me//tags/reducebykey/">reducebykey</a>&nbsp;
+            
+          </div>
+        
+
+        
+      </article>
+
       
-      <ul class="post-tags">
-        
-          <li><a href="http://sudevambadi.me/tags/apache-spark"><span class="tag">Apache Spark</span></a></li>
-        
-          <li><a href="http://sudevambadi.me/tags/mongodb"><span class="tag">MongoDB</span></a></li>
-        
-          <li><a href="http://sudevambadi.me/tags/large-csv"><span class="tag">Large Csv</span></a></li>
-        
-          <li><a href="http://sudevambadi.me/tags/data-cleaning"><span class="tag">Data Cleaning</span></a></li>
-        
-          <li><a href="http://sudevambadi.me/tags/reducebykey"><span class="tag">Reducebykey</span></a></li>
-        
-      </ul>
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://sudevambadi.me/post/2015-04-02-ponmuditwo/" data-toggle="tooltip" data-placement="top" title="Ponmudi - 2">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="http://sudevambadi.me/post/2015-07-27-znmd/" data-toggle="tooltip" data-placement="top" title="Zinda ho tum !">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
       
-      <p class="post-copyright">
-        © This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.
-      </p>
-    </footer>
+
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
     
-      
     
-  </section>
-  <footer class="site-footer">
-  <p>© 2017-2018 Sudev Ambadi</p>
-  <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/laozhu/hugo-nuo" target="_blank">Nuo</a>.</p>
-  
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "sudevgithub" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/sudev" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/sudev" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/sudev_ambadi" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            
+            <a href="http://sudevambadi.me/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="sudevambadi.me">Sudev Ambadi</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://sudevambadi.me/">Sudev Ambadi</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.37.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://sudevambadi.me/js/main.js"></script>
+<script src="http://sudevambadi.me/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="http://sudevambadi.me/js/load-photoswipe.js"></script>
 
-
-<script async src="//cdn.bootcss.com/video.js/6.2.8/alt/video.novtt.min.js"></script>
-<script async src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']],
-      processEscapes: true,
-      processEnvironments: true,
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-      TeX: { equationNumbers: { autoNumber: "AMS" },
-      extensions: ["AMSmath.js", "AMSsymbols.js"] }
-    }
-  });
-</script>
-<script type="text/x-mathjax-config">
-  // Fix <code> tags after MathJax finishes running. This is a
-  // hack to overcome a shortcoming of Markdown. Discussion at
-  // https://github.com/mojombo/jekyll/issues/199
-  MathJax.Hub.Queue(() => {
-    MathJax.Hub.getAllJax().map(v => v.SourceElement().parentNode.className += ' has-jax');
-  });
-</script>
-
-<script src="http://sudevambadi.me/js/bundle.js"></script>
-
-
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-XXXXXXXX-X', 'auto');
-ga('send', 'pageview');
-</script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
 
 
 
@@ -486,3 +552,4 @@ ga('send', 'pageview');
 
   </body>
 </html>
+

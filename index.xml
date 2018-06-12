@@ -5,12 +5,19 @@
     <link>http://sudevambadi.me/</link>
     <description>Recent content on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 09 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 May 2018 16:55:44 +0530</lastBuildDate>
     
 	<atom:link href="http://sudevambadi.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Article Name</title>
+      <link>http://sudevambadi.me/post/my-article-name/</link>
+      <pubDate>Tue, 22 May 2018 16:55:44 +0530</pubDate>
+      
+      <guid>http://sudevambadi.me/post/my-article-name/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Normalization, Standardization and Rescaling</title>
@@ -193,6 +200,16 @@ cat /sys/class/backlight/acpi_video0/brightness Change brightness by changing th
       <guid>http://sudevambadi.me/post/2013-02-05-hello/</guid>
       <description>I always wanted a clean and simple interface for my blog, I used to blog on blogger with an ugly theme.
 If you are yet to use Jkeyll, I would recommend you to use it along with Github Pages.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>http://sudevambadi.me/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudevambadi.me/page/about/</guid>
+      <description>I&amp;rsquo;m a computer enthusiast interested in data at scale and distributed systems. Want to know more, checkout my resume. You may contact me at sudevdev gma!l com.
+😈 ഞാൻ എന്നെ തന്നെ വിളിക്കുന്നത് സൂഡോ(Sudo) എന്നാണ്.</description>
     </item>
     
   </channel>

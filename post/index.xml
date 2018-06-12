@@ -5,12 +5,19 @@
     <link>http://sudevambadi.me/post/</link>
     <description>Recent content in Posts on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 09 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0530</lastBuildDate>
     
 	<atom:link href="http://sudevambadi.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Article Name</title>
+      <link>http://sudevambadi.me/post/my-article-name/</link>
+      <pubDate>Tue, 22 May 2018 16:55:44 +0530</pubDate>
+      
+      <guid>http://sudevambadi.me/post/my-article-name/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Normalization, Standardization and Rescaling</title>
