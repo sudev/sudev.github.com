@@ -308,9 +308,13 @@ DataFrames.
 
 ![](/images/sparkScala/df-5.png)
 
+#### Creating a DataFrame
 
+![](/images/sparkScala/df-6.png)
 
+1(a) Creating DataFrame from RDD, schema reflectively inferred
 
+![](/images/sparkScala/df-7.png)
 
 ## Datasets 
 
