@@ -5,19 +5,10 @@
     <link>http://sudevambadi.me/</link>
     <description>Recent content on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 22 May 2018 16:55:44 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 09 Jul 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://sudevambadi.me/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>My Article Name</title>
-      <link>http://sudevambadi.me/post/my-article-name/</link>
-      <pubDate>Tue, 22 May 2018 16:55:44 +0530</pubDate>
-      
-      <guid>http://sudevambadi.me/post/my-article-name/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Normalization, Standardization and Rescaling</title>

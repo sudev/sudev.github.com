@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://sudevambadi.me/post/my-article-name/</loc>
-    <lastmod>2018-05-22T16:55:44+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>http://sudevambadi.me/about/</loc>
     <lastmod>2018-03-20T14:02:37+02:00</lastmod>
   </url>
@@ -396,7 +391,7 @@
   
   <url>
     <loc>http://sudevambadi.me/</loc>
-    <lastmod>2018-05-22T16:55:44+05:30</lastmod>
+    <lastmod>2016-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
