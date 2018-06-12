@@ -1,0 +1,47 @@
+baseurl = "http://sudevambadi.me/"
+canonifyurls = true
+copyright = "© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+
+
+enableRobotsTXT = true
+googleAnalytics = "UA-XXXXXXXX-X"
+languageCode = "en"
+PygmentsCodeFences = true
+theme = "hugo-nuo"
+title = "Sudev Ambadi"
+
+
+# Initial site menu, you can extend menu with content.
+[[menu.main]]
+  name = "Posts"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+#[[menu.main]]
+#  name = "Works"
+#  weight = 20
+#  identifier = "works"
+#  url = "https://github.com/sudev"
+
+[[menu.main]]
+  name = "Tags"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+
+# Add your own params here
+[params]
+  author = "Sudev Ambadi"
+  avatar = "/img/avatar.jpg"
+  seotitle = "Sudev Ambadi"
+  subtitle = "Talentless soul"
+  description = "Fill this up."
+  paginate = 10
+
+  # Choose your social networks
+  email = "sudevdev@gmail.com"
+  github = "sudev"
+  twitter = "sudev"
+  instagram = "sudev_ambadi"
+  
