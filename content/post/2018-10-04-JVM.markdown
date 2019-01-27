@@ -1,0 +1,25 @@
+---
+categories:
+- posts
+comments: true
+draft: true
+date: 2018-10-04T00:00:00Z
+tags:
+- JVM 
+- GC
+title: A bit of JVM and GC.
+---
+
+
+## GC Stratergies 
+
+### ParallelOld 
+
+* Performs only whole-heap compaction, results in considerable pause times. 
+* Suits Offline analysis workload
+
+### Concurrent Mark Sweep (CMS)
+
+* No compaction
+* Realtime response
+
