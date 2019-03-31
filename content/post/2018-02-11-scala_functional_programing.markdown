@@ -1336,3 +1336,53 @@ object Collectionss {
   }
 }
 ```
+
+
+
+
+
+# Class vs Case Class vs Object. 
+
+
+
+## Equalities 
+
+
+
+![](/Users/sudev.ac/code/sudev_blog/static/images/scala/equalities.png)
+
+```scala
+class NCPoint(val x: Int, val y: Int )
+case class CPoint(val x: Int, val y: Int)
+
+val ncp1 = new NCPoint(1, 1)
+val ncp2 = new NCPoint(1, 1)
+
+val cp1 = new CPoint(1, 1)
+val cp2 = new CPoint(1, 1)
+
+// In scala the values equality is through the == check and the reference equality is through `eq` function 
+
+ncp1 == ncp2
+// false 
+ncp1 eq ncp2
+// false 
+
+cp1 == cp2
+// true.   => For case classses the value equality is true 
+cp1 eq cp2
+// false.
+```
+
+
+
+So a case class has special methods to check for equality for the values, which is not the same for the regular classes. For the regular classes the "==" will always return false as the hashcode for the equality will return different value(Java world).
+
+
+
+## Pattern Matching 
+
+
+
+# 
+

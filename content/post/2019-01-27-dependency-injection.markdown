@@ -11,27 +11,21 @@ title: Dependency Injection
 draft: true
 ---
 
-# Dependency Injection
+
 
 - Emailer depends on a SpellChecker, a TextEditor, and an AddressBook.
 - This relationship is called a dependency. In other words, Emailer is a *client* of its dependencies.
 - *Composition* also applies *transitively*; an object may depend on other objects that themselves have dependencies, and so on.
 
 
-Service
-
-    An object that performs a well-defined function when called upon.
-Client
-    
-    Any consumer of a service; an object that calls upon a service to perform a well-understood function.
-    
-
-Dependency 
-    
-    A specific service that is required by another object to fulfill its function.
-Dependent
-    
-    A client object that needs a dependency (or dependencies) in order to perform its function.
+- Service    
+*An object that performs a well-defined function when called upon.*
+- Client   
+*Any consumer of a service; an object that calls upon a service to perform a well-understood function.*
+- Dependency   
+*A specific service that is required by another object to fulfill its function.*     
+- Dependent    
+*A client object that needs a dependency (or dependencies) in order to perform its function.*
 
 
 ## Pre-DI Solutions
@@ -81,3 +75,100 @@ public Emailer() {
 }
 ```
 
+### Construction by hand 
+
+```java 
+public class Emailer {
+    private SpellChecker spellChecker;
+    public void setSpellChecker(SpellChecker spellChecker) {
+        this.spellChecker = spellChecker;
+    }
+    ...
+}
+```
+We replace the constructor to take SpellChecker as a parameter, this way we can create Emailer with different SpellChecker, test the Emailer class and so on. 
+
+```java 
+public void ensureEmailerCheckerSpelling() { 
+    MockSpellingCehcker mock = new MockSpellingChecker();
+    Emailer emailer = new Emailer();
+
+    // Pass the mock object for testing.
+    emailer.setSpellChecker(mock);
+    emailer.send("Hello There?");
+
+    // Verify the dependency used.
+    assert mock.verifyCheckSpelling();
+}
+```
+
+Similarly, it is easy to construct Emailers with various behaviors. Here's one for French spelling:
+
+
+```java 
+Emailer service = new Emailer();
+// Constructor takes a SpellChecker.
+service.setSpellChecker(new FrenchSpellChecker());
+```
+
+Since you end up connecting the pipes yourself at the time of construction, this technique is referred to as *construction by hand*. 
+
+Taking the SpellChecker within the constructor, no setter method. Even more consice than the setter method.
+
+```java 
+public class Emailer {
+    private SpellChecker spellChecker;
+    public Emailer(SpellChecker spellChecker) {
+        this.spellChecker = spellChecker;
+    }
+    ...
+}
+
+// Initialising an Emailer object in this case.
+Emailer service = new Emailer(new JapaneseSpellChecker());
+```
+
+Problems with the constrution by hand approach. 
+
+- While construction by hand definitely helps with testing, it has some problems, the most obvious one being the burden of **knowing how to construct object graphs being placed on the client of a service**.
+- **Repeatition of code** for wiring objects in all places.
+- If you alter the dependency graph or any of its parts, you may be forced to go through and **alter all of its clients as well**.
+- Since everything is wired manually this **violates the principle of encapsulation** and becomes problematic when dealing with code that is used by many clients.
+
+### The factory method
+
+* Another time-honored method of constructing object graphs is the Factory design pattern (also known as the Abstract Factory[1] pattern). 
+* The idea behind the Factory pattern is to offload the burden of creating dependencies to a third-party object called a factory.
+
+##### An email service whose spellchecker is set via constructor
+
+```java
+public class Emailer {
+    private SpellChecker spellChecker;
+    public Emailer(SpellChecker spellChecker) {
+        this.spellChecker = spellChecker;
+    }
+    ...
+}
+```
+
+Instead of constructing the object graph by hand, we do it inside another class called a factory.
+
+A "French" email service Factory pattern
+
+```java
+public class EmailerFactory {
+    public Emailer newFrenchEmailer() {
+        return new Emailer(new FrenchSpellChecker());
+    }
+}
+```
+
+Notice that the Factory pattern is very explicit about what kind of Emailer it is going to produce; newFrenchEmailer() creates one with a French spellchecker. Any code that uses French email services is now fairly straightforward:
+
+```java
+Emailer service = new EmailerFactory().newFrenchEmailer();
+```
+* The most important thing to notice here is that the client code has no reference to spellchecking, address books, or any of the other internals of Emailer. 
+* By adding a level of abstraction (the Factory pattern), we have *separated the code using the Emailer from the code that creates the Emailer*. This leaves client code clean and concise.
+* The beauty of this approach is that client code only needs to know which Factory to use to obtain a dependency.
