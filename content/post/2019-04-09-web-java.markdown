@@ -1,0 +1,254 @@
+---
+categories:
+- notes
+comments: true
+date: 2019-04-02=9T00:00:00Z
+tags:
+- java
+- web
+- java-serverlets
+- serverlet
+title: Java and web
+draft: true
+---
+
+# Java and Web
+
+## Servlets
+
+* HTTP/Browser —> Serverlets -> application
+* Similar to CGI 
+
+
+
+A servlet life cycle can be defined as the entire process from its creation till the destruction. The following are the paths followed by a servlet.
+
+- The servlet is initialized by calling the **init()** method.
+- The servlet calls **service()** method to process a client's request.
+- The servlet is terminated by calling the **destroy()** method.
+- Finally, servlet is garbage collected by the garbage collector of the JVM.
+
+![servlet-lifecycle](https://www.tutorialspoint.com/servlets/images/servlet-lifecycle.jpg)
+
+```java
+// Import required java libraries
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+// Extend HttpServlet class
+public class HelloWorld extends HttpServlet {
+ 
+   private String message;
+
+   public void init() throws ServletException {
+      // Do required initialization
+      message = "Hello World";
+   }
+
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+      
+      // Set response content type
+      response.setContentType("text/html");
+
+      // Actual logic goes here.
+      PrintWriter out = response.getWriter();
+      out.println("<h1>" + message + "</h1>");
+   }
+
+   public void destroy() {
+      // do nothing.
+   }
+}
+```
+
+## First "Hello-world" Servlet
+
+https://www.ntu.edu.sg/home/ehchua/programming/java/JavaServlets.html
+
+### Create a new Webapp "helloservlet"
+
+![Servlet_HelloServletDirectory](https://www.ntu.edu.sg/home/ehchua/programming/java/images/Servlet_HelloServletDirectory.png)
+
+
+
+
+
+# Dropwizard
+
+#### A Configuration Class
+
+Each Dropwizard application has its own subclass of the `Configuration` class which specifies environment-specific parameters. 
+
+```java
+import io.dropwizard.Configuration;
+
+public class HelloWorldConfiguration extends Configuration {
+  ...
+}
+```
+
+#### An Application Class
+
+Combined with your project’s `Configuration` subclass, its `Application` subclass forms the core of Dropwizard application.
+
+```java
+package com.example.helloworld;
+
+import io.dropwizard.Application;
+
+public class HelloWorldApplication extends Application<HelloWorldConfiguration> {
+    public static void main(String[] args) throws Exception {
+        new HelloWorldApplication().run(args);
+    }
+
+    @Override
+    public String getName() {
+        return "hello-world";
+    }
+
+    @Override
+    public void initialize(Bootstrap<HelloWorldConfiguration> bootstrap) {
+        // nothing to do yet
+    }
+
+    @Override
+    public void run(HelloWorldConfiguration configuration,
+                    Environment environment) {
+        // nothing to do yet
+    }
+
+}
+```
+
+* As you can see, `HelloWorldApplication` is parameterized with the application’s configuration type, `HelloWorldConfiguration`
+*  An `initialize` method is used to configure aspects of the application required before the application is run, like bundles, configuration source providers, etc.
+
+#### A Representation Class
+
+```java
+package com.example.helloworld.api;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.hibernate.validator.constraints.Length;
+
+public class Saying {
+    private long id;
+
+    @Length(max = 3)
+    private String content;
+
+    public Saying() {
+        // Jackson deserialization
+    }
+
+    public Saying(long id, String content) {
+        this.id = id;
+        this.content = content;
+    }
+
+    @JsonProperty
+    public long getId() {
+        return id;
+    }
+
+    @JsonProperty
+    public String getContent() {
+        return content;
+    }
+}
+		
+```
+
+
+
+* it’s **immutable** , good for multi-threaded environments.
+* It follows java beans standards.
+
+
+
+##### Java Beans 
+
+A JavaBean is just a [standard](http://www.oracle.com/technetwork/java/javase/documentation/spec-136004.html)
+
+1. All properties private (use [getters/setters](http://en.wikipedia.org/wiki/Mutator_method))
+2. A public [no-argument constructor](http://en.wikipedia.org/wiki/Nullary_constructor)  (so it can be created at will and configured by setting its properties).
+3. Implements [`Serializable`](http://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html).
+
+#### A Resource Class
+
+* Jersey resources are the meat-and-potatoes of a Dropwizard application.
+* Each resource class is associated with a URI template.
+
+```java
+package com.flipkart.planning.resources;
+
+import com.codahale.metrics.annotation.Timed;
+import com.flipkart.planning.api.Saying;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicLong;
+
+/**
+ * @author sudev.ac on 25/04/19
+ */
+// Tells Jersey that this resource is accessible at the URI /hello-world
+@Path("/hello-world")
+// Lets Jersey’s content negotiation code know that this resource produces
+// representations which are application/json
+@Produces(MediaType.APPLICATION_JSON)
+public class HelloWorldResource {
+    /**
+     * Resource classes are used by multiple threads concurrently.
+     * In general, we recommend that resources be stateless/immutable,
+     * but it’s important to keep the context in mind.
+     */
+
+    private final String template;
+    private final String defaultName;
+    // AtomicLong provides us with a cheap, thread-safe way of generating unique(ish) IDs.
+    private final AtomicLong counter;
+
+    public HelloWorldResource(String template, String defaultName) {
+        this.template = template;
+        this.defaultName = defaultName;
+        this.counter = new AtomicLong();
+    }
+
+    /**
+     * #sayHello(Optional<String>) is the meat of this class, and it’s
+     * a fairly simple method. The @QueryParam("name") annotation tells
+     * Jersey to map the name parameter from the query string to
+     * the name parameter in the method. If the client sends a
+     * request to /hello-world?name=Dougie, sayHello will be called with
+     * Optional.of("Dougie")
+     * @param name
+     * @return
+     */
+    @GET
+    // @Timed, Dropwizard automatically records the duration and rate of its invocations as a Metrics Timer.
+    @Timed
+    public Saying sayHello(@QueryParam("name") Optional<String> name) {
+        final String value = String.format(template, name.orElse(defaultName));
+        /**
+         * Once sayHello has returned, Jersey takes the Saying instance
+         * and looks for a provider class which can write Saying instances
+         * as application/json. Dropwizard has one such provider
+         * built in which allows for producing and consuming Java
+         * objects as JSON objects. The provider writes out the JSON and the
+         * client receives a 200 OK response with a content type of application/json.
+         */
+        return new Saying(counter.incrementAndGet(), value);
+    }
+}
+
+```
+
+#### Registering A Resource
+

@@ -1110,4 +1110,3 @@ This pattern has two main parts, and typically uses object-oriented programming:
 
 - The "template method", generally implemented as a [base class](https://en.wikipedia.org/wiki/Base_class) (possibly an [abstract class](https://en.wikipedia.org/wiki/Abstract_class)), which contains **shared code and parts of the overall algorithm which are invariant**. The template ensures that the overarching algorithm is always followed. In this class, "variant" portions are given a default implementation, or none at all.
 - Concrete implementations of the abstract class, **which fill in the empty or "variant" parts** of the "template" with specific algorithms that vary from implementation to implementation.
-

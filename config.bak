@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "http://sudevambadi.me/"
+baseurl = "https://sudev.dev/"
 languageCode = "en"
 title = "Sudev Ambadi"
 theme = "hugo-theme-cactus-plus"

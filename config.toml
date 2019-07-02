@@ -1,6 +1,5 @@
-baseurl = "http://sudevambadi.me/"
+baseurl = "http://sudev.dev/"
 DefaultContentLanguage = "en"
-#DefaultContentLanguage = "ja"
 title = "Sudev Ambadi"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
@@ -29,7 +28,7 @@ googleAnalytics = "UA-39443594-1"
 
 [Author]
   name = "Sudev Ambadi"
-  website = "sudevambadi.me"
+  website = "sudev.dev"
   twitter = "sudev"
   instagram = "sudev_ambadi"
   github = "sudev"
