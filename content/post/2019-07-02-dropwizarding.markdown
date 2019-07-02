@@ -8,7 +8,7 @@ tags:
 - java
 - dropwizrd
 title: Dropwizard
-draft: false
+draft: true
 ---
 
 ### The DAO, DTO layers.
