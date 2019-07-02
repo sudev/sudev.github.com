@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recursice Downloads on Sudev Ambadi</title>
-    <link>http://sudevambadi.me/tags/recursice-downloads/</link>
-    <description>Recent content in Recursice Downloads on Sudev Ambadi</description>
+    <title>recursice downloads on Sudev Ambadi</title>
+    <link>http://sudev.dev/tags/recursice-downloads/</link>
+    <description>Recent content in recursice downloads on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 09 Feb 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudevambadi.me/tags/recursice-downloads/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudev.dev/tags/recursice-downloads/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Offline mirror a website using wget</title>
-      <link>http://sudevambadi.me/post/2013-02-09-wgetwebsite/</link>
+      <link>http://sudev.dev/post/2013-02-09-wgetwebsite/</link>
       <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/post/2013-02-09-wgetwebsite/</guid>
+      <guid>http://sudev.dev/post/2013-02-09-wgetwebsite/</guid>
       <description>Use the following wget command to mirror a website
 wget -mkpb some-website-url  -m mirrors the entire website -k converts all links to suitable web viewing. -p downloads all required files like that of the css, js &amp;hellip; -b wget will run in background  This method won&amp;rsquo;t work for many websites as their server will block wget from downloading. I will update this post soon, we can use user agents in wget to mock wget as a browser.</description>
     </item>

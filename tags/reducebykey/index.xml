@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reducebykey on Sudev Ambadi</title>
-    <link>http://sudevambadi.me/tags/reducebykey/</link>
-    <description>Recent content in Reducebykey on Sudev Ambadi</description>
+    <title>reducebykey on Sudev Ambadi</title>
+    <link>http://sudev.dev/tags/reducebykey/</link>
+    <description>Recent content in reducebykey on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 18 Jul 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudevambadi.me/tags/reducebykey/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudev.dev/tags/reducebykey/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Converting large csv&#39;s to nested data structure using apache spark</title>
-      <link>http://sudevambadi.me/post/2015-07-18-mongospark/</link>
+      <link>http://sudev.dev/post/2015-07-18-mongospark/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/post/2015-07-18-mongospark/</guid>
+      <guid>http://sudev.dev/post/2015-07-18-mongospark/</guid>
       <description>What is Apache Spark ? Apache Spark brings fast, in-memory data processing to Hadoop. Elegant and expressive development APIs in Scala, Java, and Python allow data workers to efficiently execute streaming, machine learning or SQL workloads for fast iterative access to datasets.
 Quick start guide
 Problem Statement / Task To read lot of really big csv&amp;rsquo;s (~GBs) from Hadoop HDFS, clean, convert them to nested data structure and update it to MongoDB using Apache Spark.</description>

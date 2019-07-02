@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Sudev Ambadi</title>
-    <link>http://sudevambadi.me/about/</link>
+    <link>http://sudev.dev/about/</link>
     <description>Recent content in About on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Mar 2018 14:02:37 +0200</lastBuildDate>
     
-	<atom:link href="http://sudevambadi.me/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudev.dev/about/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

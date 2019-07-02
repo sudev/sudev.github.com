@@ -2,46 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Sudev Ambadi</title>
-    <link>http://sudevambadi.me/categories/</link>
+    <link>http://sudev.dev/categories/</link>
     <description>Recent content in Categories on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 09 Jul 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudevambadi.me/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudev.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Minix Virtualbox</title>
-      <link>http://sudevambadi.me/categories/minix-virtualbox/</link>
-      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/categories/minix-virtualbox/</guid>
-      <description></description>
-    </item>
     
     <item>
-      <title>Posts</title>
-      <link>http://sudevambadi.me/categories/posts/</link>
+      <title>posts</title>
+      <link>http://sudev.dev/categories/posts/</link>
       <pubDate>Sat, 09 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/categories/posts/</guid>
+      <guid>http://sudev.dev/categories/posts/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Travel</title>
-      <link>http://sudevambadi.me/categories/travel/</link>
+      <title>travel</title>
+      <link>http://sudev.dev/categories/travel/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/categories/travel/</guid>
+      <guid>http://sudev.dev/categories/travel/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ubuntu Linux Mint Battery Terminal</title>
-      <link>http://sudevambadi.me/categories/ubuntu-linux-mint-battery-terminal/</link>
+      <title>Minix VirtualBox</title>
+      <link>http://sudev.dev/categories/minix-virtualbox/</link>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/categories/minix-virtualbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu linux mint battery terminal</title>
+      <link>http://sudev.dev/categories/ubuntu-linux-mint-battery-terminal/</link>
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/categories/ubuntu-linux-mint-battery-terminal/</guid>
+      <guid>http://sudev.dev/categories/ubuntu-linux-mint-battery-terminal/</guid>
       <description></description>
     </item>
     

@@ -2,587 +2,587 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sudev Ambadi</title>
-    <link>http://sudevambadi.me/tags/</link>
+    <link>http://sudev.dev/tags/</link>
     <description>Recent content in Tags on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudevambadi.me/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudev.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Zindagi na milegi dubara</title>
+      <link>http://sudev.dev/tags/zindagi-na-milegi-dubara/</link>
+      <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/zindagi-na-milegi-dubara/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>complete</title>
+      <link>http://sudev.dev/tags/complete/</link>
+      <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/complete/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>farhan</title>
+      <link>http://sudev.dev/tags/farhan/</link>
+      <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/farhan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shayeri</title>
+      <link>http://sudev.dev/tags/shayeri/</link>
+      <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/shayeri/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Apache Spark</title>
-      <link>http://sudevambadi.me/tags/apache-spark/</link>
+      <link>http://sudev.dev/tags/apache-spark/</link>
       <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/apache-spark/</guid>
+      <guid>http://sudev.dev/tags/apache-spark/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bash</title>
-      <link>http://sudevambadi.me/tags/bash/</link>
-      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
+      <title>MongoDB</title>
+      <link>http://sudev.dev/tags/mongodb/</link>
+      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/bash/</guid>
+      <guid>http://sudev.dev/tags/mongodb/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bash Hacks</title>
-      <link>http://sudevambadi.me/tags/bash-hacks/</link>
-      <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
+      <title>data cleaning</title>
+      <link>http://sudev.dev/tags/data-cleaning/</link>
+      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/bash-hacks/</guid>
+      <guid>http://sudev.dev/tags/data-cleaning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Battery</title>
-      <link>http://sudevambadi.me/tags/battery/</link>
-      <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
+      <title>large csv</title>
+      <link>http://sudev.dev/tags/large-csv/</link>
+      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/battery/</guid>
+      <guid>http://sudev.dev/tags/large-csv/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bike</title>
-      <link>http://sudevambadi.me/tags/bike/</link>
+      <title>reducebykey</title>
+      <link>http://sudev.dev/tags/reducebykey/</link>
+      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/reducebykey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Meenmutty waterfalls</title>
+      <link>http://sudev.dev/tags/meenmutty-waterfalls/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/bike/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bike Ride</title>
-      <link>http://sudevambadi.me/tags/bike-ride/</link>
-      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/bike-ride/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C</title>
-      <link>http://sudevambadi.me/tags/c/</link>
-      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C Test</title>
-      <link>http://sudevambadi.me/tags/c-test/</link>
-      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/c-test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43;</title>
-      <link>http://sudevambadi.me/tags/c&#43;&#43;/</link>
-      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/c&#43;&#43;/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Classic</title>
-      <link>http://sudevambadi.me/tags/classic/</link>
-      <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/classic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Complete</title>
-      <link>http://sudevambadi.me/tags/complete/</link>
-      <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/complete/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Configuration</title>
-      <link>http://sudevambadi.me/tags/configuration/</link>
-      <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/configuration/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Cleaning</title>
-      <link>http://sudevambadi.me/tags/data-cleaning/</link>
-      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/data-cleaning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Science</title>
-      <link>http://sudevambadi.me/tags/data-science/</link>
-      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/data-science/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data Science Large Files</title>
-      <link>http://sudevambadi.me/tags/data-science-large-files/</link>
-      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/data-science-large-files/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Deep C</title>
-      <link>http://sudevambadi.me/tags/deep-c/</link>
-      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/deep-c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dictionary</title>
-      <link>http://sudevambadi.me/tags/dictionary/</link>
-      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/dictionary/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dictionary Script</title>
-      <link>http://sudevambadi.me/tags/dictionary-script/</link>
-      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/dictionary-script/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Farhan</title>
-      <link>http://sudevambadi.me/tags/farhan/</link>
-      <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/farhan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fedora Nitc Mirror</title>
-      <link>http://sudevambadi.me/tags/fedora-nitc-mirror/</link>
-      <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/fedora-nitc-mirror/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fosscell Mirror</title>
-      <link>http://sudevambadi.me/tags/fosscell-mirror/</link>
-      <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/fosscell-mirror/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hill Station</title>
-      <link>http://sudevambadi.me/tags/hill-station/</link>
-      <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/hill-station/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>India</title>
-      <link>http://sudevambadi.me/tags/india/</link>
-      <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/india/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Installing Packages</title>
-      <link>http://sudevambadi.me/tags/installing-packages/</link>
-      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/installing-packages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jekyll</title>
-      <link>http://sudevambadi.me/tags/jekyll/</link>
-      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/jekyll/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kerala</title>
-      <link>http://sudevambadi.me/tags/kerala/</link>
-      <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/kerala/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Large Csv</title>
-      <link>http://sudevambadi.me/tags/large-csv/</link>
-      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/large-csv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Large Dataset</title>
-      <link>http://sudevambadi.me/tags/large-dataset/</link>
-      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/large-dataset/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>http://sudevambadi.me/tags/linux/</link>
-      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux Mint</title>
-      <link>http://sudevambadi.me/tags/linux-mint/</link>
-      <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/linux-mint/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Meenmutty Waterfalls</title>
-      <link>http://sudevambadi.me/tags/meenmutty-waterfalls/</link>
-      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/meenmutty-waterfalls/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Minix 3</title>
-      <link>http://sudevambadi.me/tags/minix-3/</link>
-      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/minix-3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Minix 3 Installation</title>
-      <link>http://sudevambadi.me/tags/minix-3-installation/</link>
-      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/minix-3-installation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mirror Website</title>
-      <link>http://sudevambadi.me/tags/mirror-website/</link>
-      <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/mirror-website/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mongodb</title>
-      <link>http://sudevambadi.me/tags/mongodb/</link>
-      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/mongodb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Nit Calicut</title>
-      <link>http://sudevambadi.me/tags/nit-calicut/</link>
-      <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/nit-calicut/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Permenantly</title>
-      <link>http://sudevambadi.me/tags/permenantly/</link>
-      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/permenantly/</guid>
+      <guid>http://sudev.dev/tags/meenmutty-waterfalls/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ponmudi</title>
-      <link>http://sudevambadi.me/tags/ponmudi/</link>
+      <link>http://sudev.dev/tags/ponmudi/</link>
       <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/ponmudi/</guid>
+      <guid>http://sudev.dev/tags/ponmudi/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Programming Knowledge</title>
-      <link>http://sudevambadi.me/tags/programming-knowledge/</link>
-      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
+      <title>bike</title>
+      <link>http://sudev.dev/tags/bike/</link>
+      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/programming-knowledge/</guid>
+      <guid>http://sudev.dev/tags/bike/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Recursice Downloads</title>
-      <link>http://sudevambadi.me/tags/recursice-downloads/</link>
-      <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
+      <title>bike ride</title>
+      <link>http://sudev.dev/tags/bike-ride/</link>
+      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/recursice-downloads/</guid>
+      <guid>http://sudev.dev/tags/bike-ride/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Reducebykey</title>
-      <link>http://sudevambadi.me/tags/reducebykey/</link>
-      <pubDate>Sat, 18 Jul 2015 00:00:00 +0000</pubDate>
+      <title>trip</title>
+      <link>http://sudev.dev/tags/trip/</link>
+      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/reducebykey/</guid>
+      <guid>http://sudev.dev/tags/trip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trivandrum</title>
+      <link>http://sudev.dev/tags/trivandrum/</link>
+      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/trivandrum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data science</title>
+      <link>http://sudev.dev/tags/data-science/</link>
+      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data science large files</title>
+      <link>http://sudev.dev/tags/data-science-large-files/</link>
+      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/data-science-large-files/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>large dataset</title>
+      <link>http://sudev.dev/tags/large-dataset/</link>
+      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/large-dataset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text manipulation</title>
+      <link>http://sudev.dev/tags/text-manipulation/</link>
+      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/text-manipulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unix command line</title>
+      <link>http://sudev.dev/tags/unix-command-line/</link>
+      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/unix-command-line/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Classic</title>
+      <link>http://sudev.dev/tags/classic/</link>
+      <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/classic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hill Station</title>
+      <link>http://sudev.dev/tags/hill-station/</link>
+      <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/hill-station/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>India</title>
+      <link>http://sudev.dev/tags/india/</link>
+      <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/india/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kerala</title>
+      <link>http://sudev.dev/tags/kerala/</link>
+      <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/kerala/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ride</title>
-      <link>http://sudevambadi.me/tags/ride/</link>
+      <link>http://sudev.dev/tags/ride/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/ride/</guid>
+      <guid>http://sudev.dev/tags/ride/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Royal Enfield</title>
-      <link>http://sudevambadi.me/tags/royal-enfield/</link>
+      <link>http://sudev.dev/tags/royal-enfield/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/royal-enfield/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Script to Find Meaning</title>
-      <link>http://sudevambadi.me/tags/script-to-find-meaning/</link>
-      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/script-to-find-meaning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shayeri</title>
-      <link>http://sudevambadi.me/tags/shayeri/</link>
-      <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/shayeri/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ssh</title>
-      <link>http://sudevambadi.me/tags/ssh/</link>
-      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sudev Ambadi</title>
-      <link>http://sudevambadi.me/tags/sudev-ambadi/</link>
-      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/sudev-ambadi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sudev a C</title>
-      <link>http://sudevambadi.me/tags/sudev-a-c/</link>
-      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/sudev-a-c/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Terminal</title>
-      <link>http://sudevambadi.me/tags/terminal/</link>
-      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/terminal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test Skills</title>
-      <link>http://sudevambadi.me/tags/test-skills/</link>
-      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/test-skills/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Text Manipulation</title>
-      <link>http://sudevambadi.me/tags/text-manipulation/</link>
-      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://sudevambadi.me/tags/text-manipulation/</guid>
+      <guid>http://sudev.dev/tags/royal-enfield/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Travel</title>
-      <link>http://sudevambadi.me/tags/travel/</link>
+      <link>http://sudev.dev/tags/travel/</link>
       <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/travel/</guid>
+      <guid>http://sudev.dev/tags/travel/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Trip</title>
-      <link>http://sudevambadi.me/tags/trip/</link>
-      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
+      <title>c</title>
+      <link>http://sudev.dev/tags/c/</link>
+      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/trip/</guid>
+      <guid>http://sudev.dev/tags/c/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Trivandrum</title>
-      <link>http://sudevambadi.me/tags/trivandrum/</link>
-      <pubDate>Thu, 02 Apr 2015 00:00:00 +0000</pubDate>
+      <title>c test</title>
+      <link>http://sudev.dev/tags/c-test/</link>
+      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/trivandrum/</guid>
+      <guid>http://sudev.dev/tags/c-test/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ubuntu</title>
-      <link>http://sudevambadi.me/tags/ubuntu/</link>
-      <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
+      <title>c&#43;&#43;</title>
+      <link>http://sudev.dev/tags/c&#43;&#43;/</link>
+      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/ubuntu/</guid>
+      <guid>http://sudev.dev/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ubuntu Brightness Problem</title>
-      <link>http://sudevambadi.me/tags/ubuntu-brightness-problem/</link>
-      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      <title>deep c</title>
+      <link>http://sudev.dev/tags/deep-c/</link>
+      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/ubuntu-brightness-problem/</guid>
+      <guid>http://sudev.dev/tags/deep-c/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Ubuntu Brightness Reset Error</title>
-      <link>http://sudevambadi.me/tags/ubuntu-brightness-reset-error/</link>
-      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      <title>programming knowledge</title>
+      <link>http://sudev.dev/tags/programming-knowledge/</link>
+      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/ubuntu-brightness-reset-error/</guid>
+      <guid>http://sudev.dev/tags/programming-knowledge/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Unix Command Line</title>
-      <link>http://sudevambadi.me/tags/unix-command-line/</link>
-      <pubDate>Fri, 20 Mar 2015 00:00:00 +0000</pubDate>
+      <title>test skills</title>
+      <link>http://sudev.dev/tags/test-skills/</link>
+      <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/unix-command-line/</guid>
+      <guid>http://sudev.dev/tags/test-skills/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Useful Bash Functions</title>
-      <link>http://sudevambadi.me/tags/useful-bash-functions/</link>
+      <title>bash</title>
+      <link>http://sudev.dev/tags/bash/</link>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dictionary</title>
+      <link>http://sudev.dev/tags/dictionary/</link>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/dictionary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dictionary script</title>
+      <link>http://sudev.dev/tags/dictionary-script/</link>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/dictionary-script/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://sudev.dev/tags/linux/</link>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>script to find meaning</title>
+      <link>http://sudev.dev/tags/script-to-find-meaning/</link>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/script-to-find-meaning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>http://sudev.dev/tags/terminal/</link>
+      <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Minix 3 installation</title>
+      <link>http://sudev.dev/tags/minix-3-installation/</link>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/minix-3-installation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>installing packages</title>
+      <link>http://sudev.dev/tags/installing-packages/</link>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/installing-packages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>minix 3</title>
+      <link>http://sudev.dev/tags/minix-3/</link>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/minix-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>http://sudev.dev/tags/ssh/</link>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualbox</title>
+      <link>http://sudev.dev/tags/virtualbox/</link>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/virtualbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>without internet</title>
+      <link>http://sudev.dev/tags/without-internet/</link>
+      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/without-internet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash hacks</title>
+      <link>http://sudev.dev/tags/bash-hacks/</link>
       <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/useful-bash-functions/</guid>
+      <guid>http://sudev.dev/tags/bash-hacks/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Virtualbox</title>
-      <link>http://sudevambadi.me/tags/virtualbox/</link>
-      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
+      <title>useful bash functions</title>
+      <link>http://sudev.dev/tags/useful-bash-functions/</link>
+      <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/virtualbox/</guid>
+      <guid>http://sudev.dev/tags/useful-bash-functions/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Wget</title>
-      <link>http://sudevambadi.me/tags/wget/</link>
+      <title>Fedora Nitc mirror</title>
+      <link>http://sudev.dev/tags/fedora-nitc-mirror/</link>
+      <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/fedora-nitc-mirror/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configuration</title>
+      <link>http://sudev.dev/tags/configuration/</link>
+      <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/configuration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fosscell mirror</title>
+      <link>http://sudev.dev/tags/fosscell-mirror/</link>
+      <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/fosscell-mirror/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nit calicut</title>
+      <link>http://sudev.dev/tags/nit-calicut/</link>
+      <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/nit-calicut/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mirror website</title>
+      <link>http://sudev.dev/tags/mirror-website/</link>
       <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/wget/</guid>
+      <guid>http://sudev.dev/tags/mirror-website/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Wget to Mirror Website</title>
-      <link>http://sudevambadi.me/tags/wget-to-mirror-website/</link>
+      <title>recursice downloads</title>
+      <link>http://sudev.dev/tags/recursice-downloads/</link>
       <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/wget-to-mirror-website/</guid>
+      <guid>http://sudev.dev/tags/recursice-downloads/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Without Internet</title>
-      <link>http://sudevambadi.me/tags/without-internet/</link>
-      <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
+      <title>wget</title>
+      <link>http://sudev.dev/tags/wget/</link>
+      <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/without-internet/</guid>
+      <guid>http://sudev.dev/tags/wget/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Zindagi Na Milegi Dubara</title>
-      <link>http://sudevambadi.me/tags/zindagi-na-milegi-dubara/</link>
-      <pubDate>Mon, 27 Jul 2015 00:00:00 +0000</pubDate>
+      <title>wget to mirror website</title>
+      <link>http://sudev.dev/tags/wget-to-mirror-website/</link>
+      <pubDate>Sat, 09 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/tags/zindagi-na-milegi-dubara/</guid>
+      <guid>http://sudev.dev/tags/wget-to-mirror-website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>battery</title>
+      <link>http://sudev.dev/tags/battery/</link>
+      <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/battery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux mint</title>
+      <link>http://sudev.dev/tags/linux-mint/</link>
+      <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/linux-mint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>http://sudev.dev/tags/ubuntu/</link>
+      <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jekyll</title>
+      <link>http://sudev.dev/tags/jekyll/</link>
+      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sudev A C</title>
+      <link>http://sudev.dev/tags/sudev-a-c/</link>
+      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/sudev-a-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sudev Ambadi</title>
+      <link>http://sudev.dev/tags/sudev-ambadi/</link>
+      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/sudev-ambadi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>permenantly</title>
+      <link>http://sudev.dev/tags/permenantly/</link>
+      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/permenantly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu brightness problem</title>
+      <link>http://sudev.dev/tags/ubuntu-brightness-problem/</link>
+      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/ubuntu-brightness-problem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu brightness reset error</title>
+      <link>http://sudev.dev/tags/ubuntu-brightness-reset-error/</link>
+      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://sudev.dev/tags/ubuntu-brightness-reset-error/</guid>
       <description></description>
     </item>
     

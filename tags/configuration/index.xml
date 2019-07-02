@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Configuration on Sudev Ambadi</title>
-    <link>http://sudevambadi.me/tags/configuration/</link>
-    <description>Recent content in Configuration on Sudev Ambadi</description>
+    <title>configuration on Sudev Ambadi</title>
+    <link>http://sudev.dev/tags/configuration/</link>
+    <description>Recent content in configuration on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 22 Mar 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudevambadi.me/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudev.dev/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Configuring to Fedora 17 Local Mirror of NITC</title>
-      <link>http://sudevambadi.me/post/2013-03-22-nitcfedora/</link>
+      <link>http://sudev.dev/post/2013-03-22-nitcfedora/</link>
       <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/post/2013-03-22-nitcfedora/</guid>
+      <guid>http://sudev.dev/post/2013-03-22-nitcfedora/</guid>
       <description>This will help you to configure your system to download packages from NITC fosscell fedora mirror.
 Login as root in your system and use the following command to create a file inside the folder /etc/yum.repos.d
 touch /etc/yum.repos.d/fosscellfedora Copy and paste the folowing code into the created file using your favourite editor.

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C on Sudev Ambadi</title>
-    <link>http://sudevambadi.me/tags/c/</link>
-    <description>Recent content in C on Sudev Ambadi</description>
+    <title>c on Sudev Ambadi</title>
+    <link>http://sudev.dev/tags/c/</link>
+    <description>Recent content in c on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 04 Mar 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudevambadi.me/tags/c/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://sudev.dev/tags/c/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Deep C, understand the language before you write code.</title>
-      <link>http://sudevambadi.me/post/2014-03-04-testyourc/</link>
+      <link>http://sudev.dev/post/2014-03-04-testyourc/</link>
       <pubDate>Tue, 04 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudevambadi.me/post/2014-03-04-testyourc/</guid>
+      <guid>http://sudev.dev/post/2014-03-04-testyourc/</guid>
       <description>I came across a slide which explains why is it hard to program in C/C++ programming language when you don&amp;rsquo;t have a proper understanidng of the same.
 Here is slide which demonostrates why a proper understanding of language is neccessary before you code.
  Courtesy :: Deep C by Olve Maudal</description>
