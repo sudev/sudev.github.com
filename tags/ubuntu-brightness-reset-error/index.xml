@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ubuntu brightness reset error on Sudev Ambadi</title>
-    <link>http://sudev.dev/tags/ubuntu-brightness-reset-error/</link>
+    <link>https://sudev.dev/tags/ubuntu-brightness-reset-error/</link>
     <description>Recent content in ubuntu brightness reset error on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 05 Feb 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudev.dev/tags/ubuntu-brightness-reset-error/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sudev.dev/tags/ubuntu-brightness-reset-error/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Permanently adjust screen brightness in Ubuntu / Linux Mint</title>
-      <link>http://sudev.dev/post/2013-02-05-ubuntubrightness/</link>
+      <link>https://sudev.dev/post/2013-02-05-ubuntubrightness/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudev.dev/post/2013-02-05-ubuntubrightness/</guid>
+      <guid>https://sudev.dev/post/2013-02-05-ubuntubrightness/</guid>
       <description>This details a fix to reset the screen brightness in Ubuntu / Linux Mint during each boot.
 This idea will work only if you have a file named brightness in the folder /sys/class/backlight/acpi_video0 and the hack is relevant for the Ubuntu (version &amp;lt; 12.04) where they had a bug in which the brightness is too high during each restart.
 To know your systems current brightness level.

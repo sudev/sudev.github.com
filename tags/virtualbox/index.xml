@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>virtualbox on Sudev Ambadi</title>
-    <link>http://sudev.dev/tags/virtualbox/</link>
+    <link>https://sudev.dev/tags/virtualbox/</link>
     <description>Recent content in virtualbox on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 07 Sep 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudev.dev/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sudev.dev/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Installing Minix 3 using VirtualBox in Linux</title>
-      <link>http://sudev.dev/post/2013-09-07-minixinstall/</link>
+      <link>https://sudev.dev/post/2013-09-07-minixinstall/</link>
       <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudev.dev/post/2013-09-07-minixinstall/</guid>
+      <guid>https://sudev.dev/post/2013-09-07-minixinstall/</guid>
       <description>This article will help you in setting up Minix 3 using VirtualBox on a Linux Host for development and enabling ssh connection between Minix and host Linux machine.
 But why, but why?? Minix is a micro kernel, unlike Linux which is monolithic Minix is a operating system which is Reliable. Being a micro kernel good sepration around the Kernel Space and User Space, Minix Kernel is only 6000 lines of code compared to millions of lines of code in Linux Kernel.</description>
     </item>

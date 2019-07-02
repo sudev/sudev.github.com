@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sudev Ambadi</title>
-    <link>http://sudev.dev/tags/sudev-ambadi/</link>
+    <link>https://sudev.dev/tags/sudev-ambadi/</link>
     <description>Recent content on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 05 Feb 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudev.dev/tags/sudev-ambadi/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sudev.dev/tags/sudev-ambadi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Welcome to Jekyll</title>
-      <link>http://sudev.dev/post/2013-02-05-hello/</link>
+      <link>https://sudev.dev/post/2013-02-05-hello/</link>
       <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudev.dev/post/2013-02-05-hello/</guid>
+      <guid>https://sudev.dev/post/2013-02-05-hello/</guid>
       <description>I always wanted a clean and simple interface for my blog, I used to blog on blogger with an ugly theme.
 If you are yet to use Jkeyll, I would recommend you to use it along with Github Pages.</description>
     </item>

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>dictionary on Sudev Ambadi</title>
-    <link>http://sudev.dev/tags/dictionary/</link>
+    <link>https://sudev.dev/tags/dictionary/</link>
     <description>Recent content in dictionary on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 14 Jan 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudev.dev/tags/dictionary/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sudev.dev/tags/dictionary/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A dictionary in your terminal</title>
-      <link>http://sudev.dev/post/2014-01-14-dictionary/</link>
+      <link>https://sudev.dev/post/2014-01-14-dictionary/</link>
       <pubDate>Tue, 14 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://sudev.dev/post/2014-01-14-dictionary/</guid>
+      <guid>https://sudev.dev/post/2014-01-14-dictionary/</guid>
       <description>Owning to my poor vocabulary I had to look up for meanings every now and then, the following script gets you the meaning for any word from dictionary.com using bash.
 A bash script dictionary dict() { #Creating a temp folder dir=~/.dict #Check for the existence if not create one [[ -d $dir ]] || mkdir $dir #download respective file from dictionary dot com # -q =&amp;gt; do it quietly ie nothing @ screen # -O save it as mean wget -q -O $dir/mean wget http://dictionary.</description>
     </item>

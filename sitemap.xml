@@ -3,521 +3,521 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://sudev.dev/categories/</loc>
+    <loc>https://sudev.dev/categories/</loc>
     <lastmod>2016-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2016-07-09-standardization/</loc>
+    <loc>https://sudev.dev/post/2016-07-09-standardization/</loc>
     <lastmod>2016-07-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/</loc>
+    <loc>https://sudev.dev/post/</loc>
     <lastmod>2016-07-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/</loc>
-    <lastmod>2016-07-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/categories/posts/</loc>
+    <loc>https://sudev.dev/</loc>
     <lastmod>2016-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/</loc>
+    <loc>https://sudev.dev/categories/posts/</loc>
+    <lastmod>2016-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2015-07-27-znmd/</loc>
+    <loc>https://sudev.dev/post/2015-07-27-znmd/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/zindagi-na-milegi-dubara/</loc>
-    <lastmod>2015-07-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/complete/</loc>
+    <loc>https://sudev.dev/tags/zindagi-na-milegi-dubara/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/farhan/</loc>
+    <loc>https://sudev.dev/tags/complete/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/shayeri/</loc>
+    <loc>https://sudev.dev/tags/farhan/</loc>
     <lastmod>2015-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/apache-spark/</loc>
+    <loc>https://sudev.dev/tags/shayeri/</loc>
+    <lastmod>2015-07-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/apache-spark/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2015-07-18-mongospark/</loc>
+    <loc>https://sudev.dev/post/2015-07-18-mongospark/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/mongodb/</loc>
-    <lastmod>2015-07-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/data-cleaning/</loc>
+    <loc>https://sudev.dev/tags/mongodb/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/large-csv/</loc>
+    <loc>https://sudev.dev/tags/data-cleaning/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/reducebykey/</loc>
+    <loc>https://sudev.dev/tags/large-csv/</loc>
     <lastmod>2015-07-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/meenmutty-waterfalls/</loc>
+    <loc>https://sudev.dev/tags/reducebykey/</loc>
+    <lastmod>2015-07-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/meenmutty-waterfalls/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/ponmudi/</loc>
+    <loc>https://sudev.dev/tags/ponmudi/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2015-04-02-ponmuditwo/</loc>
+    <loc>https://sudev.dev/post/2015-04-02-ponmuditwo/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/bike/</loc>
-    <lastmod>2015-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/bike-ride/</loc>
+    <loc>https://sudev.dev/tags/bike/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/categories/travel/</loc>
+    <loc>https://sudev.dev/tags/bike-ride/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/trip/</loc>
+    <loc>https://sudev.dev/categories/travel/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/trivandrum/</loc>
+    <loc>https://sudev.dev/tags/trip/</loc>
     <lastmod>2015-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2015-03-20-datascienceunix/</loc>
+    <loc>https://sudev.dev/tags/trivandrum/</loc>
+    <lastmod>2015-04-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/post/2015-03-20-datascienceunix/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/data-science/</loc>
-    <lastmod>2015-03-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/data-science-large-files/</loc>
-    <lastmod>2015-03-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/large-dataset/</loc>
+    <loc>https://sudev.dev/tags/data-science/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/text-manipulation/</loc>
+    <loc>https://sudev.dev/tags/data-science-large-files/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/unix-command-line/</loc>
+    <loc>https://sudev.dev/tags/large-dataset/</loc>
     <lastmod>2015-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/classic/</loc>
+    <loc>https://sudev.dev/tags/text-manipulation/</loc>
+    <lastmod>2015-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/unix-command-line/</loc>
+    <lastmod>2015-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/classic/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/hill-station/</loc>
+    <loc>https://sudev.dev/tags/hill-station/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/india/</loc>
+    <loc>https://sudev.dev/tags/india/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/kerala/</loc>
+    <loc>https://sudev.dev/tags/kerala/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2014-11-09-ponmudi/</loc>
+    <loc>https://sudev.dev/post/2014-11-09-ponmudi/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/ride/</loc>
-    <lastmod>2014-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/royal-enfield/</loc>
+    <loc>https://sudev.dev/tags/ride/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/travel/</loc>
+    <loc>https://sudev.dev/tags/royal-enfield/</loc>
     <lastmod>2014-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2014-03-04-testyourc/</loc>
+    <loc>https://sudev.dev/tags/travel/</loc>
+    <lastmod>2014-11-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/post/2014-03-04-testyourc/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/c/</loc>
-    <lastmod>2014-03-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/c-test/</loc>
-    <lastmod>2014-03-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/c&#43;&#43;/</loc>
-    <lastmod>2014-03-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/deep-c/</loc>
+    <loc>https://sudev.dev/tags/c/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/programming-knowledge/</loc>
+    <loc>https://sudev.dev/tags/c-test/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/test-skills/</loc>
+    <loc>https://sudev.dev/tags/c&#43;&#43;/</loc>
     <lastmod>2014-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2014-01-14-dictionary/</loc>
-    <lastmod>2014-01-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/bash/</loc>
-    <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <loc>https://sudev.dev/tags/deep-c/</loc>
+    <lastmod>2014-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/dictionary/</loc>
-    <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <loc>https://sudev.dev/tags/programming-knowledge/</loc>
+    <lastmod>2014-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/dictionary-script/</loc>
-    <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <loc>https://sudev.dev/tags/test-skills/</loc>
+    <lastmod>2014-03-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/linux/</loc>
+    <loc>https://sudev.dev/post/2014-01-14-dictionary/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/script-to-find-meaning/</loc>
+    <loc>https://sudev.dev/tags/bash/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/terminal/</loc>
+    <loc>https://sudev.dev/tags/dictionary/</loc>
     <lastmod>2014-01-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2013-09-07-minixinstall/</loc>
+    <loc>https://sudev.dev/tags/dictionary-script/</loc>
+    <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/linux/</loc>
+    <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/script-to-find-meaning/</loc>
+    <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/terminal/</loc>
+    <lastmod>2014-01-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/post/2013-09-07-minixinstall/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/minix-3-installation/</loc>
+    <loc>https://sudev.dev/tags/minix-3-installation/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/categories/minix-virtualbox/</loc>
+    <loc>https://sudev.dev/categories/minix-virtualbox/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/installing-packages/</loc>
+    <loc>https://sudev.dev/tags/installing-packages/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/minix-3/</loc>
+    <loc>https://sudev.dev/tags/minix-3/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/ssh/</loc>
+    <loc>https://sudev.dev/tags/ssh/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/virtualbox/</loc>
+    <loc>https://sudev.dev/tags/virtualbox/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/without-internet/</loc>
+    <loc>https://sudev.dev/tags/without-internet/</loc>
     <lastmod>2013-09-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2013-05-23-bashfunction/</loc>
+    <loc>https://sudev.dev/post/2013-05-23-bashfunction/</loc>
     <lastmod>2013-05-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/bash-hacks/</loc>
-    <lastmod>2013-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/useful-bash-functions/</loc>
+    <loc>https://sudev.dev/tags/bash-hacks/</loc>
     <lastmod>2013-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2013-03-22-nitcfedora/</loc>
-    <lastmod>2013-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/fedora-nitc-mirror/</loc>
-    <lastmod>2013-03-22T00:00:00+00:00</lastmod>
+    <loc>https://sudev.dev/tags/useful-bash-functions/</loc>
+    <lastmod>2013-05-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/configuration/</loc>
+    <loc>https://sudev.dev/post/2013-03-22-nitcfedora/</loc>
     <lastmod>2013-03-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/fosscell-mirror/</loc>
+    <loc>https://sudev.dev/tags/fedora-nitc-mirror/</loc>
     <lastmod>2013-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/nit-calicut/</loc>
+    <loc>https://sudev.dev/tags/configuration/</loc>
     <lastmod>2013-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2013-02-09-wgetwebsite/</loc>
-    <lastmod>2013-02-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/mirror-website/</loc>
-    <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <loc>https://sudev.dev/tags/fosscell-mirror/</loc>
+    <lastmod>2013-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/recursice-downloads/</loc>
-    <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <loc>https://sudev.dev/tags/nit-calicut/</loc>
+    <lastmod>2013-03-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/wget/</loc>
+    <loc>https://sudev.dev/post/2013-02-09-wgetwebsite/</loc>
     <lastmod>2013-02-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/wget-to-mirror-website/</loc>
+    <loc>https://sudev.dev/tags/mirror-website/</loc>
     <lastmod>2013-02-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2013-02-08-battery/</loc>
+    <loc>https://sudev.dev/tags/recursice-downloads/</loc>
+    <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/wget/</loc>
+    <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/wget-to-mirror-website/</loc>
+    <lastmod>2013-02-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/post/2013-02-08-battery/</loc>
     <lastmod>2013-02-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/categories/ubuntu-linux-mint-battery-terminal/</loc>
+    <loc>https://sudev.dev/tags/linux-mint/</loc>
     <lastmod>2013-02-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/battery/</loc>
+    <loc>https://sudev.dev/categories/ubuntu-linux-mint-battery-terminal/</loc>
     <lastmod>2013-02-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/linux-mint/</loc>
+    <loc>https://sudev.dev/tags/battery/</loc>
     <lastmod>2013-02-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/ubuntu/</loc>
+    <loc>https://sudev.dev/tags/ubuntu/</loc>
     <lastmod>2013-02-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/jekyll/</loc>
+    <loc>https://sudev.dev/tags/jekyll/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2013-02-05-ubuntubrightness/</loc>
+    <loc>https://sudev.dev/post/2013-02-05-ubuntubrightness/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/sudev-a-c/</loc>
-    <lastmod>2013-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/sudev-ambadi/</loc>
+    <loc>https://sudev.dev/tags/sudev-a-c/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/post/2013-02-05-hello/</loc>
-    <lastmod>2013-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://sudev.dev/tags/permenantly/</loc>
+    <loc>https://sudev.dev/tags/sudev-ambadi/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/ubuntu-brightness-problem/</loc>
+    <loc>https://sudev.dev/post/2013-02-05-hello/</loc>
+    <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/tags/permenantly/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/tags/ubuntu-brightness-reset-error/</loc>
+    <loc>https://sudev.dev/tags/ubuntu-brightness-problem/</loc>
     <lastmod>2013-02-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/about/</loc>
+    <loc>https://sudev.dev/tags/ubuntu-brightness-reset-error/</loc>
+    <lastmod>2013-02-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://sudev.dev/page/about/</loc>
+    <loc>https://sudev.dev/about/</loc>
   </url>
   
   <url>
-    <loc>http://sudev.dev/page/</loc>
+    <loc>https://sudev.dev/page/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://sudev.dev/page/</loc>
     <priority>0</priority>
   </url>
   

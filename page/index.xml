@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Sudev Ambadi</title>
-    <link>http://sudev.dev/page/</link>
+    <link>https://sudev.dev/page/</link>
     <description>Recent content in Pages on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://sudev.dev/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sudev.dev/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About me</title>
-      <link>http://sudev.dev/page/about/</link>
+      <link>https://sudev.dev/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sudev.dev/page/about/</guid>
+      <guid>https://sudev.dev/page/about/</guid>
       <description>I&amp;rsquo;m a computer enthusiast interested in data at scale and distributed systems. Want to know more, checkout my resume. You may contact me at sudevdev gma!l com.
 😈 ഞാൻ എന്നെ തന്നെ വിളിക്കുന്നത് സൂഡോ(Sudo) എന്നാണ്.</description>
     </item>

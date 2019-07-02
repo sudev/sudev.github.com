@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bash hacks on Sudev Ambadi</title>
-    <link>http://sudev.dev/tags/bash-hacks/</link>
+    <link>https://sudev.dev/tags/bash-hacks/</link>
     <description>Recent content in bash hacks on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 23 May 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudev.dev/tags/bash-hacks/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sudev.dev/tags/bash-hacks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Useful bashrc functions</title>
-      <link>http://sudev.dev/post/2013-05-23-bashfunction/</link>
+      <link>https://sudev.dev/post/2013-05-23-bashfunction/</link>
       <pubDate>Thu, 23 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudev.dev/post/2013-05-23-bashfunction/</guid>
+      <guid>https://sudev.dev/post/2013-05-23-bashfunction/</guid>
       <description>I&amp;rsquo;m going to share some of my bashrc functions which saves me a lot of time.
 Killer This function helps you find a process using a keyword and to kill it, you don&amp;rsquo;t have to use ps aux along with grep and then kill the process by entering the pid instead use this function give it a keyword and it will help you in killing a process.
 killer() { echo &amp;#34;I&amp;#39;m going to kill these process&amp;#34;; ps -ef | grep $1 | grep -v grep echo &amp;#34;Can I ?</description>

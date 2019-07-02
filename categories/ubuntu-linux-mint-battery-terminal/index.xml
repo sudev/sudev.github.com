@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu linux mint battery terminal on Sudev Ambadi</title>
-    <link>http://sudev.dev/categories/ubuntu-linux-mint-battery-terminal/</link>
+    <link>https://sudev.dev/categories/ubuntu-linux-mint-battery-terminal/</link>
     <description>Recent content in Ubuntu linux mint battery terminal on Sudev Ambadi</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 08 Feb 2013 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://sudev.dev/categories/ubuntu-linux-mint-battery-terminal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sudev.dev/categories/ubuntu-linux-mint-battery-terminal/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Battery information inside terminal</title>
-      <link>http://sudev.dev/post/2013-02-08-battery/</link>
+      <link>https://sudev.dev/post/2013-02-08-battery/</link>
       <pubDate>Fri, 08 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://sudev.dev/post/2013-02-08-battery/</guid>
+      <guid>https://sudev.dev/post/2013-02-08-battery/</guid>
       <description>If you want to know your battery details in terminal use upower and create an alias to it.
 This is helpful hack if you want to trigger events on low battery or if you are someone who uses really light desktop managers without a battery indicator.
 Upower command can be used to get stats on battery.
